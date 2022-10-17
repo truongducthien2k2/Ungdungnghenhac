@@ -14,3 +14,27 @@ D:\BTVN\OOP\Đồ án\music\music\obj\Debug\music.csproj.GenerateResource.cache
 D:\BTVN\OOP\Đồ án\music\music\obj\Debug\music.csproj.CoreCompileInputs.cache
 D:\BTVN\OOP\Đồ án\music\music\obj\Debug\music.exe
 D:\BTVN\OOP\Đồ án\music\music\obj\Debug\music.pdb
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\music.exe.config
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\music.exe
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\music.pdb
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.AssemblyReference.cache
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.SuggestedBindingRedirects.cache
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\MainWindow.g.cs
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\App.g.cs
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.cache
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.lref
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\MainWindow.baml
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.g.resources
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.Properties.Resources.resources
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.GenerateResource.cache
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.CoreCompileInputs.cache
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.exe
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.pdb
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\App.baml
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete

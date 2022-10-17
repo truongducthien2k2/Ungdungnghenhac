@@ -3,209 +3,91 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon ="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:music"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1200"
+        Title="MainWindow" Height="780" Width="1200"
         ResizeMode="CanResizeWithGrip"
-        Background="#36393F"
-            
-        WindowState="Maximized">
-    <Grid  Background="#f4f5fe">
-        <!-- ADD THE COLUMN AND ROW -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="25" Padding="20" Background="#f4f5fe" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="463*"/>
+                <ColumnDefinition Width="217*"/>
+                <ColumnDefinition Width="260"/>
+            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="12*"/>
-        </Grid.RowDefinitions>
 
-        <Border Grid.Column="0"
-                Background="White">
-
-            <Grid HorizontalAlignment="Stretch">
-                <Label Content="MUSIC"
-                       Foreground="White"
-                       FontSize="30"    
-                       FontWeight="SemiBold"/>
-            </Grid>
-
-        </Border>
-        <Border Grid.Column="1"
-                Background="#f4f5fe">
-
-            <Grid HorizontalAlignment="Stretch">
-             
-            </Grid>
-
-        </Border>
-        <!-- ADD ROWS IN ROW 1 COLUMN 0 -->
-        <Grid Grid.Row="1" Grid.Column="0" Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button Content="Home"
-                   VerticalAlignment="Center" 
-                   VerticalContentAlignment="Top"
-                   HorizontalContentAlignment="Center"
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray"     
-                   Click="Button_Click"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0" />
 
-            <Button Grid.Row="1"
-                   Content="Trends"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Margin="8,0,0,0"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0"/>
+            <!-- Menu-->
+            <Border Grid.RowSpan="3" CornerRadius="25">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Home" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Trends" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
 
-            <Button Grid.Row="2"
-                   Content="Feed"
-                   VerticalAlignment="Top"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" Margin="0,12,0,0"
-                    Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0"/>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Feed" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
 
-            <Label Grid.Row="3"
-                   Content="Discover"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Margin="8,0,0,0"/>
+                    <TextBlock Text="Discover" Style="{StaticResource menubuttontext}"/>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Release Calendar" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="New and Notable" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Events" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
 
+                    <TextBlock Text="Your Collection" Style="{StaticResource menubuttontext}"/>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Favourite Sóng" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Artist" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Albums" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
 
-            <Button Grid.Row="4"
-                   Content="New and notable"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0"
-                   Margin="8,0,0,0"/>
-
-            <Button Grid.Row="5"
-                   Content="Release Calendar"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Margin="8,0,0,0"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0"/>
-            <Button Grid.Row="6"
-                   Content="Events"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Margin="8,0,0,0"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0"/>
-           
-            <Label Grid.Row="7"
-                   Content="Your collection"
-                   VerticalAlignment="Center"   
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray" 
-                   Margin="8,0,0,0"/>
-            <Button Grid.Row="8"
-                    Content="Favourite song"
-                   VerticalAlignment="Center" 
-                   VerticalContentAlignment="Top"
-                   HorizontalContentAlignment="Center"
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray"     
-                   Click="Button_Click"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0" />
-
-            <Button Grid.Row="9"
-                   Content="Artist"
-                   VerticalAlignment="Center" 
-                   VerticalContentAlignment="Top"
-                   HorizontalContentAlignment="Center"
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray"     
-                   Click="Button_Click"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0" />
-
-            <Button Grid.Row="10"
-                   Content="Album"
-                   VerticalAlignment="Center" 
-                   VerticalContentAlignment="Top"
-                   HorizontalContentAlignment="Center"
-                   FontWeight="Medium"
-                   FontSize="13"
-                   Foreground="Gray"     
-                   Click="Button_Click"
-                   Background="White"
-                   BorderBrush="Transparent"
-                   BorderThickness="0" />
-
+            </Border>
         </Grid>
-        <!-- ADD COLUMN AND ROW IN COLUMN1 ROW 1 -->
-        <Grid Grid.Row="1" Grid.Column="1" Margin="10,0,10,0">
-            <ScrollViewer>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="300"/>
-                        <RowDefinition Height="300"/>
-                        <RowDefinition Height="300"/>
-                        <RowDefinition Height="300"/>
-                        <RowDefinition Height="300"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid Grid.Row="0" Background="#f4f5fe">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="4*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <!-- PANEL 1 -->
-
-                    </Grid>
-                </Grid>
-            </ScrollViewer>
-        </Grid>
-
-    </Grid>
+    </Border>
 </Window>
