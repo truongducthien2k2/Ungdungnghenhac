@@ -5,89 +5,145 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Icon ="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:music"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="780" Width="1200"
+        Title="MainWindow" MinHeight="780" MinWidth="1200"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen">
-    <Border CornerRadius="25" Padding="20" Background="#f4f5fe" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="10" Padding="10" Background="#f4f5fe" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="220"/>
-                <ColumnDefinition Width="463*"/>
-                <ColumnDefinition Width="217*"/>
-                <ColumnDefinition Width="260"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="120"/>
-                <RowDefinition Height="130"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-
             <!-- Menu-->
-            <Border Grid.RowSpan="3" CornerRadius="25">
+            <Border Grid.Column="0" CornerRadius="10">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="White" Offset="0"/>
                     </LinearGradientBrush>
                 </Border.Background>
                 <StackPanel>
-                    <Button Style="{StaticResource menubutton}">
+                    <Button x:Name="homeBtn" Style="{StaticResource menubutton}" Click="homeBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Home" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Trang chủ" Style="{StaticResource menubuttontext}"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource menubutton}">
+                    <Button x:Name="rankBtn" Style="{StaticResource menubutton}" Click="rankBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Trends" Style="{StaticResource menubuttontext}"/>
-                        </StackPanel>
-                    </Button>
-
-                    <Button Style="{StaticResource menubutton}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Feed" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Bảng xếp hạng" Style="{StaticResource menubuttontext}"/>
                         </StackPanel>
                     </Button>
 
-                    <TextBlock Text="Discover" Style="{StaticResource menubuttontext}"/>
-                    <Button Style="{StaticResource menubutton}">
+                    <Button x:Name="historyBtn" Style="{StaticResource menubutton}" Click="historyBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Release Calendar" Style="{StaticResource menubuttontext}"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource menubutton}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="New and Notable" Style="{StaticResource menubuttontext}"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource menubutton}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Events" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Lịch sử xem" Style="{StaticResource menubuttontext}"/>
                         </StackPanel>
                     </Button>
 
-                    <TextBlock Text="Your Collection" Style="{StaticResource menubuttontext}"/>
-                    <Button Style="{StaticResource menubutton}">
+                    <TextBlock Text="Khám phá" Style="{StaticResource menubuttontext}"/>
+                    <Button x:Name="topicBtn" Style="{StaticResource menubutton}" Click="topicBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Favourite Sóng" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Chủ đề" Style="{StaticResource menubuttontext}"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource menubutton}">
+
+                    <Button x:Name="albumBtn" Style="{StaticResource menubutton}" Click="albumBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Artist" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Album" Style="{StaticResource menubuttontext}"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource menubutton}">
+
+                    <Button x:Name="artistBtn" Style="{StaticResource menubutton}" Click="artistBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Albums" Style="{StaticResource menubuttontext}"/>
+                            <TextBlock Text="Nghệ sĩ" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="songBtn" Style="{StaticResource menubutton}" Click="songBtn_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Bài hát" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="videoBtn" Style="{StaticResource menubutton}" Click="videoBtn_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Video" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="songInDeviceBtn" Style="{StaticResource menubutton}" Click="songInDeviceBtn_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Nhạc trong máy" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <TextBlock Text="Thư viện" Style="{StaticResource menubuttontext}"/>
+                    <Button  x:Name="favoriteListBtn" Style="{StaticResource menubutton}" Click="favoriteListBtn_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Danh sách yêu thích" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="playListBtn" Style="{StaticResource menubutton}" Click="playListBtn_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Danh sách nghe nhạc" Style="{StaticResource menubuttontext}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="accountBtn" Style="{StaticResource menubutton}" Margin="-5 0 15 5" Click="accountBtn_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Tài khoản cá nhân" Style="{StaticResource menubuttontext}" FontWeight="Bold"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
 
             </Border>
+        
+            <!-- Main -->
+            <Grid Grid.Column="1" Margin="10 0 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0"
+                            Margin="0 -6 0 0">
+                    <Grid HorizontalAlignment="Right">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border CornerRadius="10" Grid.Column="0">
+                            <Button x:Name="minWindowBtn" Style="{StaticResource controlbutton}" Click="minWindowBtn_Click">
+                                <materialDesign:PackIcon Kind="WindowMinimize"/>
+                            </Button>
+                        </Border>
+
+                        <Border CornerRadius="10" Grid.Column="1">
+                            <Button x:Name="maxWindowBtn" Style="{StaticResource controlbutton}" Click="maxWindowBtn_Click">
+                                <materialDesign:PackIcon Kind="WindowMaximize"/>
+                            </Button>
+                        </Border>
+
+                        <Border CornerRadius="10" Grid.Column="2">
+                            <Button x:Name="closeWindowBtn" Style="{StaticResource controlbutton}" Click="closeWindowBtn_Click">
+                                <materialDesign:PackIcon Kind="WindowClose" />
+                            </Button>
+                        </Border>
+                        
+                    </Grid>
+                </StackPanel>
+
+                <Frame x:Name="navFrame" 
+                       Grid.Row="1"
+                       NavigationUIVisibility="Hidden"/>
+            </Grid>
         </Grid>
     </Border>
 </Window>

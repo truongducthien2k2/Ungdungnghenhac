@@ -4,46 +4,69 @@
              xmlns:local="clr-namespace:music"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="menutitile" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="Gray"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Margin" Value="40 30 0 15"/>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Style x:Key="menutitile" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Margin" Value="40 30 0 15"/>
+            </Style>
 
-        <Style x:Key="menubutton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="Gray"/>
-            <Setter Property="Height" Value="45"/>  
-            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="15 0 15 5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#15111e"/>
-                    <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="Tag" Value="Visible"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style x:Key="menubutton" TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="Height" Value="45"/>  
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Margin" Value="15 0 15 5"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#15111e"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Tag" Value="Visible"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style x:Key="menubuttontext" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="Gray"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Height" Value="45"/>
-            <Setter Property="Margin" Value="50 0 0 5"/>
-            <Setter Property="AllowDrop" Value="Center"/>
-            <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Button}}}"/>
-        </Style>
+            <Style x:Key="menubuttontext" TargetType="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Height" Value="45"/>
+                <Setter Property="Margin" Value="50 0 0 5"/>
+                <Setter Property="AllowDrop" Value="True"/>
+                <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Button}}}"/>
+            </Style>
+
+            <Style x:Key="controlbutton" TargetType="Button">
+                <Setter Property="Padding" Value="10 5"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#15111e"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Tag" Value="Visible"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

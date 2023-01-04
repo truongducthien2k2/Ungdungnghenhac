@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\
 music
 none
 false
 DEBUG;TRACE
-D:\BTVN\OOP\OOP\Ungdungnghenhac\music\App.xaml
-1219584333
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\App.xaml
+13446633180
 
-6-502434485
-16-1136106198
-MainWindow.xaml;
+18-216934628
+19-493789988
+MainWindow.xaml;View\AccountView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\PlayListView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
 
 True
 
