@@ -1,0 +1,43 @@
+﻿<Window x:Class="music.View.ForgetPassword.VerifyAccountView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:music.View.ForgetPassword"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Height="250" Width="500">
+    <Grid HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Width="300">
+        <StackPanel>
+            <TextBox x:Name="txtEmail"
+                     materialDesign:HintAssist.Hint="Email của bạn"
+                     FontSize="16"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Grid Margin="0 10 0 0"> 
+                <TextBox x:Name="txtVerifyCode"
+                         HorizontalAlignment="Left"
+                         Width="100"
+                         FontSize="16"
+                         materialDesign:HintAssist.Hint="Mã xác thực"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <Label x:Name="txtCode"
+                       Margin="0 0 20 0"
+                       Content="xx"
+                       BorderThickness="1"
+                       BorderBrush="#36454f"
+                       Width="150"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Right"
+                       HorizontalContentAlignment="Center"/>
+                <materialDesign:PackIcon x:Name="btnResetCode" Kind="Autorenew" Cursor="Hand" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Right" MouseLeftButtonDown="btnResetCode_MouseLeftButtonDown"/>
+            </Grid>
+            <Button x:Name="btnVerify" Content="Xác nhận"
+                    Margin="0 20 0 0" Click="btnVerify_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

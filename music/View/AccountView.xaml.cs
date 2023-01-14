@@ -20,9 +20,11 @@ namespace music.View
     /// </summary>
     public partial class AccountView : Page
     {
+       
         public AccountView()
         {
             InitializeComponent();
         }
+
     }
 }

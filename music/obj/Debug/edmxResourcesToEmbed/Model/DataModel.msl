@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MusicAppModelStoreContainer" CdmEntityContainer="MusicAppEntities">
+    <EntitySetMapping Name="ADVERTISEMENT">
+      <EntityTypeMapping TypeName="MusicAppModel.ADVERTISEMENT">
+        <MappingFragment StoreEntitySet="ADVERTISEMENT">
+          <ScalarProperty Name="adTimeSpan" ColumnName="adTimeSpan" />
+          <ScalarProperty Name="adImage" ColumnName="adImage" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALBUM">
+      <EntityTypeMapping TypeName="MusicAppModel.ALBUM">
+        <MappingFragment StoreEntitySet="ALBUM">
+          <ScalarProperty Name="albumImage" ColumnName="albumImage" />
+          <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+          <ScalarProperty Name="albumName" ColumnName="albumName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="MusicAppModel.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="areaName" ColumnName="areaName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORY">
+      <EntityTypeMapping TypeName="MusicAppModel.CATEGORY">
+        <MappingFragment StoreEntitySet="CATEGORY">
+          <ScalarProperty Name="topicId" ColumnName="topicId" />
+          <ScalarProperty Name="categoryImage" ColumnName="categoryImage" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT">
+      <EntityTypeMapping TypeName="MusicAppModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="VIP" ColumnName="VIP" />
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_LOVE_SONG">
+      <EntityTypeMapping TypeName="MusicAppModel.CLIENT_LOVE_SONG">
+        <MappingFragment StoreEntitySet="CLIENT_LOVE_SONG">
+          <ScalarProperty Name="loveDate" ColumnName="loveDate" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="songId" ColumnName="songId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_VIEW_SONG">
+      <EntityTypeMapping TypeName="MusicAppModel.CLIENT_VIEW_SONG">
+        <MappingFragment StoreEntitySet="CLIENT_VIEW_SONG">
+          <ScalarProperty Name="viewDate" ColumnName="viewDate" />
+          <ScalarProperty Name="currentViews" ColumnName="currentViews" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="songId" ColumnName="songId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_VIEW_VIDEO">
+      <EntityTypeMapping TypeName="MusicAppModel.CLIENT_VIEW_VIDEO">
+        <MappingFragment StoreEntitySet="CLIENT_VIEW_VIDEO">
+          <ScalarProperty Name="likeVideo" ColumnName="likeVideo" />
+          <ScalarProperty Name="currentViews" ColumnName="currentViews" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="videoId" ColumnName="videoId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMENT">
+      <EntityTypeMapping TypeName="MusicAppModel.COMMENT">
+        <MappingFragment StoreEntitySet="COMMENT">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="songId" ColumnName="songId" />
+          <ScalarProperty Name="commentDate" ColumnName="commentDate" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAVORITE_LIST">
+      <EntityTypeMapping TypeName="MusicAppModel.FAVORITE_LIST">
+        <MappingFragment StoreEntitySet="FAVORITE_LIST">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAVORITE_LIST_SONG">
+      <EntityTypeMapping TypeName="MusicAppModel.FAVORITE_LIST_SONG">
+        <MappingFragment StoreEntitySet="FAVORITE_LIST_SONG">
+          <ScalarProperty Name="songId" ColumnName="songId" />
+          <ScalarProperty Name="favoriteId" ColumnName="favoriteId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLAYLIST">
+      <EntityTypeMapping TypeName="MusicAppModel.PLAYLIST">
+        <MappingFragment StoreEntitySet="PLAYLIST">
+          <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="playlistName" ColumnName="playlistName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINGER">
+      <EntityTypeMapping TypeName="MusicAppModel.SINGER">
+        <MappingFragment StoreEntitySet="SINGER">
+          <ScalarProperty Name="singerImage" ColumnName="singerImage" />
+          <ScalarProperty Name="intro" ColumnName="intro" />
+          <ScalarProperty Name="singerName" ColumnName="singerName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SONG">
+      <EntityTypeMapping TypeName="MusicAppModel.SONG">
+        <MappingFragment StoreEntitySet="SONG">
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="songCode" ColumnName="songCode" />
+          <ScalarProperty Name="songImage" ColumnName="songImage" />
+          <ScalarProperty Name="lyrics" ColumnName="lyrics" />
+          <ScalarProperty Name="singerId" ColumnName="singerId" />
+          <ScalarProperty Name="albumId" ColumnName="albumId" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="topicId" ColumnName="topicId" />
+          <ScalarProperty Name="songName" ColumnName="songName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SONG_PLAYLIST">
+      <EntityTypeMapping TypeName="MusicAppModel.SONG_PLAYLIST">
+        <MappingFragment StoreEntitySet="SONG_PLAYLIST">
+          <ScalarProperty Name="songId" ColumnName="songId" />
+          <ScalarProperty Name="playlistId" ColumnName="playlistId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MusicAppModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOPIC">
+      <EntityTypeMapping TypeName="MusicAppModel.TOPIC">
+        <MappingFragment StoreEntitySet="TOPIC">
+          <ScalarProperty Name="topicImage" ColumnName="topicImage" />
+          <ScalarProperty Name="topicName" ColumnName="topicName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIDEO">
+      <EntityTypeMapping TypeName="MusicAppModel.VIDEO">
+        <MappingFragment StoreEntitySet="VIDEO">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="topicId" ColumnName="topicId" />
+          <ScalarProperty Name="videoDesc" ColumnName="videoDesc" />
+          <ScalarProperty Name="videoImage" ColumnName="videoImage" />
+          <ScalarProperty Name="videoName" ColumnName="videoName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,4 +1,5 @@
-﻿using music.View;
+﻿using music.Component;
+using music.View;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -17,6 +18,11 @@ namespace music
             navFrame.Navigate(new HomeView());
         }
 
+        protected override void OnSourceInitialized( EventArgs e )
+        {
+            IconHelper.RemoveIcon(this);
+        }
+
         private void Border_MouseDown( object sender, MouseButtonEventArgs e )
         {
             if ( e.ChangedButton == MouseButton.Left )
@@ -29,41 +35,24 @@ namespace music
         private void Border_MouseLeftButtonDown( object sender, MouseButtonEventArgs e )
         {
             if ( e.ClickCount == 2 )
+            {
+                if ( true )
                 {
-                    if ( true )
-                        {
-                            if ( IsMaximize )
-                            {
-                                this.WindowState = WindowState.Normal;
-                                this.Width = 1280;
-                                this.Height = 780;
+                    if ( IsMaximize )
+                    {
+                        this.WindowState = WindowState.Normal;
+                        this.Width = 1280;
+                        this.Height = 780;
 
-                                IsMaximize = false;
-                            }
-                            else
-                            {
-                                this.WindowState = WindowState.Maximized;
-                                IsMaximize = true;
-                            }
-                        }
+                        IsMaximize = false;
+                    }
+                    else
+                    {
+                        this.WindowState = WindowState.Maximized;
+                        IsMaximize = true;
+                    }
                 }
             }
-
-        private void minWindowBtn_Click( object sender, RoutedEventArgs e )
-        {
-            this.WindowState = WindowState.Minimized;
-        }
-
-        private void maxWindowBtn_Click( object sender, RoutedEventArgs e )
-        {
-            if ( this.WindowState == WindowState.Normal )
-                this.WindowState = WindowState.Maximized;
-            else this.WindowState = WindowState.Normal;
-        }
-
-        private void closeWindowBtn_Click( object sender, RoutedEventArgs e )
-        {
-            Application.Current.Shutdown();
         }
 
         private void homeBtn_Click( object sender, RoutedEventArgs e )
@@ -133,7 +122,14 @@ namespace music
 
         private void accountBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new AccountView());
+            bool isSuccesLogin = false;
+            if ( isSuccesLogin )
+            {
+                navFrame.Navigate(new AccountView());
+            } else
+            {
+                navFrame.Navigate(new LoginView());
+            }
 
         }
     }

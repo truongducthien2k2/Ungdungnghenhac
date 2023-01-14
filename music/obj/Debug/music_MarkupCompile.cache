@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\App.xaml
-13446633180
+261035255974
+2353732275
+57-1944467140
+251946727023
+Component\CustomMessageBox.xaml;MainWindow.xaml;View\AccountView.xaml;View\Admin\AdvertisementAdminView.xaml;View\Admin\AlbumAdminView.xaml;View\Admin\ArtistAdminView.xaml;View\Admin\Artist\ArtistItemView.xaml;View\Admin\Artist\NewArtistView.xaml;View\Admin\HomeAdminView.xaml;View\Admin\SongAdminView.xaml;View\Admin\TopicAdminView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\ForgetPassword\ResetPassword.xaml;View\ForgetPassword\VerifyAccountView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainAdmin.xaml;View\PlayListView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
 
-18-216934628
-19-493789988
-MainWindow.xaml;View\AccountView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\PlayListView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
-
-True
+False
 

@@ -62,6 +62,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -80,18 +81,110 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Component\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\IconHelper.cs" />
+    <Compile Include="LocalStore\EmailResetPassword.cs" />
+    <Compile Include="LocalStore\OTPCode.cs" />
+    <Compile Include="Model\ADVERTISEMENT.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ALBUM.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AREA.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CATEGORY.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLIENT.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLIENT_LOVE_SONG.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLIENT_VIEW_SONG.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLIENT_VIEW_VIDEO.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\COMMENT.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="Model\FAVORITE_LIST.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FAVORITE_LIST_SONG.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PLAYLIST.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SINGER.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SONG.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SONG_PLAYLIST.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TOPIC.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VIDEO.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ArtistViewModel.cs" />
+    <Compile Include="ViewModel\VerifyAccountViewModel.cs" />
     <Compile Include="View\AccountView.xaml.cs">
       <DependentUpon>AccountView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AdvertisementAdminView.xaml.cs">
+      <DependentUpon>AdvertisementAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AlbumAdminView.xaml.cs">
+      <DependentUpon>AlbumAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\ArtistAdminView.xaml.cs">
+      <DependentUpon>ArtistAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Artist\ArtistItemView.xaml.cs">
+      <DependentUpon>ArtistItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Artist\NewArtistView.xaml.cs">
+      <DependentUpon>NewArtistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\HomeAdminView.xaml.cs">
+      <DependentUpon>HomeAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\SongAdminView.xaml.cs">
+      <DependentUpon>SongAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\TopicAdminView.xaml.cs">
+      <DependentUpon>TopicAdminView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AlbumView.xaml.cs">
       <DependentUpon>AlbumView.xaml</DependentUpon>
@@ -102,11 +195,23 @@
     <Compile Include="View\FavoriteListView.xaml.cs">
       <DependentUpon>FavoriteListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ForgetPassword\ResetPassword.xaml.cs">
+      <DependentUpon>ResetPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgetPassword\VerifyAccountView.xaml.cs">
+      <DependentUpon>VerifyAccountView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainAdmin.xaml.cs">
+      <DependentUpon>MainAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PlayListView.xaml.cs">
       <DependentUpon>PlayListView.xaml</DependentUpon>
@@ -126,6 +231,10 @@
     <Compile Include="View\VideoView.xaml.cs">
       <DependentUpon>VideoView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Component\CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -142,6 +251,38 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Admin\AdvertisementAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\AlbumAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\ArtistAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Artist\ArtistItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Artist\NewArtistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\HomeAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\SongAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\TopicAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AlbumView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,11 +295,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ForgetPassword\ResetPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ForgetPassword\VerifyAccountView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -223,7 +380,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PIC\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mono-5-6324.jpg" />
@@ -232,6 +388,12 @@
     <Content Include="Model\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DataModel.Context.cs</LastGenOutput>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\DataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
