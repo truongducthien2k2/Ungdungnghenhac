@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/database/musicapp.sql")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/datamodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/datamodel.tt")]
 

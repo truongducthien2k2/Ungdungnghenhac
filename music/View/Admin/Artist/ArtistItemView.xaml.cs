@@ -21,26 +21,26 @@ namespace music.View.Admin.Artist
     /// </summary>
     public partial class ArtistItemView : UserControl
     {
-        Page parentPage;
+        Frame MainContent;
         SINGER artist;
         public ArtistItemView()
         {
             InitializeComponent();
         }
 
-        public ArtistItemView(SINGER artist, Page parent)
+        public ArtistItemView(SINGER artist, Frame MainContent)
         {
             InitializeComponent();
             artistId.Text = artist.id.ToString();
             artistName.Text = artist.singerName;
             artistImage.Source = new BitmapImage(new Uri(artist.singerImage));
-            parentPage = parent;
+            this.MainContent = MainContent;
             this.artist = artist;
         }
 
         private void btnAdjust_Click( object sender, RoutedEventArgs e )
         {
-            NewArtistView newArtist = new NewArtistView(artist, "adjust");
+            NewArtistView newArtist = new NewArtistView(artist, "adjust", MainContent);
             newArtist.Show();
         }
     }

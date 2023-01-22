@@ -15,6 +15,9 @@ namespace music
         public MainWindow()
         {
             InitializeComponent();
+            MainAdmin admin = new MainAdmin();
+            admin.Show();
+            this.Close();
             navFrame.Navigate(new HomeView());
         }
 

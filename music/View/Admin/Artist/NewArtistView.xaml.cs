@@ -26,17 +26,19 @@ namespace music.View.Admin.Artist
         string selectedFileName;
         SINGER artist;
         string option;
+        Frame MainContent;
         public NewArtistView()
         {
             InitializeComponent();
         }
 
-        public NewArtistView(SINGER artist, string option)
+        public NewArtistView(SINGER artist, string option, Frame MainContent)
         {
             InitializeComponent();
             this.artist = artist;
             this.option = option ?? throw new ArgumentNullException(nameof(option));
             LoadData();
+            this.MainContent = MainContent;
         }
 
         private void LoadData()
@@ -88,6 +90,7 @@ namespace music.View.Admin.Artist
                             if ( result.Value )
                             {
                                 this.Close();
+                                MainContent.Navigate(new ArtistAdminView(MainContent));
                             }
                         }
                         break;
@@ -98,6 +101,7 @@ namespace music.View.Admin.Artist
                             if ( result.Value )
                             {
                                 this.Close();
+                                MainContent.Navigate(new ArtistAdminView(MainContent));
                             }
                         }
                         break;

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\App.xaml
-261035255974
+29-1341880446
 3322446459
-58268411538
+62442800077
 251946727023
-Component\CustomMessageBox.xaml;MainWindow.xaml;View\AccountView.xaml;View\Admin\AdvertisementAdminView.xaml;View\Admin\AlbumAdminView.xaml;View\Admin\ArtistAdminView.xaml;View\Admin\Artist\ArtistItemView.xaml;View\Admin\Artist\NewArtistView.xaml;View\Admin\HomeAdminView.xaml;View\Admin\SongAdminView.xaml;View\Admin\TopicAdminView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\ForgetPassword\ResetPassword.xaml;View\ForgetPassword\VerifyAccountView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainAdmin.xaml;View\PlayListView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
+Component\CustomMessageBox.xaml;MainWindow.xaml;View\AccountView.xaml;View\Admin\AdvertisementAdminView.xaml;View\Admin\AlbumAdminView.xaml;View\Admin\Artist\ArtistAdminView.xaml;View\Admin\Artist\ArtistItemView.xaml;View\Admin\Artist\NewArtistView.xaml;View\Admin\HomeAdminView.xaml;View\Admin\Song\AddNewSongView.xaml;View\Admin\Song\SongAdminView.xaml;View\Admin\Topic\NewTopicView.xaml;View\Admin\Topic\TopicAdminView.xaml;View\Admin\Topic\TopicItemView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\ForgetPassword\ResetPassword.xaml;View\ForgetPassword\VerifyAccountView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainAdmin.xaml;View\PlayListView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
 
-False
+True
 

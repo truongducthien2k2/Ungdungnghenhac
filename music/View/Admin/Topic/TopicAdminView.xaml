@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:music.View.Admin"
+      xmlns:local="clr-namespace:music.View.Admin" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TopicAdminView">
@@ -13,6 +13,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" 
@@ -23,6 +24,22 @@
                    FontSize="16"
                    Foreground="Gray"/>
 
+            <ScrollViewer Grid.Row="1">
+                <StackPanel x:Name="plTopics"/>
+            </ScrollViewer>
+
+            <Button x:Name="btnAddTopic" 
+                    Grid.Row="2"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Margin="0 0 20 0"
+                    Background="#088F8F"
+                    BorderThickness="0" Click="btnAddTopic_Click">
+                <Grid>
+                    <materialDesign:PackIcon Kind="Add" Width="20" Height="20" Foreground="White" VerticalAlignment="Center"/>
+                    <TextBlock Text="Thêm mới" FontSize="16" Margin="30 0 0 0"/>
+                </Grid>
+            </Button>
         </Grid>
     </Border>
 </Page>

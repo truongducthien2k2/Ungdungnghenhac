@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace music.View.Admin
+namespace music.View.Admin.Song
 {
     /// <summary>
-    /// Interaction logic for TopicAdminView.xaml
+    /// Interaction logic for AddNewSongView.xaml
     /// </summary>
-    public partial class TopicAdminView : Page
+    public partial class AddNewSongView : Window
     {
-        public TopicAdminView()
+        public AddNewSongView()
         {
             InitializeComponent();
         }

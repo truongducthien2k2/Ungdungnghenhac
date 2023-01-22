@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Menu-->
-            <Border Grid.Column="0" CornerRadius="0 0 0 10">
+            <Border Grid.Column="0" CornerRadius="0 0 0 10" BorderThickness="0 0 1 0" BorderBrush="LightGray">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="White" Offset="0"/>

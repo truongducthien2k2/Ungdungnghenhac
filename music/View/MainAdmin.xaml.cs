@@ -76,7 +76,7 @@ namespace music.View
 
         private void topicBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate (new TopicAdminView());
+            navFrame.Navigate (new TopicAdminView(navFrame));
         }
 
         private void albumBtn_Click( object sender, RoutedEventArgs e )
@@ -86,7 +86,7 @@ namespace music.View
 
         private void artistBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new ArtistAdminView());
+            navFrame.Navigate(new ArtistAdminView(navFrame));
         }
 
         private void advertisementBtn_Click( object sender, RoutedEventArgs e )

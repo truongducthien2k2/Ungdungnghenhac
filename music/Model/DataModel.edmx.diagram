@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="644f6f225e57442fb4eaaaf8bc5aa4ab" Name="Diagram1" ZoomLevel="64">
+      <Diagram DiagramId="644f6f225e57442fb4eaaaf8bc5aa4ab" Name="Diagram1" ZoomLevel="93">
         <EntityTypeShape EntityType="MusicAppModel.ADVERTISEMENT" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="MusicAppModel.ALBUM" Width="1.5" PointX="3" PointY="14.125" />
         <EntityTypeShape EntityType="MusicAppModel.AREA" Width="1.5" PointX="3" PointY="16.875" />

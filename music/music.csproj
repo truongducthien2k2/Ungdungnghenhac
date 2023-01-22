@@ -158,6 +158,7 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ArtistViewModel.cs" />
+    <Compile Include="ViewModel\TopicViewModel.cs" />
     <Compile Include="ViewModel\VerifyAccountViewModel.cs" />
     <Compile Include="View\AccountView.xaml.cs">
       <DependentUpon>AccountView.xaml</DependentUpon>
@@ -168,7 +169,7 @@
     <Compile Include="View\Admin\AlbumAdminView.xaml.cs">
       <DependentUpon>AlbumAdminView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\ArtistAdminView.xaml.cs">
+    <Compile Include="View\Admin\Artist\ArtistAdminView.xaml.cs">
       <DependentUpon>ArtistAdminView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Artist\ArtistItemView.xaml.cs">
@@ -180,11 +181,20 @@
     <Compile Include="View\Admin\HomeAdminView.xaml.cs">
       <DependentUpon>HomeAdminView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\SongAdminView.xaml.cs">
+    <Compile Include="View\Admin\Song\AddNewSongView.xaml.cs">
+      <DependentUpon>AddNewSongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Song\SongAdminView.xaml.cs">
       <DependentUpon>SongAdminView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\TopicAdminView.xaml.cs">
+    <Compile Include="View\Admin\Topic\NewTopicView.xaml.cs">
+      <DependentUpon>NewTopicView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Topic\TopicAdminView.xaml.cs">
       <DependentUpon>TopicAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Topic\TopicItemView.xaml.cs">
+      <DependentUpon>TopicItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AlbumView.xaml.cs">
       <DependentUpon>AlbumView.xaml</DependentUpon>
@@ -259,7 +269,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\ArtistAdminView.xaml">
+    <Page Include="View\Admin\Artist\ArtistAdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -275,11 +285,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\SongAdminView.xaml">
+    <Page Include="View\Admin\Song\AddNewSongView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\TopicAdminView.xaml">
+    <Page Include="View\Admin\Song\SongAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Topic\NewTopicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Topic\TopicAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Topic\TopicItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -361,6 +383,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="Model\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -382,9 +405,10 @@
     <Folder Include="PIC\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mono-5-6324.jpg" />
+    <None Include="Resources\mono.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\Database\MusicApp.sql" />
     <Content Include="Model\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DataModel.Context.cs</LastGenOutput>

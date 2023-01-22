@@ -26,15 +26,23 @@ namespace music.View.Admin
     public partial class ArtistAdminView : Page
     {
         ArtistViewModel artistVM = new ArtistViewModel();
+        Frame MainContent;
         public ArtistAdminView()
         {
             InitializeComponent();
             LoadSingerData();
         }
 
+        public ArtistAdminView(Frame MainContent)
+        {
+            InitializeComponent();
+            LoadSingerData();
+            this.MainContent = MainContent;
+        }
+
         private void btnNewArtist_Click( object sender, RoutedEventArgs e )
         {
-            NewArtistView newArtist = new NewArtistView(null, "add");
+            NewArtistView newArtist = new NewArtistView(null, "add", MainContent);
             newArtist.Show();
         }
 
@@ -44,7 +52,7 @@ namespace music.View.Admin
 
             foreach ( var item in singerList)
             {
-                plArtistList.Children.Add(new ArtistItemView(item, this));
+                plArtistList.Children.Add(new ArtistItemView(item, MainContent));
             }
         }
     }
