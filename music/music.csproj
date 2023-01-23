@@ -96,9 +96,6 @@
     <Compile Include="Model\AREA.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CATEGORY.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\CLIENT.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -158,6 +155,8 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ArtistViewModel.cs" />
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
+    <Compile Include="ViewModel\SongViewModel.cs" />
     <Compile Include="ViewModel\TopicViewModel.cs" />
     <Compile Include="ViewModel\VerifyAccountViewModel.cs" />
     <Compile Include="View\AccountView.xaml.cs">
@@ -181,11 +180,14 @@
     <Compile Include="View\Admin\HomeAdminView.xaml.cs">
       <DependentUpon>HomeAdminView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\Song\AddNewSongView.xaml.cs">
-      <DependentUpon>AddNewSongView.xaml</DependentUpon>
+    <Compile Include="View\Admin\Song\NewSongView.xaml.cs">
+      <DependentUpon>NewSongView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Song\SongAdminView.xaml.cs">
       <DependentUpon>SongAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Song\SongItemView.xaml.cs">
+      <DependentUpon>SongItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Topic\NewTopicView.xaml.cs">
       <DependentUpon>NewTopicView.xaml</DependentUpon>
@@ -285,11 +287,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\Song\AddNewSongView.xaml">
+    <Page Include="View\Admin\Song\NewSongView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Admin\Song\SongAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Song\SongItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

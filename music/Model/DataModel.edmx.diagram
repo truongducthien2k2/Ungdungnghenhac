@@ -5,29 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="644f6f225e57442fb4eaaaf8bc5aa4ab" Name="Diagram1" ZoomLevel="93">
-        <EntityTypeShape EntityType="MusicAppModel.ADVERTISEMENT" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MusicAppModel.ALBUM" Width="1.5" PointX="3" PointY="14.125" />
-        <EntityTypeShape EntityType="MusicAppModel.AREA" Width="1.5" PointX="3" PointY="16.875" />
-        <EntityTypeShape EntityType="MusicAppModel.CATEGORY" Width="1.5" PointX="3" PointY="10.75" />
-        <EntityTypeShape EntityType="MusicAppModel.CLIENT" Width="1.5" PointX="3" PointY="2.125" />
-        <EntityTypeShape EntityType="MusicAppModel.CLIENT_LOVE_SONG" Width="1.5" PointX="10.5" PointY="13.875" />
-        <EntityTypeShape EntityType="MusicAppModel.CLIENT_VIEW_SONG" Width="1.5" PointX="10.5" PointY="10.75" />
-        <EntityTypeShape EntityType="MusicAppModel.CLIENT_VIEW_VIDEO" Width="1.5" PointX="7.5" PointY="14.75" />
-        <EntityTypeShape EntityType="MusicAppModel.COMMENT" Width="1.5" PointX="10.5" PointY="6.75" />
-        <EntityTypeShape EntityType="MusicAppModel.FAVORITE_LIST" Width="1.5" PointX="5.25" PointY="6.125" />
-        <EntityTypeShape EntityType="MusicAppModel.FAVORITE_LIST_SONG" Width="1.5" PointX="7.5" PointY="8" />
-        <EntityTypeShape EntityType="MusicAppModel.PLAYLIST" Width="1.5" PointX="5.25" PointY="2.875" />
-        <EntityTypeShape EntityType="MusicAppModel.SINGER" Width="1.5" PointX="3" PointY="7.5" />
-        <EntityTypeShape EntityType="MusicAppModel.SONG" Width="1.5" PointX="5.25" PointY="9.5" />
-        <EntityTypeShape EntityType="MusicAppModel.SONG_PLAYLIST" Width="1.5" PointX="7.5" PointY="5" />
-        <EntityTypeShape EntityType="MusicAppModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MusicAppModel.TOPIC" Width="1.5" PointX="0.75" PointY="10.875" />
-        <EntityTypeShape EntityType="MusicAppModel.VIDEO" Width="1.5" PointX="8.25" PointY="10.75" />
+        <EntityTypeShape EntityType="MusicAppModel.ADVERTISEMENT" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MusicAppModel.ALBUM" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="MusicAppModel.AREA" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="MusicAppModel.CLIENT" Width="1.5" PointX="6" PointY="2.875" />
+        <EntityTypeShape EntityType="MusicAppModel.CLIENT_LOVE_SONG" Width="1.5" PointX="8.25" PointY="7.625" />
+        <EntityTypeShape EntityType="MusicAppModel.CLIENT_VIEW_SONG" Width="1.5" PointX="8.25" PointY="10.625" />
+        <EntityTypeShape EntityType="MusicAppModel.CLIENT_VIEW_VIDEO" Width="1.5" PointX="5.25" PointY="10.625" />
+        <EntityTypeShape EntityType="MusicAppModel.COMMENT" Width="1.5" PointX="5.25" PointY="14.625" />
+        <EntityTypeShape EntityType="MusicAppModel.FAVORITE_LIST" Width="1.5" PointX="6" PointY="17.875" />
+        <EntityTypeShape EntityType="MusicAppModel.FAVORITE_LIST_SONG" Width="1.5" PointX="8.25" PointY="13.75" />
+        <EntityTypeShape EntityType="MusicAppModel.PLAYLIST" Width="1.5" PointX="3" PointY="5.625" />
+        <EntityTypeShape EntityType="MusicAppModel.SINGER" Width="1.5" PointX="0.75" PointY="13.625" />
+        <EntityTypeShape EntityType="MusicAppModel.SONG" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="MusicAppModel.SONG_PLAYLIST" Width="1.5" PointX="5.25" PointY="7.75" />
+        <EntityTypeShape EntityType="MusicAppModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MusicAppModel.TOPIC" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="MusicAppModel.VIDEO" Width="1.5" PointX="3" PointY="16.125" />
         <AssociationConnector Association="MusicAppModel.FK__SONG__albumId__5165187F" />
         <AssociationConnector Association="MusicAppModel.FK__SONG__areaId__534D60F1" />
-        <AssociationConnector Association="MusicAppModel.FK__CATEGORY__topicI__3A81B327" />
-        <AssociationConnector Association="MusicAppModel.FK__SONG__categoryId__5070F446" />
-        <AssociationConnector Association="MusicAppModel.FK__VIDEO__categoryI__440B1D61" />
         <AssociationConnector Association="MusicAppModel.FK__CLIENT_LO__clien__778AC167" />
         <AssociationConnector Association="MusicAppModel.FK__CLIENT_VI__clien__6FE99F9F" />
         <AssociationConnector Association="MusicAppModel.FK__CLIENT_VI__clien__73BA3083" />

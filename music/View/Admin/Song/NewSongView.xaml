@@ -1,0 +1,130 @@
+﻿<Window x:Class="music.View.Admin.Song.NewSongView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:music.View.Admin.Song"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="NewSongView" Height="530" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+
+            <Border Margin="0 50 0 20" Width="150" 
+                    Height="150" 
+                    CornerRadius="100" 
+                    Background="GhostWhite" 
+                    BorderBrush="Gainsboro" 
+                    BorderThickness="1" 
+                    Grid.Row="0">
+                <Image  x:Name="ImageViewer"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" 
+                            Stretch="Fill" >
+                    <Image.Clip>
+                        <RectangleGeometry RadiusX="100"
+                                           RadiusY="100"
+                                           Rect="0,0,148,148"/>
+                    </Image.Clip>
+                </Image>
+
+            </Border>
+
+
+            <Button x:Name="btnAddImage"
+                    Content="Thêm hình ảnh"
+                    Width="150"
+                    Background="#5F9EA0"
+                    BorderThickness="0"
+                    VerticalAlignment="Top" Click="btnAddImage_Click" />
+
+            
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10 0">
+            <TextBlock Text="THÔNG TIN BÀI HÁT"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       FontSize="18"
+                       Margin="0 20"/>
+
+            <TextBox x:Name="tbSongName"
+                     materialDesign:HintAssist.Hint="Tên bài hát"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     FontSize="15"/>
+
+            <ComboBox x:Name="cbTopicList"
+                      Margin="0 6"
+                      FontSize="15"
+                      materialDesign:HintAssist.Hint="Chủ đề"
+                      IsEditable="True"
+                      materialDesign:HintAssist.HintOpacity=".26" />
+
+            <ComboBox x:Name="cbAlbumList"
+                      Margin="0 6"
+                      FontSize="15"
+                      materialDesign:HintAssist.Hint="Album"
+                      IsEditable="True"
+                      materialDesign:HintAssist.HintOpacity=".26" />
+
+            <ComboBox x:Name="cbSingerList"
+                      Margin="0 6"
+                      FontSize="15"
+                      materialDesign:HintAssist.Hint="Ca sĩ"
+                      IsEditable="True"
+                      materialDesign:HintAssist.HintOpacity=".26" />
+
+            <ComboBox x:Name="cbAreaList"
+                      Margin="0 6"
+                      FontSize="15"
+                      materialDesign:HintAssist.Hint="Khu vực"
+                      IsEditable="True"
+                      materialDesign:HintAssist.HintOpacity=".26" />
+
+            <TextBox x:Name="tbLyrics"
+                     VerticalAlignment="Top"
+                     Height="100"
+                     Margin="0 6"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     FontSize="15"
+                     materialDesign:HintAssist.Hint="Lời bài hát"
+                     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" />
+
+            <Grid Margin="0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBox x:Name="tbMusicPath"
+                         Grid.Column="0"
+                         materialDesign:HintAssist.Hint="Địa chỉ file"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+                <Button x:Name="btnAddMusicFile"
+                        Content="Thêm địa chỉ"
+                        Grid.Column="1"
+                        Width="120"
+                        Background="#5F9EA0"
+                        BorderThickness="0"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Right" Click="btnAddMusicFile_Click"/>
+            </Grid>
+            
+            <Button x:Name="btnSubmit"
+                    Margin="0 20 0 0"
+                    Content="Xác nhận"
+                    Width="150"
+                    Background="#088F8F"
+                    BorderThickness="0"
+                    VerticalAlignment="Center" Click="btnSubmit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

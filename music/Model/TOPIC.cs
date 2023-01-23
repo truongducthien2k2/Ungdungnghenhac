@@ -16,7 +16,6 @@ namespace music.Model
     {
         public TOPIC()
         {
-            this.CATEGORY = new HashSet<CATEGORY>();
             this.SONG = new HashSet<SONG>();
             this.VIDEO = new HashSet<VIDEO>();
         }
@@ -25,7 +24,6 @@ namespace music.Model
         public string topicName { get; set; }
         public string topicImage { get; set; }
     
-        public virtual ICollection<CATEGORY> CATEGORY { get; set; }
         public virtual ICollection<SONG> SONG { get; set; }
         public virtual ICollection<VIDEO> VIDEO { get; set; }
     }

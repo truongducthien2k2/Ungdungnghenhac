@@ -27,7 +27,6 @@ namespace music.Model
         public int id { get; set; }
         public string songName { get; set; }
         public Nullable<int> topicId { get; set; }
-        public Nullable<int> categoryId { get; set; }
         public Nullable<int> albumId { get; set; }
         public Nullable<int> singerId { get; set; }
         public string lyrics { get; set; }
@@ -37,7 +36,6 @@ namespace music.Model
     
         public virtual ALBUM ALBUM { get; set; }
         public virtual AREA AREA { get; set; }
-        public virtual CATEGORY CATEGORY { get; set; }
         public virtual ICollection<CLIENT_LOVE_SONG> CLIENT_LOVE_SONG { get; set; }
         public virtual ICollection<CLIENT_VIEW_SONG> CLIENT_VIEW_SONG { get; set; }
         public virtual ICollection<CLIENT_VIEW_VIDEO> CLIENT_VIEW_VIDEO { get; set; }

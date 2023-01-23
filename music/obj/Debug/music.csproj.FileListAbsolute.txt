@@ -119,13 +119,15 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\NewArtistView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongAdminView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongAdminView.baml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\AddNewSongView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\NewTopicView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicAdminView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\AddNewSongView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\NewTopicView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicAdminView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicItemView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistAdminView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistAdminView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicItemView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\NewSongView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\NewSongView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongItemView.baml

@@ -71,7 +71,7 @@ namespace music.View
 
         private void songBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new SongAdminView());
+            navFrame.Navigate(new SongAdminView(navFrame));
         }
 
         private void topicBtn_Click( object sender, RoutedEventArgs e )

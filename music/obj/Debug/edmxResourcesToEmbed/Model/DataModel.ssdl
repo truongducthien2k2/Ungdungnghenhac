@@ -24,15 +24,6 @@
     <Property Name="id" Type="char" MaxLength="1" Nullable="false" />
     <Property Name="areaName" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="CATEGORY">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="categoryName" Type="nvarchar" MaxLength="100" />
-    <Property Name="categoryImage" Type="varchar" MaxLength="500" />
-    <Property Name="topicId" Type="int" />
-  </EntityType>
   <EntityType Name="CLIENT">
     <Key>
       <PropertyRef Name="id" />
@@ -125,7 +116,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="songName" Type="nvarchar" MaxLength="100" />
     <Property Name="topicId" Type="int" />
-    <Property Name="categoryId" Type="int" />
     <Property Name="albumId" Type="int" />
     <Property Name="singerId" Type="int" />
     <Property Name="lyrics" Type="text" />
@@ -168,20 +158,7 @@
     <Property Name="videoImage" Type="varchar" MaxLength="500" />
     <Property Name="videoDesc" Type="text" />
     <Property Name="topicId" Type="int" />
-    <Property Name="categoryId" Type="int" />
   </EntityType>
-  <Association Name="FK__CATEGORY__topicI__3A81B327">
-    <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
-    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TOPIC">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="CATEGORY">
-        <PropertyRef Name="topicId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__CLIENT_LO__clien__778AC167">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="CLIENT_LOVE_SONG" Type="Self.CLIENT_LOVE_SONG" Multiplicity="*" />
@@ -350,18 +327,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__categoryId__5070F446">
-    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
-    <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CATEGORY">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="SONG">
-        <PropertyRef Name="categoryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__SONG__singerId__52593CB8">
     <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1" />
     <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
@@ -410,18 +375,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VIDEO__categoryI__440B1D61">
-    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
-    <End Role="VIDEO" Type="Self.VIDEO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CATEGORY">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VIDEO">
-        <PropertyRef Name="categoryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__VIDEO__topicId__4316F928">
     <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
     <End Role="VIDEO" Type="Self.VIDEO" Multiplicity="*" />
@@ -438,7 +391,6 @@
     <EntitySet Name="ADVERTISEMENT" EntityType="Self.ADVERTISEMENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ALBUM" EntityType="Self.ALBUM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AREA" EntityType="Self.AREA" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENT_LOVE_SONG" EntityType="Self.CLIENT_LOVE_SONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLIENT_VIEW_SONG" EntityType="Self.CLIENT_VIEW_SONG" Schema="dbo" store:Type="Tables" />
@@ -453,10 +405,6 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TOPIC" EntityType="Self.TOPIC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__CATEGORY__topicI__3A81B327" Association="Self.FK__CATEGORY__topicI__3A81B327">
-      <End Role="TOPIC" EntitySet="TOPIC" />
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-    </AssociationSet>
     <AssociationSet Name="FK__CLIENT_LO__clien__778AC167" Association="Self.FK__CLIENT_LO__clien__778AC167">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_LOVE_SONG" EntitySet="CLIENT_LOVE_SONG" />
@@ -513,10 +461,6 @@
       <End Role="AREA" EntitySet="AREA" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__categoryId__5070F446" Association="Self.FK__SONG__categoryId__5070F446">
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-      <End Role="SONG" EntitySet="SONG" />
-    </AssociationSet>
     <AssociationSet Name="FK__SONG__singerId__52593CB8" Association="Self.FK__SONG__singerId__52593CB8">
       <End Role="SINGER" EntitySet="SINGER" />
       <End Role="SONG" EntitySet="SONG" />
@@ -532,10 +476,6 @@
     <AssociationSet Name="FK__SONG_PLAY__songI__5FB337D6" Association="Self.FK__SONG_PLAY__songI__5FB337D6">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="SONG_PLAYLIST" EntitySet="SONG_PLAYLIST" />
-    </AssociationSet>
-    <AssociationSet Name="FK__VIDEO__categoryI__440B1D61" Association="Self.FK__VIDEO__categoryI__440B1D61">
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-      <End Role="VIDEO" EntitySet="VIDEO" />
     </AssociationSet>
     <AssociationSet Name="FK__VIDEO__topicId__4316F928" Association="Self.FK__VIDEO__topicId__4316F928">
       <End Role="TOPIC" EntitySet="TOPIC" />

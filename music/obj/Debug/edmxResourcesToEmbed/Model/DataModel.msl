@@ -28,16 +28,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CATEGORY">
-      <EntityTypeMapping TypeName="MusicAppModel.CATEGORY">
-        <MappingFragment StoreEntitySet="CATEGORY">
-          <ScalarProperty Name="topicId" ColumnName="topicId" />
-          <ScalarProperty Name="categoryImage" ColumnName="categoryImage" />
-          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="CLIENT">
       <EntityTypeMapping TypeName="MusicAppModel.CLIENT">
         <MappingFragment StoreEntitySet="CLIENT">
@@ -141,7 +131,6 @@
           <ScalarProperty Name="lyrics" ColumnName="lyrics" />
           <ScalarProperty Name="singerId" ColumnName="singerId" />
           <ScalarProperty Name="albumId" ColumnName="albumId" />
-          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
           <ScalarProperty Name="topicId" ColumnName="topicId" />
           <ScalarProperty Name="songName" ColumnName="songName" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -180,7 +169,6 @@
     <EntitySetMapping Name="VIDEO">
       <EntityTypeMapping TypeName="MusicAppModel.VIDEO">
         <MappingFragment StoreEntitySet="VIDEO">
-          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
           <ScalarProperty Name="topicId" ColumnName="topicId" />
           <ScalarProperty Name="videoDesc" ColumnName="videoDesc" />
           <ScalarProperty Name="videoImage" ColumnName="videoImage" />

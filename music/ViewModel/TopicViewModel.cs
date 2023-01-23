@@ -35,6 +35,19 @@ namespace music.ViewModel
             return 1;
         }
 
+        public int RemoveTopic(int id)
+        {
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM TOPIC WHERE id={id}");
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
+
         public List<TOPIC> GetAllTopic()
         {
             return DataProvider.Ins.DB.TOPIC.ToList();

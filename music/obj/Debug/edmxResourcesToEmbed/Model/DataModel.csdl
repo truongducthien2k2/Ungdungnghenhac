@@ -4,7 +4,6 @@
     <EntitySet Name="ADVERTISEMENT" EntityType="MusicAppModel.ADVERTISEMENT" />
     <EntitySet Name="ALBUM" EntityType="MusicAppModel.ALBUM" />
     <EntitySet Name="AREA" EntityType="MusicAppModel.AREA" />
-    <EntitySet Name="CATEGORY" EntityType="MusicAppModel.CATEGORY" />
     <EntitySet Name="CLIENT" EntityType="MusicAppModel.CLIENT" />
     <EntitySet Name="CLIENT_LOVE_SONG" EntityType="MusicAppModel.CLIENT_LOVE_SONG" />
     <EntitySet Name="CLIENT_VIEW_SONG" EntityType="MusicAppModel.CLIENT_VIEW_SONG" />
@@ -26,18 +25,6 @@
     <AssociationSet Name="FK__SONG__areaId__534D60F1" Association="MusicAppModel.FK__SONG__areaId__534D60F1">
       <End Role="AREA" EntitySet="AREA" />
       <End Role="SONG" EntitySet="SONG" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CATEGORY__topicI__3A81B327" Association="MusicAppModel.FK__CATEGORY__topicI__3A81B327">
-      <End Role="TOPIC" EntitySet="TOPIC" />
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-    </AssociationSet>
-    <AssociationSet Name="FK__SONG__categoryId__5070F446" Association="MusicAppModel.FK__SONG__categoryId__5070F446">
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-      <End Role="SONG" EntitySet="SONG" />
-    </AssociationSet>
-    <AssociationSet Name="FK__VIDEO__categoryI__440B1D61" Association="MusicAppModel.FK__VIDEO__categoryI__440B1D61">
-      <End Role="CATEGORY" EntitySet="CATEGORY" />
-      <End Role="VIDEO" EntitySet="VIDEO" />
     </AssociationSet>
     <AssociationSet Name="FK__CLIENT_LO__clien__778AC167" Association="MusicAppModel.FK__CLIENT_LO__clien__778AC167">
       <End Role="CLIENT" EntitySet="CLIENT" />
@@ -133,18 +120,6 @@
     <Property Name="id" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="areaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__areaId__534D60F1" FromRole="AREA" ToRole="SONG" />
-  </EntityType>
-  <EntityType Name="CATEGORY">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="categoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="categoryImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="topicId" Type="Int32" />
-    <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__CATEGORY__topicI__3A81B327" FromRole="CATEGORY" ToRole="TOPIC" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__categoryId__5070F446" FromRole="CATEGORY" ToRole="SONG" />
-    <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__categoryI__440B1D61" FromRole="CATEGORY" ToRole="VIDEO" />
   </EntityType>
   <EntityType Name="CLIENT">
     <Key>
@@ -259,7 +234,6 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="songName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="topicId" Type="Int32" />
-    <Property Name="categoryId" Type="Int32" />
     <Property Name="albumId" Type="Int32" />
     <Property Name="singerId" Type="Int32" />
     <Property Name="lyrics" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -268,7 +242,6 @@
     <Property Name="areaId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="ALBUM" Relationship="MusicAppModel.FK__SONG__albumId__5165187F" FromRole="SONG" ToRole="ALBUM" />
     <NavigationProperty Name="AREA" Relationship="MusicAppModel.FK__SONG__areaId__534D60F1" FromRole="SONG" ToRole="AREA" />
-    <NavigationProperty Name="CATEGORY" Relationship="MusicAppModel.FK__SONG__categoryId__5070F446" FromRole="SONG" ToRole="CATEGORY" />
     <NavigationProperty Name="CLIENT_LOVE_SONG" Relationship="MusicAppModel.FK__CLIENT_LO__songI__76969D2E" FromRole="SONG" ToRole="CLIENT_LOVE_SONG" />
     <NavigationProperty Name="CLIENT_VIEW_SONG" Relationship="MusicAppModel.FK__CLIENT_VI__songI__6EF57B66" FromRole="SONG" ToRole="CLIENT_VIEW_SONG" />
     <NavigationProperty Name="CLIENT_VIEW_VIDEO" Relationship="MusicAppModel.FK__CLIENT_VI__video__72C60C4A" FromRole="SONG" ToRole="CLIENT_VIEW_VIDEO" />
@@ -305,7 +278,6 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="topicName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="topicImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="CATEGORY" Relationship="MusicAppModel.FK__CATEGORY__topicI__3A81B327" FromRole="TOPIC" ToRole="CATEGORY" />
     <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__topicId__4F7CD00D" FromRole="TOPIC" ToRole="SONG" />
     <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="TOPIC" ToRole="VIDEO" />
   </EntityType>
@@ -318,8 +290,6 @@
     <Property Name="videoImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="videoDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="topicId" Type="Int32" />
-    <Property Name="categoryId" Type="Int32" />
-    <NavigationProperty Name="CATEGORY" Relationship="MusicAppModel.FK__VIDEO__categoryI__440B1D61" FromRole="VIDEO" ToRole="CATEGORY" />
     <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="VIDEO" ToRole="TOPIC" />
   </EntityType>
   <Association Name="FK__SONG__albumId__5165187F">
@@ -343,42 +313,6 @@
       </Principal>
       <Dependent Role="SONG">
         <PropertyRef Name="areaId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CATEGORY__topicI__3A81B327">
-    <End Type="MusicAppModel.TOPIC" Role="TOPIC" Multiplicity="0..1" />
-    <End Type="MusicAppModel.CATEGORY" Role="CATEGORY" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TOPIC">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="CATEGORY">
-        <PropertyRef Name="topicId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__SONG__categoryId__5070F446">
-    <End Type="MusicAppModel.CATEGORY" Role="CATEGORY" Multiplicity="0..1" />
-    <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CATEGORY">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="SONG">
-        <PropertyRef Name="categoryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__VIDEO__categoryI__440B1D61">
-    <End Type="MusicAppModel.CATEGORY" Role="CATEGORY" Multiplicity="0..1" />
-    <End Type="MusicAppModel.VIDEO" Role="VIDEO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CATEGORY">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VIDEO">
-        <PropertyRef Name="categoryId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

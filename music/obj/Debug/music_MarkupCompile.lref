@@ -8,7 +8,7 @@ FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Artist\ArtistItemView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Artist\NewArtistView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\HomeAdminView.xaml;;
-FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Song\AddNewSongView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Song\NewSongView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Song\SongAdminView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Topic\NewTopicView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Topic\TopicAdminView.xaml;;
@@ -28,4 +28,5 @@ FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\SongI
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\SongView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\TopicView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\VideoView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Admin\Song\SongItemView.xaml;;
 

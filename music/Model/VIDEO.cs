@@ -19,9 +19,7 @@ namespace music.Model
         public string videoImage { get; set; }
         public string videoDesc { get; set; }
         public Nullable<int> topicId { get; set; }
-        public Nullable<int> categoryId { get; set; }
     
-        public virtual CATEGORY CATEGORY { get; set; }
         public virtual TOPIC TOPIC { get; set; }
     }
 }

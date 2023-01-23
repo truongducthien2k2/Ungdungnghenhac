@@ -1,4 +1,6 @@
-﻿using music.Model;
+﻿using music.Component;
+using music.Model;
+using music.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,7 @@ namespace music.View.Admin.Topic
     /// </summary>
     public partial class TopicItemView : UserControl
     {
+        TopicViewModel topicVM = new TopicViewModel();
         Frame MainContent;
         TOPIC topic;
         public TopicItemView()
@@ -50,7 +53,22 @@ namespace music.View.Admin.Topic
 
         private void btnRemoveTopic_Click( object sender, RoutedEventArgs e )
         {
-
+            if ( topicVM.RemoveTopic(topic.id) == 1 )
+            {
+                bool? result = new CustomMessageBox("Xóa chủ đề thành công!!!", "Success").ShowDialog();
+                if ( result.Value )
+                {
+                    MainContent.Navigate(new TopicAdminView(MainContent));
+                }
+            }
+            else
+            {
+                bool? result = new CustomMessageBox("Bạn không thể xóa chủ đề này!!!", "Error").ShowDialog();
+                if ( result.Value )
+                {
+                    MainContent.Navigate(new TopicAdminView(MainContent));
+                }
+            }
         }
     }
 }

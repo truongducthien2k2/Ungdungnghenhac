@@ -28,7 +28,6 @@ namespace music.Model
         public DbSet<ADVERTISEMENT> ADVERTISEMENT { get; set; }
         public DbSet<ALBUM> ALBUM { get; set; }
         public DbSet<AREA> AREA { get; set; }
-        public DbSet<CATEGORY> CATEGORY { get; set; }
         public DbSet<CLIENT> CLIENT { get; set; }
         public DbSet<CLIENT_LOVE_SONG> CLIENT_LOVE_SONG { get; set; }
         public DbSet<CLIENT_VIEW_SONG> CLIENT_VIEW_SONG { get; set; }

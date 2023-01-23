@@ -11,9 +11,8 @@ CREATE TABLE CLIENT(
  isAdmin BIT,
  VIP BIT
 )
-select * from CLIENT
-INSERT INTO CLIENT (userName, fullName, email, phone, isAdmin, VIP) VALUES ('annoy', N'Lê Thế Phúc', 'lethephuc2002@gmail.com', '0368341595', 0, 0)
 
+INSERT INTO CLIENT (userName, fullName, email, phone, isAdmin, VIP) VALUES ('annoy', N'Lê Thế Phúc', 'lethephuc2002@gmail.com', '0368341595', 0, 0)
 
 CREATE TABLE VIDEO(
  id INT IDENTITY(1,1) PRIMARY KEY,
@@ -21,14 +20,12 @@ CREATE TABLE VIDEO(
  videoImage VARCHAR(500),
  videoDesc TEXT,
  topicId INT REFERENCES TOPIC(id),
- categoryId INT REFERENCES CATEGORY(id),
 )
 
 CREATE TABLE SONG(
  id INT IDENTITY(1,1) PRIMARY KEY,
  songName NVARCHAR(100),
  topicId INT REFERENCES TOPIC(id),
- categoryId INT REFERENCES CATEGORY(id),
  albumId INT REFERENCES ALBUM(id),
  singerId INT REFERENCES SINGER(id),
  lyrics TEXT,
@@ -43,13 +40,6 @@ CREATE TABLE TOPIC(
  topicImage VARCHAR(500),
 )
 
-CREATE TABLE CATEGORY(
- id INT IDENTITY(1,1) PRIMARY KEY,
- categoryName NVARCHAR(100),
- categoryImage VARCHAR(500),
- topicId INT REFERENCES TOPIC(id)
-)
-
 CREATE TABLE ALBUM(
  id INT IDENTITY(1,1) PRIMARY KEY,
  albumName NVARCHAR(100),
@@ -62,7 +52,7 @@ CREATE TABLE SINGER(
  singerName NVARCHAR(100),
  intro NVARCHAR(MAX),
  singerImage VARCHAR(500)
-)select * from SINGER
+)
 
 CREATE TABLE AREA(
  id CHAR(1) PRIMARY KEY,
