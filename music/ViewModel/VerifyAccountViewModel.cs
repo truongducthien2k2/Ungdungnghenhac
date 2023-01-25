@@ -10,7 +10,7 @@ namespace music.ViewModel
 {
     internal class VerifyAccountViewModel
     {
-        public bool IsExistedEmailInSysten(string email)
+        public bool IsExistedEmailInSystem(string email)
         {
             return DataProvider.Ins.DB.CLIENT.SqlQuery($"SELECT * FROM CLIENT WHERE email='{email}'").Count() > 0;
         }

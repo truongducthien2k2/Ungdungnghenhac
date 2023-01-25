@@ -14,16 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace music.View
+namespace music.View.Admin
 {
     /// <summary>
-    /// Interaction logic for AccountView.xaml
+    /// Interaction logic for AccountAdminView.xaml
     /// </summary>
-    public partial class AccountView : Page
+    public partial class AccountAdminView : Page
     {
         AccountViewModel accountVM = new AccountViewModel();
-       
-        public AccountView()
+        public AccountAdminView()
         {
             InitializeComponent();
         }

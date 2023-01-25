@@ -17,6 +17,7 @@
     <EntitySet Name="SONG_PLAYLIST" EntityType="MusicAppModel.SONG_PLAYLIST" />
     <EntitySet Name="sysdiagrams" EntityType="MusicAppModel.sysdiagrams" />
     <EntitySet Name="TOPIC" EntityType="MusicAppModel.TOPIC" />
+    <EntitySet Name="USER_LOGIN_CREDENTIAL" EntityType="MusicAppModel.USER_LOGIN_CREDENTIAL" />
     <EntitySet Name="VIDEO" EntityType="MusicAppModel.VIDEO" />
     <AssociationSet Name="FK__SONG__albumId__5165187F" Association="MusicAppModel.FK__SONG__albumId__5165187F">
       <End Role="ALBUM" EntitySet="ALBUM" />
@@ -236,9 +237,9 @@
     <Property Name="topicId" Type="Int32" />
     <Property Name="albumId" Type="Int32" />
     <Property Name="singerId" Type="Int32" />
-    <Property Name="lyrics" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="songImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="songCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="lyrics" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="songImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="songCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="areaId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="ALBUM" Relationship="MusicAppModel.FK__SONG__albumId__5165187F" FromRole="SONG" ToRole="ALBUM" />
     <NavigationProperty Name="AREA" Relationship="MusicAppModel.FK__SONG__areaId__534D60F1" FromRole="SONG" ToRole="AREA" />
@@ -280,6 +281,13 @@
     <Property Name="topicImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__topicId__4F7CD00D" FromRole="TOPIC" ToRole="SONG" />
     <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="TOPIC" ToRole="VIDEO" />
+  </EntityType>
+  <EntityType Name="USER_LOGIN_CREDENTIAL">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isAdmin" Type="Boolean" />
   </EntityType>
   <EntityType Name="VIDEO">
     <Key>

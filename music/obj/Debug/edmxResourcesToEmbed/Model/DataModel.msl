@@ -166,6 +166,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="USER_LOGIN_CREDENTIAL">
+      <EntityTypeMapping TypeName="MusicAppModel.USER_LOGIN_CREDENTIAL">
+        <MappingFragment StoreEntitySet="USER_LOGIN_CREDENTIAL">
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="VIDEO">
       <EntityTypeMapping TypeName="MusicAppModel.VIDEO">
         <MappingFragment StoreEntitySet="VIDEO">

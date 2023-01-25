@@ -1,5 +1,6 @@
 ﻿using music.Component;
 using music.View.Admin;
+using music.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,11 @@ namespace music.View
     /// </summary>
     public partial class MainAdmin : Window
     {
+        AccountViewModel accountVM = new AccountViewModel();
         public MainAdmin()
         {
             InitializeComponent();
+            StoreData();
             navFrame.Navigate(new HomeAdminView());
         }
 
@@ -64,6 +67,13 @@ namespace music.View
             }
         }
 
+        private void StoreData()
+        {
+            var account = accountVM.AccountData();
+            Properties.Settings.Default ["user"] = account.userName;
+            Properties.Settings.Default ["isAdmin"] = account.isAdmin;
+        }
+
         private void homeBtn_Click( object sender, RoutedEventArgs e )
         {
             navFrame.Navigate(new HomeAdminView());
@@ -96,7 +106,7 @@ namespace music.View
 
         private void accountBtn_Click( object sender, RoutedEventArgs e )
         {
-
+            navFrame.Navigate(new AccountAdminView());
         }
     }
 }

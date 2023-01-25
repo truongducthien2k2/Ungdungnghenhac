@@ -30,7 +30,7 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="userName" Type="varchar" MaxLength="50" />
-    <Property Name="pass" Type="text" />
+    <Property Name="pass" Type="varchar(max)" />
     <Property Name="fullName" Type="nvarchar" MaxLength="100" />
     <Property Name="email" Type="varchar" MaxLength="100" />
     <Property Name="phone" Type="char" MaxLength="10" />
@@ -118,9 +118,9 @@
     <Property Name="topicId" Type="int" />
     <Property Name="albumId" Type="int" />
     <Property Name="singerId" Type="int" />
-    <Property Name="lyrics" Type="text" />
-    <Property Name="songImage" Type="varchar" MaxLength="500" />
-    <Property Name="songCode" Type="varchar(max)" />
+    <Property Name="lyrics" Type="nvarchar(max)" />
+    <Property Name="songImage" Type="nvarchar" MaxLength="500" />
+    <Property Name="songCode" Type="nvarchar" MaxLength="500" />
     <Property Name="areaId" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="SONG_PLAYLIST">
@@ -148,6 +148,13 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="topicName" Type="nvarchar" MaxLength="100" />
     <Property Name="topicImage" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="USER_LOGIN_CREDENTIAL">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isAdmin" Type="bit" />
   </EntityType>
   <EntityType Name="VIDEO">
     <Key>
@@ -375,6 +382,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__USER_LOGI__userN__17F790F9' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__USER_LOGI__userN__17F790F9" />-->
   <Association Name="FK__VIDEO__topicId__4316F928">
     <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
     <End Role="VIDEO" Type="Self.VIDEO" Multiplicity="*" />
@@ -404,6 +414,7 @@
     <EntitySet Name="SONG_PLAYLIST" EntityType="Self.SONG_PLAYLIST" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TOPIC" EntityType="Self.TOPIC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_LOGIN_CREDENTIAL" EntityType="Self.USER_LOGIN_CREDENTIAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__CLIENT_LO__clien__778AC167" Association="Self.FK__CLIENT_LO__clien__778AC167">
       <End Role="CLIENT" EntitySet="CLIENT" />

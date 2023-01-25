@@ -89,7 +89,7 @@ namespace music.View.ForgetPassword
             else
             {
                 VerifyAccountViewModel verifyAccountVM = new VerifyAccountViewModel();
-                if ( !IsValidEmail(txtEmail.Text) || !verifyAccountVM.IsExistedEmailInSysten(txtEmail.Text) )
+                if ( !IsValidEmail(txtEmail.Text) || !verifyAccountVM.IsExistedEmailInSystem(txtEmail.Text) )
                 {
                     CustomMessageBox message = new CustomMessageBox("Email không chính xác", "Error");
                     message.Show();

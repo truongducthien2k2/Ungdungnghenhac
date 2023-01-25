@@ -151,9 +151,13 @@
     <Compile Include="Model\TOPIC.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\USER_LOGIN_CREDENTIAL.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\VIDEO.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AccountViewModel.cs" />
     <Compile Include="ViewModel\ArtistViewModel.cs" />
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\SongViewModel.cs" />
@@ -162,10 +166,13 @@
     <Compile Include="View\AccountView.xaml.cs">
       <DependentUpon>AccountView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\AdvertisementAdminView.xaml.cs">
+    <Compile Include="View\Admin\AccountAdminView.xaml.cs">
+      <DependentUpon>AccountAdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Advertisement\AdvertisementAdminView.xaml.cs">
       <DependentUpon>AdvertisementAdminView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\AlbumAdminView.xaml.cs">
+    <Compile Include="View\Admin\Album\AlbumAdminView.xaml.cs">
       <DependentUpon>AlbumAdminView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Artist\ArtistAdminView.xaml.cs">
@@ -263,11 +270,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\AdvertisementAdminView.xaml">
+    <Page Include="View\Admin\AccountAdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Admin\AlbumAdminView.xaml">
+    <Page Include="View\Admin\Advertisement\AdvertisementAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Album\AlbumAdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,5 +1,6 @@
 ﻿using music.Component;
 using music.View;
+using music.ViewModel;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -11,14 +12,12 @@ namespace music
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-        {
+    {
+        AccountViewModel accountVM = new AccountViewModel();
         public MainWindow()
         {
             InitializeComponent();
-            MainAdmin admin = new MainAdmin();
-            admin.Show();
-            this.Close();
-            navFrame.Navigate(new HomeView());
+            HandleLogin();
         }
 
         protected override void OnSourceInitialized( EventArgs e )
@@ -56,6 +55,31 @@ namespace music
                     }
                 }
             }
+        }
+
+        private void HandleLogin()
+        {
+            if (accountVM.AccountData() != null)
+            {
+                if ( (bool) accountVM.AccountData().isAdmin )
+                {
+                    MainAdmin admin = new MainAdmin();
+                    this.Close();
+                    admin.Show();
+                }
+                else
+                {
+                    StoreData();
+                    navFrame.Navigate(new HomeView());
+                }
+            }
+        }
+
+        private void StoreData()
+        {
+            var account = accountVM.AccountData();
+            Properties.Settings.Default ["user"] = account.userName;
+            Properties.Settings.Default ["isAdmin"] = account.isAdmin;
         }
 
         private void homeBtn_Click( object sender, RoutedEventArgs e )
@@ -125,15 +149,13 @@ namespace music
 
         private void accountBtn_Click( object sender, RoutedEventArgs e )
         {
-            bool isSuccesLogin = false;
-            if ( isSuccesLogin )
+            if ( Properties.Settings.Default ["user"] != "" )
             {
                 navFrame.Navigate(new AccountView());
             } else
             {
                 navFrame.Navigate(new LoginView());
             }
-
         }
     }
 }

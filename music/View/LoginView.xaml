@@ -55,7 +55,7 @@
                                 Margin="0 30 0 0"
                                 Width="120"
                                 Style="{StaticResource MaterialDesignRaisedButton}"
-                                ToolTip="Resource name: MaterialDesignRaisedButton">
+                                ToolTip="Resource name: MaterialDesignRaisedButton" Click="btnLogin_Click">
                             Đăng nhập
                         </Button>
                     </StackPanel>
@@ -66,7 +66,7 @@
                     <Label  Content="Bạn chưa có tài khoản?"
                             Margin="20 0 0 0"
                             FontSize="14"/>
-                    <Button x:Name="lbSignUp" 
+                    <Button x:Name="btnSignUp" 
                            Content="Đăng ký ngay" 
                            Width="130"
                            Margin="170 -2 0 0"
@@ -78,14 +78,14 @@
                            Cursor="Hand"
                            VerticalContentAlignment="Center"/>
                 </Grid>
-                <Button x:Name="lbForgetPass" 
+                <Button x:Name="btnForgetPass" 
                        Content="Quên mật khẩu"
                        Background="Transparent"
                        BorderThickness="0"
                        Foreground="#5d3fd3"
                        FontWeight="Bold"
                        FontSize="14"
-                       HorizontalAlignment="Center" Click="lbForgetPass_Click"/>
+                       HorizontalAlignment="Center" Click="btnForgetPass_Click"/>
             </StackPanel>
 
         </Grid>

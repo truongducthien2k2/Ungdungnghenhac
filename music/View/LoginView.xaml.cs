@@ -1,4 +1,5 @@
 ﻿using music.View.ForgetPassword;
+using music.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,17 +22,29 @@ namespace music.View
     /// </summary>
     public partial class LoginView : Page
     {
+        AccountViewModel accountVM = new AccountViewModel();
         public LoginView()
         {
             InitializeComponent();
         }
 
-        private void lbForgetPass_PreviewMouseLeftButtonDown( object sender, MouseButtonEventArgs e )
+        private void btnLogin_Click( object sender, RoutedEventArgs e )
         {
-
+            string username = txtUserName.Text;
+            string password = txtPass.Password;
+            if (accountVM.LoginSuccessfully(username, password))
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại");
+            }
         }
 
-        private void lbForgetPass_Click( object sender, RoutedEventArgs e )
+        private void btnForgetPass_Click( object sender, RoutedEventArgs e )
         {
             VerifyAccountView verifyAccount = new VerifyAccountView();
             verifyAccount.Show();

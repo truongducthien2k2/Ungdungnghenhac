@@ -92,7 +92,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button x:Name="accountBtn" Style="{StaticResource menubutton}" Margin="-5 0 15 5" Click="accountBtn_Click" >
+                    <Button x:Name="accountBtn" Style="{StaticResource menubutton}" Click="accountBtn_Click" >
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Tài khoản cá nhân" Style="{StaticResource menubuttontext}" FontWeight="Bold"/>
                         </StackPanel>

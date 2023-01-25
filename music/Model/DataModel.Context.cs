@@ -41,6 +41,7 @@ namespace music.Model
         public DbSet<SONG_PLAYLIST> SONG_PLAYLIST { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TOPIC> TOPIC { get; set; }
+        public DbSet<USER_LOGIN_CREDENTIAL> USER_LOGIN_CREDENTIAL { get; set; }
         public DbSet<VIDEO> VIDEO { get; set; }
     }
 }
