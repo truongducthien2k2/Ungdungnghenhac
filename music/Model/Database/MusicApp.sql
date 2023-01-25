@@ -4,7 +4,7 @@ USE MusicApp
 CREATE TABLE CLIENT(
  id INT IDENTITY(1,1) PRIMARY KEY,
  userName VARCHAR(50) UNIQUE,
- pass TEXT,
+ pass VARCHAR(MAX),
  fullName NVARCHAR(100),
  email VARCHAR(100),
  phone CHAR(10),
@@ -13,6 +13,7 @@ CREATE TABLE CLIENT(
 )
 
 INSERT INTO CLIENT (userName, fullName, email, phone, isAdmin, VIP) VALUES ('annoy', N'Lê Thế Phúc', 'lethephuc2002@gmail.com', '0368341595', 0, 0)
+INSERT INTO CLIENT (userName, pass, fullName, email, phone, isAdmin, VIP) VALUES ('admin', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Lê Hoàng Long', 'lephuc8a1@gmail.com', '0368341595', 1, 0)
 
 CREATE TABLE VIDEO(
  id INT IDENTITY(1,1) PRIMARY KEY,
@@ -28,9 +29,9 @@ CREATE TABLE SONG(
  topicId INT REFERENCES TOPIC(id),
  albumId INT REFERENCES ALBUM(id),
  singerId INT REFERENCES SINGER(id),
- lyrics TEXT,
- songImage VARCHAR(500),
- songCode VARCHAR(MAX),
+ lyrics NVARCHAR(MAX),
+ songImage NVARCHAR(500),
+ songCode NVARCHAR(500),
  areaId CHAR(1) REFERENCES AREA(id)
 )
 
@@ -118,4 +119,9 @@ CREATE TABLE ADVERTISEMENT(
  id INT IDENTITY(1,1) PRIMARY KEY,
  adImage VARCHAR(500),
  adTimeSpan INT
+)
+
+CREATE TABLE USER_LOGIN_CREDENTIAL(
+ userName VARCHAR(50) PRIMARY KEY REFERENCES CLIENT(userName),
+ isAdmin BIT
 )
