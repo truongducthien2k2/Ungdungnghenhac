@@ -52,6 +52,17 @@ namespace music.ViewModel
             return null;
         }
 
-
+        public int Logout()
+        {
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM USER_LOGIN_CREDENTIAL");
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
     }
 }

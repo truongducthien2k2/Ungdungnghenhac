@@ -30,7 +30,12 @@ namespace music.View
 
         private void btnLogout_Click( object sender, RoutedEventArgs e )
         {
-            
+            if (accountVM.Logout() == 1)
+            {
+                MessageBox.Show("Đăng xuất thành công");
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
+            }
         }
     }
 }
