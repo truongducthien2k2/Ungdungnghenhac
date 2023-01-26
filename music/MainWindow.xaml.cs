@@ -23,7 +23,6 @@ namespace music
         public MainWindow()
         {
             InitializeComponent();
-            song = songVM.GetAllSong().First();
             HandleLogin();
             LoadSong();
         }
@@ -31,10 +30,14 @@ namespace music
 
         private void LoadSong()
         {
-            ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
-            tbSongName.Text = song.songName;
-            tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
-            player.Open(new Uri(song.songCode));
+            if (songVM.GetAllSong().Count > 0)
+            {
+                song = songVM.GetAllSong().First();
+                ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+                tbSongName.Text = song.songName;
+                tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
+                player.Open(new Uri(song.songCode));
+            }
         }
 
         protected override void OnSourceInitialized( EventArgs e )
