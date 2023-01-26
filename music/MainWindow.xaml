@@ -102,9 +102,81 @@
             </Border>
         
             <!-- Main -->
-            <Frame x:Name="navFrame" 
-                    Grid.Column="1"
-                    NavigationUIVisibility="Hidden"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Frame x:Name="navFrame" 
+                        Grid.Column="1"
+                        NavigationUIVisibility="Hidden"/>
+
+                <Grid Grid.Row="1" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="400"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Border Margin="20 0 0 0" Width="40" 
+                                Height="40" 
+                                CornerRadius="100" 
+                                Background="GhostWhite" 
+                                BorderBrush="Gainsboro" 
+                                BorderThickness="1" 
+                                Grid.Row="0">
+                            <Image  x:Name="ImageViewer"
+                                    VerticalAlignment="Center" 
+                                    HorizontalAlignment="Center" 
+                                    Stretch="Fill" >
+                                <Image.Clip>
+                                    <RectangleGeometry RadiusX="40"
+                                           RadiusY="40"
+                                           Rect="0,0,38,38"/>
+                                </Image.Clip>
+                            </Image>
+                        </Border>
+
+                        <Grid Margin="20 0 0 0" Width="150">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock x:Name="tbSongName" Text="Nhaccuatui" FontSize="13" VerticalAlignment="Bottom"/>
+                            <TextBlock x:Name="tbSingerName"  Text="Nhaccuatui" Grid.Row="1" FontSize="14" FontWeight="Thin"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <Grid Grid.Column="1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnPrevious"  Background="Transparent" Padding="6" BorderThickness="0" Height="60">
+                                <materialDesign:PackIcon Kind="KeyboardArrowLeft" Foreground="Gray" Width="30" Height="30"/>
+                            </Button>
+                            <Grid>
+                                <Button x:Name="btnPlay"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnPlay_Click">
+                                    <materialDesign:PackIcon Kind="Play" Foreground="Gray" Width="30" Height="30"/>
+                                </Button>
+                                <Button Visibility="Hidden" x:Name="btnPause"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnPause_Click">
+                                    <materialDesign:PackIcon Kind="Pause" Foreground="Gray" Width="30" Height="30"/>
+                                </Button>
+                            </Grid>
+                            <Button x:Name="btnNext"  Background="Transparent" Padding="6" BorderThickness="0" Height="60">
+                                <materialDesign:PackIcon Kind="KeyboardArrowRight" Foreground="Gray" Width="30" Height="30"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock x:Name="tbCurrentTime" Text="03:00" VerticalAlignment="Center" FontWeight="Thin" />
+                            <TextBlock VerticalAlignment="Center" Text="/" FontWeight="Thin" />
+                            <TextBlock x:Name="tbTotalTime" Text="03:00" VerticalAlignment="Center" FontWeight="Thin" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
     </Border>
 </Window>

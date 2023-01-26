@@ -1,10 +1,13 @@
 ﻿using music.Component;
+using music.Model;
 using music.View;
 using music.ViewModel;
 using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace music
 {
@@ -14,10 +17,24 @@ namespace music
     public partial class MainWindow : Window
     {
         AccountViewModel accountVM = new AccountViewModel();
+        SongViewModel songVM = new SongViewModel();
+        SONG song;
+        MediaPlayer player = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
+            song = songVM.GetAllSong().First();
             HandleLogin();
+            LoadSong();
+        }
+
+
+        private void LoadSong()
+        {
+            ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+            tbSongName.Text = song.songName;
+            tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
+            player.Open(new Uri(song.songCode));
         }
 
         protected override void OnSourceInitialized( EventArgs e )
@@ -149,13 +166,27 @@ namespace music
 
         private void accountBtn_Click( object sender, RoutedEventArgs e )
         {
-            if ( Properties.Settings.Default ["user"] != "" )
+            if ( Properties.Settings.Default ["user"].ToString() != "" )
             {
                 navFrame.Navigate(new AccountView());
             } else
             {
                 navFrame.Navigate(new LoginView());
             }
+        }
+
+        private void btnPlay_Click( object sender, RoutedEventArgs e )
+        {
+            btnPlay.Visibility = Visibility.Hidden;
+            btnPause.Visibility = Visibility.Visible;
+            player.Play();
+        }
+
+        private void btnPause_Click( object sender, RoutedEventArgs e )
+        {
+            btnPlay.Visibility = Visibility.Visible;
+            btnPause.Visibility = Visibility.Hidden;
+            player.Pause();
         }
     }
 }
