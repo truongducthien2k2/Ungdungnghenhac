@@ -38,6 +38,7 @@ D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe.config
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.pdb
@@ -84,8 +85,8 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HistoryView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HomeView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlayListView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\RankView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongView.g.cs
@@ -121,6 +122,7 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlayListView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\RankView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongView.baml

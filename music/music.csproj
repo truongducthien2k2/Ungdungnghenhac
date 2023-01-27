@@ -235,6 +235,9 @@
     <Compile Include="View\PlayListView.xaml.cs">
       <DependentUpon>PlayListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PlaySongView.xaml.cs">
+      <DependentUpon>PlaySongView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RankView.xaml.cs">
       <DependentUpon>RankView.xaml</DependentUpon>
     </Compile>
@@ -359,6 +362,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PlayListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlaySongView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
