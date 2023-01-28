@@ -28,8 +28,8 @@
             <Image x:Name="artistImage"
                    Stretch="UniformToFill">
                 <Image.Clip>
-                    <RectangleGeometry RadiusX="30"
-                                       RadiusY="30"
+                    <RectangleGeometry RadiusX="100"
+                                       RadiusY="100"
                                        Rect="0, 0, 100, 100"/>
                 </Image.Clip>
             </Image>
