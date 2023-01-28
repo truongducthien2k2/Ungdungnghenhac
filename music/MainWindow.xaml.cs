@@ -197,7 +197,7 @@ namespace music
                 navFrame.Navigate(new AccountView());
             } else
             {
-                navFrame.Navigate(new LoginView());
+                navFrame.Navigate(new LoginView(navFrame));
             }
         }
 

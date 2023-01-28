@@ -76,7 +76,7 @@
                            FontSize="14"
                            FontWeight="Bold"
                            Cursor="Hand"
-                           VerticalContentAlignment="Center"/>
+                           VerticalContentAlignment="Center" Click="btnSignUp_Click"/>
                 </Grid>
                 <Button x:Name="btnForgetPass" 
                        Content="Quên mật khẩu"

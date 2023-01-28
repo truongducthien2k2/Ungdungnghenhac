@@ -10,6 +10,10 @@ namespace music.ViewModel
 {
     internal class AccountViewModel
     {
+        public List<CLIENT> GetAllUser()
+        {
+            return DataProvider.Ins.DB.CLIENT.ToList();
+        }
         public string ComputeSha256Hash( string rawData )
         {
             using ( SHA256 sha256Hash = SHA256.Create() )
@@ -62,6 +66,19 @@ namespace music.ViewModel
             try
             {
                 DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM USER_LOGIN_CREDENTIAL");
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        public int SignUp(string userName, string pass, string fullName, string email, string phone, int isAdmin, int vip)
+        {
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO CLIENT (userName, pass, fullName, email, phone, isAdmin, vip) VALUES ('{userName}', '{ComputeSha256Hash(pass)}', N'{fullName}', '{email}', '{phone}', {isAdmin}, {vip}) ");
             }
             catch
             {
