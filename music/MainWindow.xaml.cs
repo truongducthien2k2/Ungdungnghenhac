@@ -4,6 +4,7 @@ using music.Model;
 using music.View;
 using music.ViewModel;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,7 +25,9 @@ namespace music
         MediaPlayer player = new MediaPlayer();
         private int indexOfSong;
         private bool isRandom = false;
-        private bool isReapeatOnce = false; 
+        private bool isReapeatOnce = false;
+        public List<SONG> viewedSongLocal = new List<SONG>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -117,6 +120,21 @@ namespace music
             Properties.Settings.Default.isAdmin = (bool) account.isAdmin;
         }
 
+        private void StoreSongIntoHistory(SONG song)
+        {
+            if ( Properties.Settings.Default.user == "" )
+            {
+                if ( viewedSongLocal.Count >= 0 && !viewedSongLocal.Contains(song) )
+                {
+                    viewedSongLocal.Add(song);
+                }
+            }
+            else
+            {
+                songVM.InsertSongIntoHistory(Properties.Settings.Default.user, song.id);
+            }
+        }
+
         private void homeBtn_Click( object sender, RoutedEventArgs e )
         {
             navFrame.Navigate(new HomeView());
@@ -129,7 +147,7 @@ namespace music
 
         private void historyBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new HistoryView());
+            navFrame.Navigate(new HistoryView(viewedSongLocal, ImageViewer, tbSongName, tbSingerName, player));
         }
 
         private void topicBtn_Click( object sender, RoutedEventArgs e )
@@ -149,7 +167,7 @@ namespace music
 
         private void songBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new SongView(ImageViewer, tbSongName, tbSingerName, player));
+            navFrame.Navigate(new SongView( ImageViewer, tbSongName, tbSingerName, player));
         }
 
         private void videoBtn_Click( object sender, RoutedEventArgs e )
@@ -193,6 +211,8 @@ namespace music
         {
             if (player.Source != null)
             {
+                song = songVM.GetAllSong().Where(song => song.songName == tbSongName.Text).First();
+                StoreSongIntoHistory(song);
                 if (this.indexOfSong == -1)
                 {
                     this.indexOfSong = GetIndexOfSong();

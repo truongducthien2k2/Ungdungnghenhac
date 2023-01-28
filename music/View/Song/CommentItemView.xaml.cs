@@ -23,16 +23,19 @@ namespace music.View.Song
     public partial class CommentItemView : UserControl
     {
         AccountViewModel accountVM = new AccountViewModel();
+        SongViewModel songVM = new SongViewModel();
         COMMENT comment;
+        Frame MainContent;
         public CommentItemView()
         {
             InitializeComponent();
         }
 
-        public CommentItemView(COMMENT comment)
+        public CommentItemView(COMMENT comment, Frame MainContent)
         {
             InitializeComponent();
             this.comment = comment;
+            this.MainContent = MainContent;
             LoadComment();
         }
 
@@ -43,6 +46,14 @@ namespace music.View.Song
             DateTime commentDate = (DateTime) comment.commentDate;
             tbTimeOfComment.Text = $"{commentDate.Day}/{commentDate.Month}/{commentDate.Year}";
             tbContentOfComment.Text = comment.content;
+        }
+
+        private void btnRemove_Click( object sender, RoutedEventArgs e )
+        {
+            if ( songVM.RemoveComment(comment.id) == 1 )
+            {
+                MainContent.Navigate(new PlaySongView(MainContent));
+            }
         }
     }
 }

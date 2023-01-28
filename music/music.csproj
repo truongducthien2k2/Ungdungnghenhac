@@ -221,7 +221,10 @@
     <Compile Include="View\ForgetPassword\VerifyAccountView.xaml.cs">
       <DependentUpon>VerifyAccountView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\HistoryView.xaml.cs">
+    <Compile Include="View\History\HistoryItemView.xaml.cs">
+      <DependentUpon>HistoryItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HomeView.xaml.cs">
@@ -352,7 +355,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\HistoryView.xaml">
+    <Page Include="View\History\HistoryItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\History\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

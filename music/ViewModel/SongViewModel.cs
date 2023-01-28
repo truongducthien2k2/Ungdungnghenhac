@@ -115,5 +115,46 @@ namespace music.ViewModel
         {
             return DataProvider.Ins.DB.COMMENT.Where(comment => comment.songId == songId).ToList();
         }
+
+        public int RemoveComment(int commentId)
+        {
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM COMMENT WHERE id={commentId}");
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        public List<CLIENT_VIEW_SONG> GetViewHistoryOfUser(string username)
+        {
+            int id = DataProvider.Ins.DB.CLIENT.Where(client => client.userName == username).First().id;
+            return DataProvider.Ins.DB.CLIENT_VIEW_SONG.Where(view => view.clientId == id).ToList();
+        }
+
+        public void InsertSongIntoHistory(string username, int songId) 
+        {
+            int clientId = DataProvider.Ins.DB.CLIENT.Where(client => client.userName == username).First().id;
+
+            try
+            {
+                List<CLIENT_VIEW_SONG> viewHistoryOfUser = DataProvider.Ins.DB.CLIENT_VIEW_SONG.Where(view => view.clientId == clientId && view.songId == songId).ToList();
+                if ( viewHistoryOfUser.Count() > 0)
+                {
+                    int viewId = viewHistoryOfUser.First().id;
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"UPDATE CLIENT_VIEW_SONG SET currentViews += 1, viewDate={DateTime.Now.ToString("yyyy/MM/dd")} WHERE songId={songId} AND clientId={clientId}");
+                }
+                else
+                {
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO CLIENT_VIEW_SONG (songId, clientId, currentViews, viewDate) VALUES ({songId}, {clientId}, 1, {DateTime.Now.ToString("yyyy/MM/dd")})");
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }

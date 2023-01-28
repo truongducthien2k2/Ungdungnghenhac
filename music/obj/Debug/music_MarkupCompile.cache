@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\App.xaml
-34-992064502
+35-1601734959
 3322446459
-70-1889524295
+71-1642828586
 251946727023
-Component\CustomMessageBox.xaml;MainWindow.xaml;View\AccountView.xaml;View\Admin\AccountAdminView.xaml;View\Admin\Advertisement\AdvertisementAdminView.xaml;View\Admin\Album\AlbumAdminView.xaml;View\Admin\Artist\ArtistAdminView.xaml;View\Admin\Artist\ArtistItemView.xaml;View\Admin\Artist\NewArtistView.xaml;View\Admin\HomeAdminView.xaml;View\Admin\Song\NewSongView.xaml;View\Admin\Song\SongAdminView.xaml;View\Admin\Song\SongItemView.xaml;View\Admin\Topic\NewTopicView.xaml;View\Admin\Topic\TopicAdminView.xaml;View\Admin\Topic\TopicItemView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\ForgetPassword\ResetPassword.xaml;View\ForgetPassword\VerifyAccountView.xaml;View\HistoryView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainAdmin.xaml;View\PlayListView.xaml;View\PlaySongView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\Song\CommentItemView.xaml;View\Song\SongItemView.xaml;View\Song\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
+Component\CustomMessageBox.xaml;MainWindow.xaml;View\AccountView.xaml;View\Admin\AccountAdminView.xaml;View\Admin\Advertisement\AdvertisementAdminView.xaml;View\Admin\Album\AlbumAdminView.xaml;View\Admin\Artist\ArtistAdminView.xaml;View\Admin\Artist\ArtistItemView.xaml;View\Admin\Artist\NewArtistView.xaml;View\Admin\HomeAdminView.xaml;View\Admin\Song\NewSongView.xaml;View\Admin\Song\SongAdminView.xaml;View\Admin\Song\SongItemView.xaml;View\Admin\Topic\NewTopicView.xaml;View\Admin\Topic\TopicAdminView.xaml;View\Admin\Topic\TopicItemView.xaml;View\AlbumView.xaml;View\ArtistView.xaml;View\FavoriteListView.xaml;View\ForgetPassword\ResetPassword.xaml;View\ForgetPassword\VerifyAccountView.xaml;View\History\HistoryItemView.xaml;View\History\HistoryView.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainAdmin.xaml;View\PlayListView.xaml;View\PlaySongView.xaml;View\RankView.xaml;View\SongInDeviceView.xaml;View\Song\CommentItemView.xaml;View\Song\SongItemView.xaml;View\Song\SongView.xaml;View\TopicView.xaml;View\VideoView.xaml;
 
 False
 

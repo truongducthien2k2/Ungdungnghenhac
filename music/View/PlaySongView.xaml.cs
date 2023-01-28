@@ -67,7 +67,7 @@ namespace music.View
             {
                 foreach (COMMENT comment in comments)
                 {
-                    plComments.Children.Add(new CommentItemView(comment));
+                    plComments.Children.Add(new CommentItemView(comment, MainContent));
                 }
             }
             else

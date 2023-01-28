@@ -62,7 +62,6 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HistoryView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HomeView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.g.cs
@@ -119,7 +118,6 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.baml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HistoryView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HomeView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.baml
@@ -139,3 +137,7 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\m
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.exe
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.baml
