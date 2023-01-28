@@ -11,7 +11,7 @@
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
         WindowStartupLocation="CenterScreen">
-    <Border CornerRadius="0 0 10 10" Background="#f4f5fe" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="0 0 10 10" Background="#f4f5fe" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
@@ -127,7 +127,7 @@
                                 BorderThickness="1" 
                                 Cursor="Hand"
                                 Grid.Row="0" MouseLeftButtonDown="btnViewSong_Click">
-                            <Image  x:Name="ImageViewer"
+                            <Image x:Name="ImageViewer"
                                     VerticalAlignment="Center" 
                                     HorizontalAlignment="Center" 
                                     Stretch="Fill" >

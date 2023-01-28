@@ -85,6 +85,7 @@
       <DependentUpon>CustomMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Component\IconHelper.cs" />
+    <Compile Include="LocalStore\BasicSong.cs" />
     <Compile Include="LocalStore\EmailResetPassword.cs" />
     <Compile Include="LocalStore\OTPCode.cs" />
     <Compile Include="Model\ADVERTISEMENT.cs">
@@ -244,7 +245,10 @@
     <Compile Include="View\SongInDeviceView.xaml.cs">
       <DependentUpon>SongInDeviceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SongView.xaml.cs">
+    <Compile Include="View\Song\SongItemView.xaml.cs">
+      <DependentUpon>SongItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\SongView.xaml.cs">
       <DependentUpon>SongView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TopicView.xaml.cs">
@@ -377,7 +381,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SongView.xaml">
+    <Page Include="View\Song\SongItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\SongView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

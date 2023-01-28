@@ -1,4 +1,5 @@
-﻿using music.Model;
+﻿using music.LocalStore;
+using music.Model;
 using music.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -22,29 +23,38 @@ namespace music.View
     /// </summary>
     public partial class PlaySongView : Page
     {
+        SongViewModel songVM = new SongViewModel();
         SONG song;
         Frame MainContent;
-        SongViewModel songVM = new SongViewModel();
+
         public PlaySongView()
         {
             InitializeComponent();
             LoadLyrics();
         }
 
-        public PlaySongView(SONG song, Frame MainContent)
+        public PlaySongView( Frame MainContent )
         {
             InitializeComponent();
-            this.song = song;
             this.MainContent = MainContent;
+            AssignSong();
             DisplaySongUI();
             LoadLyrics();
         }
 
+        private void AssignSong()
+        {
+            this.song = songVM.GetAllSong().Where(song => song.songName == BasicSong.Instance.name).First();
+        }
+
         private void DisplaySongUI()
         {
-            tbSongName.Text = song.songName;
-            tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
-            ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+            if (song != null)
+            {
+                tbSongName.Text = song.songName;
+                tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
+                ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+            }
         }
 
         private void LoadLyrics()
