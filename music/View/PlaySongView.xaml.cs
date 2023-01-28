@@ -1,5 +1,6 @@
 ﻿using music.LocalStore;
 using music.Model;
+using music.View.Song;
 using music.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace music.View
         SongViewModel songVM = new SongViewModel();
         SONG song;
         Frame MainContent;
+        string user = Properties.Settings.Default.user;
 
         public PlaySongView()
         {
@@ -39,6 +41,7 @@ namespace music.View
             this.MainContent = MainContent;
             AssignSong();
             DisplaySongUI();
+            LoadComment();
             LoadLyrics();
         }
 
@@ -57,6 +60,24 @@ namespace music.View
             }
         }
 
+        private void LoadComment()
+        {
+            List<COMMENT> comments = songVM.GetAllCommentOfSong(song.id);
+            if (comments.Count > 0)
+            {
+                foreach (COMMENT comment in comments)
+                {
+                    plComments.Children.Add(new CommentItemView(comment));
+                }
+            }
+            else
+            {
+                TextBlock notice = new TextBlock();
+                notice.Text = "Chưa có bình luận nào";
+                plComments.Children.Add(notice);
+            }
+        }
+
         private void LoadLyrics()
         {
             if (song != null)
@@ -70,9 +91,26 @@ namespace music.View
             MainContent.Navigate(new HomeView());
         }
 
-        private void ImageViewer_Loaded( object sender, RoutedEventArgs e )
+        private void btnComment_Click( object sender, RoutedEventArgs e )
         {
-
+            if (String.IsNullOrEmpty(user))
+            {
+                MessageBox.Show("Vui lòng đăng nhập trước khi bình luận");
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(tbCommentContent.Text.Trim()))
+                {
+                    MessageBox.Show("Vui lòng nhập bình luận");
+                }
+                else
+                {
+                    if (songVM.InsertComment(tbCommentContent.Text, user, song.id) == 1)
+                    {
+                        MainContent.Navigate(new PlaySongView(MainContent));
+                    }
+                }
+            }
         }
     }
 }

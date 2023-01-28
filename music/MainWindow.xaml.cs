@@ -68,14 +68,6 @@ namespace music
             IconHelper.RemoveIcon(this);
         }
 
-        //private void Border_MouseDown( object sender, MouseButtonEventArgs e )
-        //{
-        //    if ( e.ChangedButton == MouseButton.Left )
-        //    {
-        //        this.DragMove();
-        //    }
-        //}
-
         bool IsMaximize = false;
         private void Border_MouseLeftButtonDown( object sender, MouseButtonEventArgs e )
         {
@@ -121,8 +113,8 @@ namespace music
         private void StoreData()
         {
             var account = accountVM.AccountData();
-            Properties.Settings.Default ["user"] = account.userName;
-            Properties.Settings.Default ["isAdmin"] = account.isAdmin;
+            Properties.Settings.Default.user = account.userName;
+            Properties.Settings.Default.isAdmin = (bool) account.isAdmin;
         }
 
         private void homeBtn_Click( object sender, RoutedEventArgs e )
@@ -182,7 +174,7 @@ namespace music
 
         private void accountBtn_Click( object sender, RoutedEventArgs e )
         {
-            if ( Properties.Settings.Default ["user"].ToString() != "" )
+            if ( Properties.Settings.Default.user != "" )
             {
                 navFrame.Navigate(new AccountView());
             } else
@@ -191,14 +183,19 @@ namespace music
             }
         }
 
+        private int GetIndexOfSong()
+        {
+            song = songVM.GetAllSong().Where(song => song.songName == tbSongName.Text).First();
+            return songVM.GetAllSong().IndexOf(song);
+        }
+
         private void btnPlay_Click( object sender, RoutedEventArgs e )
         {
             if (player.Source != null)
             {
                 if (this.indexOfSong == -1)
                 {
-                    song = songVM.GetAllSong().Where(song => song.songName == tbSongName.Text).First();
-                    this.indexOfSong = songVM.GetAllSong().IndexOf(song);
+                    this.indexOfSong = GetIndexOfSong();
                 }
                 btnPlay.Visibility = Visibility.Hidden;
                 btnPause.Visibility = Visibility.Visible;
@@ -238,8 +235,9 @@ namespace music
 
         private void btnViewSong_Click( object sender, MouseButtonEventArgs e )
         {
-            if ( BasicSong.Instance.name != "")
+            if ( !String.IsNullOrEmpty(BasicSong.Instance.name) )
             {
+                this.indexOfSong = GetIndexOfSong();
                 navFrame.Navigate(new PlaySongView(navFrame));
             }
         }

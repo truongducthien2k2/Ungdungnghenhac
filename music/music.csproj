@@ -245,6 +245,9 @@
     <Compile Include="View\SongInDeviceView.xaml.cs">
       <DependentUpon>SongInDeviceView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Song\CommentItemView.xaml.cs">
+      <DependentUpon>CommentItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Song\SongItemView.xaml.cs">
       <DependentUpon>SongItemView.xaml</DependentUpon>
     </Compile>
@@ -381,6 +384,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Song\CommentItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Song\SongItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -451,6 +458,7 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

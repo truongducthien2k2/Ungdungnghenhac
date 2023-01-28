@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace music.ViewModel
 {
@@ -93,6 +94,26 @@ namespace music.ViewModel
                 return 0;
             }
             return 1;
+        }
+
+        public int InsertComment(string content, string username, int songId) 
+        {
+            int clientId = DataProvider.Ins.DB.CLIENT.Where(user => user.userName == username).First().id;
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO COMMENT (content, commentDate, songId, clientId) VALUES (N'{content}', '{DateTime.Now.ToString("yyyy/MM/dd")}', {songId}, {clientId})");
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+                return 0;
+            }
+            return 1;
+        }
+
+        public List<COMMENT> GetAllCommentOfSong(int songId)
+        {
+            return DataProvider.Ins.DB.COMMENT.Where(comment => comment.songId == songId).ToList();
         }
     }
 }

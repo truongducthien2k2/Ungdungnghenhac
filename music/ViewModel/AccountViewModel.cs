@@ -43,6 +43,11 @@ namespace music.ViewModel
             return false;
         }
 
+        public CLIENT GetUserInfo(int id)
+        {
+            return DataProvider.Ins.DB.CLIENT.Where(user => user.id == id).First();
+        }
+
         public USER_LOGIN_CREDENTIAL AccountData()
         {
             if ( DataProvider.Ins.DB.USER_LOGIN_CREDENTIAL.ToList().Count > 0 )
