@@ -6,17 +6,18 @@ using music.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace music
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         AccountViewModel accountVM = new AccountViewModel();
@@ -26,6 +27,7 @@ namespace music
         private int indexOfSong;
         private bool isRandom = false;
         private bool isReapeatOnce = false;
+
         public List<SONG> viewedSongLocal = new List<SONG>();
 
         public MainWindow()
@@ -258,7 +260,7 @@ namespace music
             if ( !String.IsNullOrEmpty(BasicSong.Instance.name) )
             {
                 this.indexOfSong = GetIndexOfSong();
-                navFrame.Navigate(new PlaySongView(navFrame));
+                navFrame.Navigate(new PlaySongView(navFrame, btnPlay, btnPause, player));
             }
         }
 

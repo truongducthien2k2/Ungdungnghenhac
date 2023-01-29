@@ -91,6 +91,7 @@
     <Compile Include="LocalStore\BasicSong.cs" />
     <Compile Include="LocalStore\EmailResetPassword.cs" />
     <Compile Include="LocalStore\OTPCode.cs" />
+    <Compile Include="LocalStore\TimeToStop.cs" />
     <Compile Include="Model\ADVERTISEMENT.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -260,6 +261,9 @@
     <Compile Include="View\Song\PostSongOnFacebookView.xaml.cs">
       <DependentUpon>PostSongOnFacebookView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Song\SetTimeToStopView.xaml.cs">
+      <DependentUpon>SetTimeToStopView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Song\ShareSongView.xaml.cs">
       <DependentUpon>ShareSongView.xaml</DependentUpon>
     </Compile>
@@ -412,6 +416,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Song\PostSongOnFacebookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\SetTimeToStopView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -26,16 +26,22 @@ namespace music.View.Song
         SongViewModel songVM = new SongViewModel();
         COMMENT comment;
         Frame MainContent;
+        Button btnPlay;
+        Button btnPause;
+        MediaPlayer player;
         public CommentItemView()
         {
             InitializeComponent();
         }
 
-        public CommentItemView(COMMENT comment, Frame MainContent)
+        public CommentItemView(COMMENT comment, Frame MainContent, Button btnPlay, Button btnPause, MediaPlayer player )
         {
             InitializeComponent();
             this.comment = comment;
             this.MainContent = MainContent;
+            this.btnPlay = btnPlay;
+            this.btnPause = btnPause;
+            this.player = player;
             LoadComment();
         }
 
@@ -52,7 +58,7 @@ namespace music.View.Song
         {
             if ( songVM.RemoveComment(comment.id) == 1 )
             {
-                MainContent.Navigate(new PlaySongView(MainContent));
+                MainContent.Navigate(new PlaySongView(MainContent, btnPlay, btnPause, player));
             }
         }
     }
