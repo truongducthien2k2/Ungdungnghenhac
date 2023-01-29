@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace music.View
 {
@@ -28,19 +30,23 @@ namespace music.View
         SONG song;
         Frame MainContent;
         string user = Properties.Settings.Default.user;
+        Button btnPlay;
+        Button btnPause;
+        MediaPlayer player;
+        DispatcherTimer timer;
+        private int totalTime = 0;
 
-        public PlaySongView()
-        {
-            InitializeComponent();
-            LoadLyrics();
-        }
-
-        public PlaySongView( Frame MainContent )
+        public PlaySongView( Frame MainContent, Button btnPlay, Button btnPause, MediaPlayer player )
         {
             InitializeComponent();
             this.MainContent = MainContent;
+            this.btnPlay = btnPlay;
+            this.btnPause = btnPause;
+            this.player = player;
+            this.timer = new DispatcherTimer();
             AssignSong();
             DisplaySongUI();
+            LoadLikeSong();
             LoadComment();
             LoadLyrics();
         }
@@ -60,6 +66,19 @@ namespace music.View
             }
         }
 
+        private void LoadLikeSong()
+        {
+            if (songVM.IsLikedSong(song.id, user))
+            {
+                btnLike.Foreground = new SolidColorBrush(Colors.Gray);
+            }
+            else
+            {
+                btnLike.Foreground = new SolidColorBrush(Colors.LightGray);
+            }
+
+        }
+
         private void LoadComment()
         {
             List<COMMENT> comments = songVM.GetAllCommentOfSong(song.id);
@@ -67,7 +86,7 @@ namespace music.View
             {
                 foreach (COMMENT comment in comments)
                 {
-                    plComments.Children.Add(new CommentItemView(comment));
+                    plComments.Children.Add(new CommentItemView(comment, MainContent, btnPlay, btnPause, player));
                 }
             }
             else
@@ -107,9 +126,50 @@ namespace music.View
                 {
                     if (songVM.InsertComment(tbCommentContent.Text, user, song.id) == 1)
                     {
-                        MainContent.Navigate(new PlaySongView(MainContent));
+                        MainContent.Navigate(new PlaySongView(MainContent, btnPlay, btnPause, player));
                     }
                 }
+            }
+        }
+
+        private void btnLike_Click( object sender, RoutedEventArgs e )
+        {
+            if (songVM.LikeSong(song.id, user) == 1)
+            {
+                MainContent.Navigate(new PlaySongView(MainContent, btnPlay, btnPause, player));
+            }
+        }
+
+        private void btnSetTime_Click( object sender, RoutedEventArgs e )
+        {
+            SetTimeToStopView setTime = new SetTimeToStopView();
+            setTime.Show();
+            setTime.Closed += SetTime_Closed;
+        }
+
+        private void SetTime_Closed( object sender, EventArgs e )
+        {
+            if ( TimeToStop.Instance.minute != 0 )
+            {
+                this.totalTime = TimeToStop.Instance.minute * 60;
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Tick += Timer_Tick;
+                timer.Start();
+            }
+        }
+
+        private void Timer_Tick( object sender, EventArgs e )
+        {
+            if ( this.totalTime > 0)
+            {
+                this.totalTime--;
+            }
+            else
+            {
+                btnPlay.Visibility = Visibility.Visible;
+                btnPause.Visibility = Visibility.Hidden;
+                player.Stop();
+                timer.Stop();
             }
         }
     }

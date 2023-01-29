@@ -65,15 +65,15 @@
                 </Grid>
                 <Border Grid.Row="2" BorderThickness="0 0 0 1" BorderBrush="LightGray">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="btnSetTime" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50">
-                            <materialDesign:PackIcon Kind="ClockOutline" Foreground="Gray" Width="30" Height="30"/>
+                        <Button x:Name="btnSetTime" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50" Click="btnSetTime_Click">
+                            <materialDesign:PackIcon Kind="ClockOutline" Foreground="Gray" Width="20" Height="20"/>
                         </Button>
 
                         <Button x:Name="btnDownLoad" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50">
-                            <materialDesign:PackIcon Kind="Download" Foreground="Gray" Width="30" Height="30"/>
+                            <materialDesign:PackIcon Kind="Download" Foreground="Gray" Width="20" Height="20"/>
                         </Button>
-                        <Button x:Name="btnLike" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50">
-                            <materialDesign:PackIcon Kind="LikeOutline" Foreground="Gray" Width="30" Height="30"/>
+                        <Button x:Name="btnLike" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50" Foreground="LightGray" Click="btnLike_Click">
+                            <materialDesign:PackIcon Kind="LikeOutline" Width="20" Height="20"/>
                         </Button>
                     </StackPanel>
                 </Border>

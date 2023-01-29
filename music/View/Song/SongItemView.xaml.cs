@@ -23,12 +23,12 @@ namespace music.View.Song
     /// </summary>
     public partial class SongItemView : UserControl
     {
+        SongViewModel songVM = new SongViewModel();
         SONG songDataItem;
         Image songImage;
         TextBlock songName;
         TextBlock singerName;
         MediaPlayer player;
-        SongViewModel songVM = new SongViewModel();
         public SongItemView()
         {
             InitializeComponent();
@@ -58,6 +58,12 @@ namespace music.View.Song
             singerName.Text = tbSingerName.Text;
             player.Open(new Uri(songDataItem.songCode));
             BasicSong.Instance.name = songName.Text;
+        }
+
+        private void btnShare_Click( object sender, RoutedEventArgs e )
+        {
+            ShareSongView shareSong = new ShareSongView();
+            shareSong.Show();
         }
     }
 }

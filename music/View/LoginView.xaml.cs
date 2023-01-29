@@ -23,9 +23,16 @@ namespace music.View
     public partial class LoginView : Page
     {
         AccountViewModel accountVM = new AccountViewModel();
+        Frame MainContent;
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        public LoginView(Frame MainContent)
+        {
+            InitializeComponent();
+            this.MainContent = MainContent;
         }
 
         private void btnLogin_Click( object sender, RoutedEventArgs e )
@@ -48,6 +55,11 @@ namespace music.View
         {
             VerifyAccountView verifyAccount = new VerifyAccountView();
             verifyAccount.Show();
+        }
+
+        private void btnSignUp_Click( object sender, RoutedEventArgs e )
+        {
+            MainContent.Navigate(new SignupView(MainContent));
         }
     }
 }

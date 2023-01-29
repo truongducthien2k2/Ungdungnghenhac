@@ -5,13 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:music.View.Song"
              mc:Ignorable="d" 
-             d:DesignHeight="80" d:DesignWidth="800"
+             d:DesignHeight="80" d:DesignWidth="450"
              Background="White">
     <Border Height="60" Margin="10 10" BorderThickness="1" BorderBrush="LightGray" CornerRadius="10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0"
@@ -45,6 +46,8 @@
 
                 <TextBlock x:Name="tbContentOfComment" Margin="0 4 0 0" Text="hihi"/>
             </StackPanel>
+
+            <Button x:Name="btnRemove" Grid.Column="2" Margin="0 0 0 4" Content="Thu hồi" Background="#5F9EA0" BorderThickness="0" FontSize="12" Height="25" Padding="0" Width="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="btnRemove_Click"/>
         </Grid>
     </Border>
 </UserControl>
