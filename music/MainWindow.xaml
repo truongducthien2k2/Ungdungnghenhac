@@ -152,29 +152,29 @@
 
                     <Grid Grid.Column="1">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="btnRandom" Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnRandom_Click">
-                                <materialDesign:PackIcon Kind="ShuffleVariant" Foreground="LightGray" Width="30" Height="30"/>
+                            <Button x:Name="btnRandom" Background="Transparent" Padding="6" Foreground="LightGray" BorderThickness="0" Height="60" Click="btnRandom_Click">
+                                <materialDesign:PackIcon Kind="ShuffleVariant"  Width="25" Height="25"/>
                             </Button>
                             <Button x:Name="btnPrevious"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnPrevious_Click">
-                                <materialDesign:PackIcon Kind="SkipPrevious" Foreground="Gray" Width="30" Height="30"/>
+                                <materialDesign:PackIcon Kind="SkipPrevious" Foreground="Gray" Width="25" Height="25"/>
                             </Button>
                             <Grid>
                                 <Button x:Name="btnPlay"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnPlay_Click">
-                                    <materialDesign:PackIcon Kind="PlayCircleOutline" Foreground="Gray" Width="30" Height="30"/>
+                                    <materialDesign:PackIcon Kind="PlayCircleOutline" Foreground="Gray" Width="25" Height="25"/>
                                 </Button>
                                 <Button Visibility="Hidden" x:Name="btnPause"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnPause_Click">
-                                    <materialDesign:PackIcon Kind="PauseCircleOutline" Foreground="Gray" Width="30" Height="30"/>
+                                    <materialDesign:PackIcon Kind="PauseCircleOutline" Foreground="Gray" Width="25" Height="25"/>
                                 </Button>
                             </Grid>
                             <Button x:Name="btnNext"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnNext_Click">
-                                <materialDesign:PackIcon Kind="SkipNext" Foreground="Gray" Width="30" Height="30"/>
+                                <materialDesign:PackIcon Kind="SkipNext" Foreground="Gray" Width="25" Height="25"/>
                             </Button>
                             <Grid>
                                 <Button x:Name="btnRepeat"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnRepeat_Click">
-                                    <materialDesign:PackIcon Kind="Repeat" Foreground="Gray" Width="30" Height="30"/>
+                                    <materialDesign:PackIcon Kind="Repeat" Foreground="Gray" Width="25" Height="25"/>
                                 </Button>
                                 <Button x:Name="btnRepeatOnce" Visibility="Hidden" Background="Transparent" Padding="6" BorderThickness="0" Height="60" Click="btnRepeatOnce_Click">
-                                    <materialDesign:PackIcon Kind="RepeatOnce" Foreground="Gray" Width="30" Height="30"/>
+                                    <materialDesign:PackIcon Kind="RepeatOnce" Foreground="Gray" Width="25" Height="25"/>
                                 </Button>
                             </Grid>
                         </StackPanel>
@@ -184,10 +184,10 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Grid>
                                 <Button x:Name="btnVolume"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Cursor="Hand" Click="btnVolume_Click">
-                                    <materialDesign:PackIcon Kind="VolumeMedium" Foreground="Gray" Width="30" Height="22"/>
+                                    <materialDesign:PackIcon Kind="VolumeMedium" Foreground="Gray" Width="25" Height="22"/>
                                 </Button>
                                 <Button x:Name="btnMuteVolume"  Background="Transparent" Padding="6" BorderThickness="0" Height="60" Cursor="Hand" Visibility="Hidden" Click="btnMuteVolume_Click">
-                                    <materialDesign:PackIcon Kind="VolumeMute" Foreground="Gray" Width="28" Height="22"/>
+                                    <materialDesign:PackIcon Kind="VolumeMute" Foreground="Gray" Width="25" Height="22"/>
                                 </Button>
                             </Grid>
                             

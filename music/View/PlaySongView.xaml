@@ -72,8 +72,8 @@
                         <Button x:Name="btnDownLoad" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50">
                             <materialDesign:PackIcon Kind="Download" Foreground="Gray" Width="20" Height="20"/>
                         </Button>
-                        <Button x:Name="btnLike" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50">
-                            <materialDesign:PackIcon Kind="LikeOutline" Foreground="Gray" Width="20" Height="20"/>
+                        <Button x:Name="btnLike" Background="Transparent" Padding="10 0" BorderThickness="0" Height="50" Foreground="LightGray" Click="btnLike_Click">
+                            <materialDesign:PackIcon Kind="LikeOutline" Width="20" Height="20"/>
                         </Button>
                     </StackPanel>
                 </Border>

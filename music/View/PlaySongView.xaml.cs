@@ -41,6 +41,7 @@ namespace music.View
             this.MainContent = MainContent;
             AssignSong();
             DisplaySongUI();
+            LoadLikeSong();
             LoadComment();
             LoadLyrics();
         }
@@ -58,6 +59,19 @@ namespace music.View
                 tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
                 ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
             }
+        }
+
+        private void LoadLikeSong()
+        {
+            if (songVM.IsLikedSong(song.id, user))
+            {
+                btnLike.Foreground = new SolidColorBrush(Colors.Gray);
+            }
+            else
+            {
+                btnLike.Foreground = new SolidColorBrush(Colors.LightGray);
+            }
+
         }
 
         private void LoadComment()
@@ -110,6 +124,14 @@ namespace music.View
                         MainContent.Navigate(new PlaySongView(MainContent));
                     }
                 }
+            }
+        }
+
+        private void btnLike_Click( object sender, RoutedEventArgs e )
+        {
+            if (songVM.LikeSong(song.id, user) == 1)
+            {
+                MainContent.Navigate(new PlaySongView(MainContent));
             }
         }
     }

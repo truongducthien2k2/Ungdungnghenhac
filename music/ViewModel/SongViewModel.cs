@@ -156,5 +156,77 @@ namespace music.ViewModel
             {
             }
         }
+
+        public int LikeSong(int songId, string username)
+        {
+            if ( IsLikedSong(songId, username) )
+            {
+                if (RemoveLikeSong(songId, username) == 1)
+                {
+                    return 1;
+                }
+                    
+            }
+            else
+            {
+                if (InsertLikeSong(songId, username) == 1)
+                {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+
+        public bool IsLikedSong( int songId, string username ) 
+        {
+            if ( username == "" )
+            {
+                return DataProvider.Ins.DB.CLIENT_LOVE_SONG.Where(like => like.songId == songId && like.clientId == null).Count() > 0;
+            }
+            int userId = DataProvider.Ins.DB.CLIENT.Where(client => client.userName == username).First().id;
+            return DataProvider.Ins.DB.CLIENT_LOVE_SONG.Where(like => like.songId == songId && like.clientId == userId).Count() > 0;
+        }
+
+        public int InsertLikeSong(int songId, string username)
+        {
+            try
+            {
+                if (username == "")
+                {
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO CLIENT_LOVE_SONG (songId, loveDate) VALUES ({songId}, '{DateTime.Now.ToString("yyyy/MM/dd")}')");
+                }
+                else
+                {
+                    int clientId = DataProvider.Ins.DB.CLIENT.Where(client => client.userName == username).First().id;
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO CLIENT_LOVE_SONG (songId, clientId, loveDate) VALUES ({songId}, {clientId}, '{DateTime.Now.ToString("yyyy/MM/dd")}')");
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        public int RemoveLikeSong( int songId, string username )
+        {
+            try
+            {
+                if ( username == "" )
+                {
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM CLIENT_LOVE_SONG WHERE songId={songId} AND clientId=null)");
+                }
+                else
+                {
+                    int clientId = DataProvider.Ins.DB.CLIENT.Where(client => client.userName == username).First().id;
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand($"DELETE FROM CLIENT_LOVE_SONG WHERE songId={songId} AND clientId={clientId}");
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+            return 1;
+        }
     }
 }
