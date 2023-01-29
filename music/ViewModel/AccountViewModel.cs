@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace music.ViewModel
 {
@@ -82,6 +83,20 @@ namespace music.ViewModel
             }
             catch
             {
+                return 0;
+            }
+            return 1;
+        }
+
+        public int UpdateProfile(int id, string name, string email, string phone)
+        {
+            try
+            {
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"UPDATE CLIENT SET fullName=N'{name}', email='{email}', phone='{phone}' WHERE id={id}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
                 return 0;
             }
             return 1;

@@ -56,7 +56,7 @@ namespace music.View
 
         private bool IsPhoneNumber( string number )
         {
-            if(!number.StartsWith("0"))
+            if(!number.StartsWith("0") || number.Length > 10)
                 return false;
             for (int i = 0; i < number.Length; i++ )
             {

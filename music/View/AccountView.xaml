@@ -3,9 +3,9 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:music.View"
+      xmlns:local="clr-namespace:music.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="650" d:DesignWidth="1000"
       Background="White"
       Title="AccountView">
 
@@ -24,11 +24,121 @@
                    FontSize="16"
                    Foreground="Gray"/>
 
-            <StackPanel Grid.Row="1" Margin="20 10 0 0" >
-                <Button x:Name="btnLogout" Width="120" Background="Transparent" Foreground="Gray" HorizontalAlignment="Left" Click="btnLogout_Click">
+            <Grid Grid.Row="1" Margin="20 10 0 0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="230"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Margin="0 10 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Width="250" 
+                                Height="250" 
+                                CornerRadius="200" 
+                                Background="GhostWhite" 
+                                BorderBrush="Gainsboro" 
+                                BorderThickness="1" 
+                                Cursor="Hand"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center">
+                            <Image x:Name="ImageViewer"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Stretch="Fill"
+                                   Source="/Resources/user.png">
+                                <Image.Clip>
+                                    <RectangleGeometry RadiusX="250"
+                                                       RadiusY="250"
+                                                       Rect="0,0,248,248"/>
+                                </Image.Clip>
+                            </Image>
+                        </Border>
+
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0 0 30 0">
+                            <TextBlock x:Name="tbUserName" Margin="0 0 0 30" FontSize="22" Text="Annoy"/>
+                            <TextBox x:Name="tbFullName" Margin="0 4 10 0" BorderBrush="Transparent" IsReadOnly="True" FontSize="18" Text="Lê Thế Phúc" Foreground="Gray"/>
+                            <TextBox x:Name="tbEmail" Margin="0 4 10 0" BorderBrush="Transparent" IsReadOnly="True" FontSize="18" Text="lethephuc2002@gmail.com" Foreground="Gray"/>
+                            <TextBox x:Name="tbPhone" Margin="0 4 10 0" BorderBrush="Transparent" IsReadOnly="True" FontSize="18" Text="0368341595" Foreground="Gray"/>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button x:Name="btnSubmit"
+                                        Width="130"
+                                        Background="#5F9EA0"
+                                        BorderThickness="0"
+                                        BorderBrush="Transparent"
+                                        Margin="0 20 30 0"
+                                        Content="Xác nhận" Click="btnSubmit_Click">
+                                </Button>
+                                
+                                <Button x:Name="btnAdjustProfile"
+                                        Width="130"
+                                        Background="#5F9EA0"
+                                        BorderThickness="0"
+                                        BorderBrush="Transparent"
+                                        Margin="0 20 30 0" Click="btnAdjustProfile_Click">
+                                    <Grid>
+                                        <materialDesign:PackIcon Kind="Pen" Width="20" Height="20" Foreground="White" VerticalAlignment="Bottom"/>
+                                        <TextBlock Text="Chỉnh sửa" FontSize="14" Margin="30,0,0,0"/>
+                                    </Grid>
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Margin="20 40" CornerRadius="10" Background="#088F8F">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="MusicCircleOutline" Margin="10 0 0 0" Width="70" Height="70" Foreground="White" VerticalAlignment="Top"/>
+                                <StackPanel Margin="20 0 0 0">
+                                    <TextBlock Text="Số bài hát đã nghe" FontSize="16" Foreground="White"/>
+                                    <TextBlock x:Name="tbViewedSongs" Margin="0 10 0 0" Text="10" FontSize="30" Foreground="White" HorizontalAlignment="Right"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Margin="20 35" Grid.Column="1" CornerRadius="10" Background="#00A36C">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="LikeOutline" Margin="10 0 0 0" Width="70" Height="70" Foreground="White" VerticalAlignment="Top"/>
+                                <StackPanel Margin="20 0 0 0">
+                                    <TextBlock Text="Số lượt thích bài hát" FontSize="16" Foreground="White"/>
+                                    <TextBlock x:Name="tbLikes" Margin="0 10 0 0" Text="10" FontSize="30" Foreground="White" HorizontalAlignment="Right"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Margin="20 35" Grid.Column="2" CornerRadius="10" Background="#A7C7E7">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ChessKing" Margin="10 0 0 0" Width="70" Height="70" Foreground="White" VerticalAlignment="Top"/>
+                                <StackPanel Margin="20 0 0 0">
+                                    <TextBlock Text="Hạng mục tài khoản" FontSize="16" Foreground="White"/>
+                                    <TextBlock x:Name="tbVIP" Margin="0 10 0 0" Text="VIP" FontSize="30" Foreground="White" HorizontalAlignment="Right"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+
+                <Button x:Name="btnLogout" Margin="0 0 20 0" Width="120" Grid.Row="1" Background="#5F8575" BorderThickness="0" Foreground="White" HorizontalAlignment="Right" Click="btnLogout_Click">
                     Đăng xuất
                 </Button>
-            </StackPanel>
+            </Grid>
         </Grid>
     </Border>
 </Page>

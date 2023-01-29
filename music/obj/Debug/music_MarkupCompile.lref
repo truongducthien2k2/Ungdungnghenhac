@@ -20,6 +20,7 @@ FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Artis
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\FavoriteListView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\ForgetPassword\ResetPassword.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\ForgetPassword\VerifyAccountView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\History\HistoryItemView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\History\HistoryView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\HomeView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\LoginView.xaml;;
@@ -27,12 +28,13 @@ FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\MainA
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\PlayListView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\PlaySongView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\RankView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\SignupView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\SongInDeviceView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Song\CommentItemView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Song\PostSongOnFacebookView.xaml;;
+FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Song\ShareSongView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Song\SongItemView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\Song\SongView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\TopicView.xaml;;
 FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\VideoView.xaml;;
-FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\History\HistoryItemView.xaml;;
-FE:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\View\SignupView.xaml;;
 

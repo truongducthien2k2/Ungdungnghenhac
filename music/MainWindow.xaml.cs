@@ -194,7 +194,7 @@ namespace music
         {
             if ( Properties.Settings.Default.user != "" )
             {
-                navFrame.Navigate(new AccountView());
+                navFrame.Navigate(new AccountView(navFrame));
             } else
             {
                 navFrame.Navigate(new LoginView(navFrame));

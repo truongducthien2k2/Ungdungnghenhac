@@ -30,7 +30,7 @@
                     <TextBlock Text="3.6K" FontSize="13" VerticalAlignment="Center" Margin="4" FontWeight="Thin"/>
 
 
-                    <Button x:Name="btnShare" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60">
+                    <Button x:Name="btnShare" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60" Click="btnShare_Click">
                         <materialDesign:PackIcon Kind="ShareVariant" Foreground="Gray" Width="30" Height="30"/>
                     </Button>
 

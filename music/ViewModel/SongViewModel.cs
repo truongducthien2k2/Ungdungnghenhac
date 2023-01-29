@@ -228,5 +228,15 @@ namespace music.ViewModel
             }
             return 1;
         }
+
+        public List<CLIENT_LOVE_SONG> GetLikeSongList()
+        {
+            return DataProvider.Ins.DB.CLIENT_LOVE_SONG.ToList();
+        }
+
+        public List<CLIENT_VIEW_SONG> GetViewSongList()
+        {
+            return DataProvider.Ins.DB.CLIENT_VIEW_SONG.ToList();
+        }
     }
 }

@@ -60,6 +60,10 @@ namespace music.View.Song
             BasicSong.Instance.name = songName.Text;
         }
 
-        
+        private void btnShare_Click( object sender, RoutedEventArgs e )
+        {
+            ShareSongView shareSong = new ShareSongView();
+            shareSong.Show();
+        }
     }
 }

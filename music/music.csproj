@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>packages\Facebook.7.0.10-beta\lib\net45\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
     </Reference>
@@ -254,6 +257,12 @@
     <Compile Include="View\Song\CommentItemView.xaml.cs">
       <DependentUpon>CommentItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Song\PostSongOnFacebookView.xaml.cs">
+      <DependentUpon>PostSongOnFacebookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\ShareSongView.xaml.cs">
+      <DependentUpon>ShareSongView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Song\SongItemView.xaml.cs">
       <DependentUpon>SongItemView.xaml</DependentUpon>
     </Compile>
@@ -399,6 +408,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Song\CommentItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\PostSongOnFacebookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\ShareSongView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
