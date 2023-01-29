@@ -15,83 +15,82 @@
     <EntitySet Name="SINGER" EntityType="MusicAppModel.SINGER" />
     <EntitySet Name="SONG" EntityType="MusicAppModel.SONG" />
     <EntitySet Name="SONG_PLAYLIST" EntityType="MusicAppModel.SONG_PLAYLIST" />
-    <EntitySet Name="sysdiagrams" EntityType="MusicAppModel.sysdiagrams" />
     <EntitySet Name="TOPIC" EntityType="MusicAppModel.TOPIC" />
     <EntitySet Name="USER_LOGIN_CREDENTIAL" EntityType="MusicAppModel.USER_LOGIN_CREDENTIAL" />
     <EntitySet Name="VIDEO" EntityType="MusicAppModel.VIDEO" />
-    <AssociationSet Name="FK__SONG__albumId__5165187F" Association="MusicAppModel.FK__SONG__albumId__5165187F">
+    <AssociationSet Name="FK__SONG__albumId__3C69FB99" Association="MusicAppModel.FK__SONG__albumId__3C69FB99">
       <End Role="ALBUM" EntitySet="ALBUM" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__areaId__534D60F1" Association="MusicAppModel.FK__SONG__areaId__534D60F1">
+    <AssociationSet Name="FK__SONG__areaId__3E52440B" Association="MusicAppModel.FK__SONG__areaId__3E52440B">
       <End Role="AREA" EntitySet="AREA" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_LO__clien__778AC167" Association="MusicAppModel.FK__CLIENT_LO__clien__778AC167">
+    <AssociationSet Name="FK__CLIENT_LO__clien__5441852A" Association="MusicAppModel.FK__CLIENT_LO__clien__5441852A">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_LOVE_SONG" EntitySet="CLIENT_LOVE_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__clien__6FE99F9F" Association="MusicAppModel.FK__CLIENT_VI__clien__6FE99F9F">
+    <AssociationSet Name="FK__CLIENT_VI__clien__4CA06362" Association="MusicAppModel.FK__CLIENT_VI__clien__4CA06362">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_VIEW_SONG" EntitySet="CLIENT_VIEW_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__clien__73BA3083" Association="MusicAppModel.FK__CLIENT_VI__clien__73BA3083">
+    <AssociationSet Name="FK__CLIENT_VI__clien__5070F446" Association="MusicAppModel.FK__CLIENT_VI__clien__5070F446">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_VIEW_VIDEO" EntitySet="CLIENT_VIEW_VIDEO" />
     </AssociationSet>
-    <AssociationSet Name="FK__COMMENT__clientI__7B5B524B" Association="MusicAppModel.FK__COMMENT__clientI__7B5B524B">
+    <AssociationSet Name="FK__COMMENT__clientI__5812160E" Association="MusicAppModel.FK__COMMENT__clientI__5812160E">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="COMMENT" EntitySet="COMMENT" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___clien__68487DD7" Association="MusicAppModel.FK__FAVORITE___clien__68487DD7">
+    <AssociationSet Name="FK__FAVORITE___clien__44FF419A" Association="MusicAppModel.FK__FAVORITE___clien__44FF419A">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="FAVORITE_LIST" EntitySet="FAVORITE_LIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__PLAYLIST__client__5BE2A6F2" Association="MusicAppModel.FK__PLAYLIST__client__5BE2A6F2">
+    <AssociationSet Name="FK__PLAYLIST__client__31EC6D26" Association="MusicAppModel.FK__PLAYLIST__client__31EC6D26">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="PLAYLIST" EntitySet="PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_LO__songI__76969D2E" Association="MusicAppModel.FK__CLIENT_LO__songI__76969D2E">
+    <AssociationSet Name="FK__CLIENT_LO__songI__534D60F1" Association="MusicAppModel.FK__CLIENT_LO__songI__534D60F1">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_LOVE_SONG" EntitySet="CLIENT_LOVE_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__songI__6EF57B66" Association="MusicAppModel.FK__CLIENT_VI__songI__6EF57B66">
+    <AssociationSet Name="FK__CLIENT_VI__songI__4BAC3F29" Association="MusicAppModel.FK__CLIENT_VI__songI__4BAC3F29">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_VIEW_SONG" EntitySet="CLIENT_VIEW_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__video__72C60C4A" Association="MusicAppModel.FK__CLIENT_VI__video__72C60C4A">
+    <AssociationSet Name="FK__CLIENT_VI__video__4F7CD00D" Association="MusicAppModel.FK__CLIENT_VI__video__4F7CD00D">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_VIEW_VIDEO" EntitySet="CLIENT_VIEW_VIDEO" />
     </AssociationSet>
-    <AssociationSet Name="FK__COMMENT__songId__7A672E12" Association="MusicAppModel.FK__COMMENT__songId__7A672E12">
+    <AssociationSet Name="FK__COMMENT__songId__571DF1D5" Association="MusicAppModel.FK__COMMENT__songId__571DF1D5">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="COMMENT" EntitySet="COMMENT" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___favor__6B24EA82" Association="MusicAppModel.FK__FAVORITE___favor__6B24EA82">
+    <AssociationSet Name="FK__FAVORITE___favor__47DBAE45" Association="MusicAppModel.FK__FAVORITE___favor__47DBAE45">
       <End Role="FAVORITE_LIST" EntitySet="FAVORITE_LIST" />
       <End Role="FAVORITE_LIST_SONG" EntitySet="FAVORITE_LIST_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___songI__6C190EBB" Association="MusicAppModel.FK__FAVORITE___songI__6C190EBB">
+    <AssociationSet Name="FK__FAVORITE___songI__48CFD27E" Association="MusicAppModel.FK__FAVORITE___songI__48CFD27E">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="FAVORITE_LIST_SONG" EntitySet="FAVORITE_LIST_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG_PLAY__playl__5EBF139D" Association="MusicAppModel.FK__SONG_PLAY__playl__5EBF139D">
+    <AssociationSet Name="FK__SONG_PLAY__playl__412EB0B6" Association="MusicAppModel.FK__SONG_PLAY__playl__412EB0B6">
       <End Role="PLAYLIST" EntitySet="PLAYLIST" />
       <End Role="SONG_PLAYLIST" EntitySet="SONG_PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__singerId__52593CB8" Association="MusicAppModel.FK__SONG__singerId__52593CB8">
+    <AssociationSet Name="FK__SONG__singerId__3D5E1FD2" Association="MusicAppModel.FK__SONG__singerId__3D5E1FD2">
       <End Role="SINGER" EntitySet="SINGER" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__topicId__4F7CD00D" Association="MusicAppModel.FK__SONG__topicId__4F7CD00D">
+    <AssociationSet Name="FK__SONG__topicId__3B75D760" Association="MusicAppModel.FK__SONG__topicId__3B75D760">
       <End Role="TOPIC" EntitySet="TOPIC" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG_PLAY__songI__5FB337D6" Association="MusicAppModel.FK__SONG_PLAY__songI__5FB337D6">
+    <AssociationSet Name="FK__SONG_PLAY__songI__4222D4EF" Association="MusicAppModel.FK__SONG_PLAY__songI__4222D4EF">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="SONG_PLAYLIST" EntitySet="SONG_PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__VIDEO__topicId__4316F928" Association="MusicAppModel.FK__VIDEO__topicId__4316F928">
+    <AssociationSet Name="FK__VIDEO__topicId__38996AB5" Association="MusicAppModel.FK__VIDEO__topicId__38996AB5">
       <End Role="TOPIC" EntitySet="TOPIC" />
       <End Role="VIDEO" EntitySet="VIDEO" />
     </AssociationSet>
@@ -112,7 +111,7 @@
     <Property Name="albumName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="publishDate" Type="DateTime" Precision="0" />
     <Property Name="albumImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__albumId__5165187F" FromRole="ALBUM" ToRole="SONG" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__albumId__3C69FB99" FromRole="ALBUM" ToRole="SONG" />
   </EntityType>
   <EntityType Name="AREA">
     <Key>
@@ -120,7 +119,7 @@
     </Key>
     <Property Name="id" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="areaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__areaId__534D60F1" FromRole="AREA" ToRole="SONG" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__areaId__3E52440B" FromRole="AREA" ToRole="SONG" />
   </EntityType>
   <EntityType Name="CLIENT">
     <Key>
@@ -134,12 +133,12 @@
     <Property Name="phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="isAdmin" Type="Boolean" />
     <Property Name="VIP" Type="Boolean" />
-    <NavigationProperty Name="CLIENT_LOVE_SONG" Relationship="MusicAppModel.FK__CLIENT_LO__clien__778AC167" FromRole="CLIENT" ToRole="CLIENT_LOVE_SONG" />
-    <NavigationProperty Name="CLIENT_VIEW_SONG" Relationship="MusicAppModel.FK__CLIENT_VI__clien__6FE99F9F" FromRole="CLIENT" ToRole="CLIENT_VIEW_SONG" />
-    <NavigationProperty Name="CLIENT_VIEW_VIDEO" Relationship="MusicAppModel.FK__CLIENT_VI__clien__73BA3083" FromRole="CLIENT" ToRole="CLIENT_VIEW_VIDEO" />
-    <NavigationProperty Name="COMMENT" Relationship="MusicAppModel.FK__COMMENT__clientI__7B5B524B" FromRole="CLIENT" ToRole="COMMENT" />
-    <NavigationProperty Name="FAVORITE_LIST" Relationship="MusicAppModel.FK__FAVORITE___clien__68487DD7" FromRole="CLIENT" ToRole="FAVORITE_LIST" />
-    <NavigationProperty Name="PLAYLIST" Relationship="MusicAppModel.FK__PLAYLIST__client__5BE2A6F2" FromRole="CLIENT" ToRole="PLAYLIST" />
+    <NavigationProperty Name="CLIENT_LOVE_SONG" Relationship="MusicAppModel.FK__CLIENT_LO__clien__5441852A" FromRole="CLIENT" ToRole="CLIENT_LOVE_SONG" />
+    <NavigationProperty Name="CLIENT_VIEW_SONG" Relationship="MusicAppModel.FK__CLIENT_VI__clien__4CA06362" FromRole="CLIENT" ToRole="CLIENT_VIEW_SONG" />
+    <NavigationProperty Name="CLIENT_VIEW_VIDEO" Relationship="MusicAppModel.FK__CLIENT_VI__clien__5070F446" FromRole="CLIENT" ToRole="CLIENT_VIEW_VIDEO" />
+    <NavigationProperty Name="COMMENT" Relationship="MusicAppModel.FK__COMMENT__clientI__5812160E" FromRole="CLIENT" ToRole="COMMENT" />
+    <NavigationProperty Name="FAVORITE_LIST" Relationship="MusicAppModel.FK__FAVORITE___clien__44FF419A" FromRole="CLIENT" ToRole="FAVORITE_LIST" />
+    <NavigationProperty Name="PLAYLIST" Relationship="MusicAppModel.FK__PLAYLIST__client__31EC6D26" FromRole="CLIENT" ToRole="PLAYLIST" />
   </EntityType>
   <EntityType Name="CLIENT_LOVE_SONG">
     <Key>
@@ -149,8 +148,8 @@
     <Property Name="songId" Type="Int32" />
     <Property Name="clientId" Type="Int32" />
     <Property Name="loveDate" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_LO__clien__778AC167" FromRole="CLIENT_LOVE_SONG" ToRole="CLIENT" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_LO__songI__76969D2E" FromRole="CLIENT_LOVE_SONG" ToRole="SONG" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_LO__clien__5441852A" FromRole="CLIENT_LOVE_SONG" ToRole="CLIENT" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_LO__songI__534D60F1" FromRole="CLIENT_LOVE_SONG" ToRole="SONG" />
   </EntityType>
   <EntityType Name="CLIENT_VIEW_SONG">
     <Key>
@@ -161,8 +160,8 @@
     <Property Name="clientId" Type="Int32" />
     <Property Name="currentViews" Type="Int32" />
     <Property Name="viewDate" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_VI__clien__6FE99F9F" FromRole="CLIENT_VIEW_SONG" ToRole="CLIENT" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_VI__songI__6EF57B66" FromRole="CLIENT_VIEW_SONG" ToRole="SONG" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_VI__clien__4CA06362" FromRole="CLIENT_VIEW_SONG" ToRole="CLIENT" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_VI__songI__4BAC3F29" FromRole="CLIENT_VIEW_SONG" ToRole="SONG" />
   </EntityType>
   <EntityType Name="CLIENT_VIEW_VIDEO">
     <Key>
@@ -173,20 +172,20 @@
     <Property Name="clientId" Type="Int32" />
     <Property Name="currentViews" Type="Int32" />
     <Property Name="likeVideo" Type="Boolean" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_VI__clien__73BA3083" FromRole="CLIENT_VIEW_VIDEO" ToRole="CLIENT" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_VI__video__72C60C4A" FromRole="CLIENT_VIEW_VIDEO" ToRole="SONG" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__CLIENT_VI__clien__5070F446" FromRole="CLIENT_VIEW_VIDEO" ToRole="CLIENT" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__CLIENT_VI__video__4F7CD00D" FromRole="CLIENT_VIEW_VIDEO" ToRole="SONG" />
   </EntityType>
   <EntityType Name="COMMENT">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="commentDate" Type="DateTime" Precision="3" />
     <Property Name="songId" Type="Int32" />
     <Property Name="clientId" Type="Int32" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__COMMENT__clientI__7B5B524B" FromRole="COMMENT" ToRole="CLIENT" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__COMMENT__songId__7A672E12" FromRole="COMMENT" ToRole="SONG" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__COMMENT__clientI__5812160E" FromRole="COMMENT" ToRole="CLIENT" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__COMMENT__songId__571DF1D5" FromRole="COMMENT" ToRole="SONG" />
   </EntityType>
   <EntityType Name="FAVORITE_LIST">
     <Key>
@@ -194,8 +193,8 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="clientId" Type="Int32" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__FAVORITE___clien__68487DD7" FromRole="FAVORITE_LIST" ToRole="CLIENT" />
-    <NavigationProperty Name="FAVORITE_LIST_SONG" Relationship="MusicAppModel.FK__FAVORITE___favor__6B24EA82" FromRole="FAVORITE_LIST" ToRole="FAVORITE_LIST_SONG" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__FAVORITE___clien__44FF419A" FromRole="FAVORITE_LIST" ToRole="CLIENT" />
+    <NavigationProperty Name="FAVORITE_LIST_SONG" Relationship="MusicAppModel.FK__FAVORITE___favor__47DBAE45" FromRole="FAVORITE_LIST" ToRole="FAVORITE_LIST_SONG" />
   </EntityType>
   <EntityType Name="FAVORITE_LIST_SONG">
     <Key>
@@ -204,8 +203,8 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="favoriteId" Type="Int32" />
     <Property Name="songId" Type="Int32" />
-    <NavigationProperty Name="FAVORITE_LIST" Relationship="MusicAppModel.FK__FAVORITE___favor__6B24EA82" FromRole="FAVORITE_LIST_SONG" ToRole="FAVORITE_LIST" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__FAVORITE___songI__6C190EBB" FromRole="FAVORITE_LIST_SONG" ToRole="SONG" />
+    <NavigationProperty Name="FAVORITE_LIST" Relationship="MusicAppModel.FK__FAVORITE___favor__47DBAE45" FromRole="FAVORITE_LIST_SONG" ToRole="FAVORITE_LIST" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__FAVORITE___songI__48CFD27E" FromRole="FAVORITE_LIST_SONG" ToRole="SONG" />
   </EntityType>
   <EntityType Name="PLAYLIST">
     <Key>
@@ -215,8 +214,8 @@
     <Property Name="playlistName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="clientId" Type="Int32" />
     <Property Name="ipAddress" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__PLAYLIST__client__5BE2A6F2" FromRole="PLAYLIST" ToRole="CLIENT" />
-    <NavigationProperty Name="SONG_PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__playl__5EBF139D" FromRole="PLAYLIST" ToRole="SONG_PLAYLIST" />
+    <NavigationProperty Name="CLIENT" Relationship="MusicAppModel.FK__PLAYLIST__client__31EC6D26" FromRole="PLAYLIST" ToRole="CLIENT" />
+    <NavigationProperty Name="SONG_PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__playl__412EB0B6" FromRole="PLAYLIST" ToRole="SONG_PLAYLIST" />
   </EntityType>
   <EntityType Name="SINGER">
     <Key>
@@ -226,7 +225,7 @@
     <Property Name="singerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="singerImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__singerId__52593CB8" FromRole="SINGER" ToRole="SONG" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__singerId__3D5E1FD2" FromRole="SINGER" ToRole="SONG" />
   </EntityType>
   <EntityType Name="SONG">
     <Key>
@@ -241,16 +240,16 @@
     <Property Name="songImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="songCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="areaId" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="ALBUM" Relationship="MusicAppModel.FK__SONG__albumId__5165187F" FromRole="SONG" ToRole="ALBUM" />
-    <NavigationProperty Name="AREA" Relationship="MusicAppModel.FK__SONG__areaId__534D60F1" FromRole="SONG" ToRole="AREA" />
-    <NavigationProperty Name="CLIENT_LOVE_SONG" Relationship="MusicAppModel.FK__CLIENT_LO__songI__76969D2E" FromRole="SONG" ToRole="CLIENT_LOVE_SONG" />
-    <NavigationProperty Name="CLIENT_VIEW_SONG" Relationship="MusicAppModel.FK__CLIENT_VI__songI__6EF57B66" FromRole="SONG" ToRole="CLIENT_VIEW_SONG" />
-    <NavigationProperty Name="CLIENT_VIEW_VIDEO" Relationship="MusicAppModel.FK__CLIENT_VI__video__72C60C4A" FromRole="SONG" ToRole="CLIENT_VIEW_VIDEO" />
-    <NavigationProperty Name="COMMENT" Relationship="MusicAppModel.FK__COMMENT__songId__7A672E12" FromRole="SONG" ToRole="COMMENT" />
-    <NavigationProperty Name="FAVORITE_LIST_SONG" Relationship="MusicAppModel.FK__FAVORITE___songI__6C190EBB" FromRole="SONG" ToRole="FAVORITE_LIST_SONG" />
-    <NavigationProperty Name="SINGER" Relationship="MusicAppModel.FK__SONG__singerId__52593CB8" FromRole="SONG" ToRole="SINGER" />
-    <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__SONG__topicId__4F7CD00D" FromRole="SONG" ToRole="TOPIC" />
-    <NavigationProperty Name="SONG_PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__songI__5FB337D6" FromRole="SONG" ToRole="SONG_PLAYLIST" />
+    <NavigationProperty Name="ALBUM" Relationship="MusicAppModel.FK__SONG__albumId__3C69FB99" FromRole="SONG" ToRole="ALBUM" />
+    <NavigationProperty Name="AREA" Relationship="MusicAppModel.FK__SONG__areaId__3E52440B" FromRole="SONG" ToRole="AREA" />
+    <NavigationProperty Name="CLIENT_LOVE_SONG" Relationship="MusicAppModel.FK__CLIENT_LO__songI__534D60F1" FromRole="SONG" ToRole="CLIENT_LOVE_SONG" />
+    <NavigationProperty Name="CLIENT_VIEW_SONG" Relationship="MusicAppModel.FK__CLIENT_VI__songI__4BAC3F29" FromRole="SONG" ToRole="CLIENT_VIEW_SONG" />
+    <NavigationProperty Name="CLIENT_VIEW_VIDEO" Relationship="MusicAppModel.FK__CLIENT_VI__video__4F7CD00D" FromRole="SONG" ToRole="CLIENT_VIEW_VIDEO" />
+    <NavigationProperty Name="COMMENT" Relationship="MusicAppModel.FK__COMMENT__songId__571DF1D5" FromRole="SONG" ToRole="COMMENT" />
+    <NavigationProperty Name="FAVORITE_LIST_SONG" Relationship="MusicAppModel.FK__FAVORITE___songI__48CFD27E" FromRole="SONG" ToRole="FAVORITE_LIST_SONG" />
+    <NavigationProperty Name="SINGER" Relationship="MusicAppModel.FK__SONG__singerId__3D5E1FD2" FromRole="SONG" ToRole="SINGER" />
+    <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__SONG__topicId__3B75D760" FromRole="SONG" ToRole="TOPIC" />
+    <NavigationProperty Name="SONG_PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__songI__4222D4EF" FromRole="SONG" ToRole="SONG_PLAYLIST" />
   </EntityType>
   <EntityType Name="SONG_PLAYLIST">
     <Key>
@@ -259,18 +258,8 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="playlistId" Type="Int32" />
     <Property Name="songId" Type="Int32" />
-    <NavigationProperty Name="PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__playl__5EBF139D" FromRole="SONG_PLAYLIST" ToRole="PLAYLIST" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG_PLAY__songI__5FB337D6" FromRole="SONG_PLAYLIST" ToRole="SONG" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PLAYLIST" Relationship="MusicAppModel.FK__SONG_PLAY__playl__412EB0B6" FromRole="SONG_PLAYLIST" ToRole="PLAYLIST" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG_PLAY__songI__4222D4EF" FromRole="SONG_PLAYLIST" ToRole="SONG" />
   </EntityType>
   <EntityType Name="TOPIC">
     <Key>
@@ -279,8 +268,8 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="topicName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="topicImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__topicId__4F7CD00D" FromRole="TOPIC" ToRole="SONG" />
-    <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="TOPIC" ToRole="VIDEO" />
+    <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__topicId__3B75D760" FromRole="TOPIC" ToRole="SONG" />
+    <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__topicId__38996AB5" FromRole="TOPIC" ToRole="VIDEO" />
   </EntityType>
   <EntityType Name="USER_LOGIN_CREDENTIAL">
     <Key>
@@ -298,9 +287,9 @@
     <Property Name="videoImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="videoDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="topicId" Type="Int32" />
-    <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="VIDEO" ToRole="TOPIC" />
+    <NavigationProperty Name="TOPIC" Relationship="MusicAppModel.FK__VIDEO__topicId__38996AB5" FromRole="VIDEO" ToRole="TOPIC" />
   </EntityType>
-  <Association Name="FK__SONG__albumId__5165187F">
+  <Association Name="FK__SONG__albumId__3C69FB99">
     <End Type="MusicAppModel.ALBUM" Role="ALBUM" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -312,7 +301,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__areaId__534D60F1">
+  <Association Name="FK__SONG__areaId__3E52440B">
     <End Type="MusicAppModel.AREA" Role="AREA" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -324,7 +313,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_LO__clien__778AC167">
+  <Association Name="FK__CLIENT_LO__clien__5441852A">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_LOVE_SONG" Role="CLIENT_LOVE_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -336,7 +325,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__clien__6FE99F9F">
+  <Association Name="FK__CLIENT_VI__clien__4CA06362">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_VIEW_SONG" Role="CLIENT_VIEW_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -348,7 +337,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__clien__73BA3083">
+  <Association Name="FK__CLIENT_VI__clien__5070F446">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_VIEW_VIDEO" Role="CLIENT_VIEW_VIDEO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -360,7 +349,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__COMMENT__clientI__7B5B524B">
+  <Association Name="FK__COMMENT__clientI__5812160E">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.COMMENT" Role="COMMENT" Multiplicity="*" />
     <ReferentialConstraint>
@@ -372,7 +361,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___clien__68487DD7">
+  <Association Name="FK__FAVORITE___clien__44FF419A">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.FAVORITE_LIST" Role="FAVORITE_LIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -384,7 +373,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PLAYLIST__client__5BE2A6F2">
+  <Association Name="FK__PLAYLIST__client__31EC6D26">
     <End Type="MusicAppModel.CLIENT" Role="CLIENT" Multiplicity="0..1" />
     <End Type="MusicAppModel.PLAYLIST" Role="PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -396,7 +385,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_LO__songI__76969D2E">
+  <Association Name="FK__CLIENT_LO__songI__534D60F1">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_LOVE_SONG" Role="CLIENT_LOVE_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -408,7 +397,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__songI__6EF57B66">
+  <Association Name="FK__CLIENT_VI__songI__4BAC3F29">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_VIEW_SONG" Role="CLIENT_VIEW_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -420,7 +409,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__video__72C60C4A">
+  <Association Name="FK__CLIENT_VI__video__4F7CD00D">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.CLIENT_VIEW_VIDEO" Role="CLIENT_VIEW_VIDEO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -432,7 +421,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__COMMENT__songId__7A672E12">
+  <Association Name="FK__COMMENT__songId__571DF1D5">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.COMMENT" Role="COMMENT" Multiplicity="*" />
     <ReferentialConstraint>
@@ -444,7 +433,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___favor__6B24EA82">
+  <Association Name="FK__FAVORITE___favor__47DBAE45">
     <End Type="MusicAppModel.FAVORITE_LIST" Role="FAVORITE_LIST" Multiplicity="0..1" />
     <End Type="MusicAppModel.FAVORITE_LIST_SONG" Role="FAVORITE_LIST_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -456,7 +445,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___songI__6C190EBB">
+  <Association Name="FK__FAVORITE___songI__48CFD27E">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.FAVORITE_LIST_SONG" Role="FAVORITE_LIST_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -468,7 +457,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG_PLAY__playl__5EBF139D">
+  <Association Name="FK__SONG_PLAY__playl__412EB0B6">
     <End Type="MusicAppModel.PLAYLIST" Role="PLAYLIST" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG_PLAYLIST" Role="SONG_PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -480,7 +469,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__singerId__52593CB8">
+  <Association Name="FK__SONG__singerId__3D5E1FD2">
     <End Type="MusicAppModel.SINGER" Role="SINGER" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -492,7 +481,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__topicId__4F7CD00D">
+  <Association Name="FK__SONG__topicId__3B75D760">
     <End Type="MusicAppModel.TOPIC" Role="TOPIC" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -504,7 +493,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG_PLAY__songI__5FB337D6">
+  <Association Name="FK__SONG_PLAY__songI__4222D4EF">
     <End Type="MusicAppModel.SONG" Role="SONG" Multiplicity="0..1" />
     <End Type="MusicAppModel.SONG_PLAYLIST" Role="SONG_PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -516,7 +505,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VIDEO__topicId__4316F928">
+  <Association Name="FK__VIDEO__topicId__38996AB5">
     <End Type="MusicAppModel.TOPIC" Role="TOPIC" Multiplicity="0..1" />
     <End Type="MusicAppModel.VIDEO" Role="VIDEO" Multiplicity="*" />
     <ReferentialConstraint>

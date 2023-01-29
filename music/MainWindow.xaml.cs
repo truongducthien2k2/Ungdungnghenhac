@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using music.View.Topic;
 
 namespace music
 {
@@ -154,7 +155,7 @@ namespace music
 
         private void topicBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new TopicView());
+            navFrame.Navigate(new TopicView(ImageViewer, tbSongName));
         }
 
         private void albumBtn_Click( object sender, RoutedEventArgs e )
