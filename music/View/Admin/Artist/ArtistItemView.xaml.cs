@@ -42,6 +42,12 @@ namespace music.View.Admin.Artist
         {
             NewArtistView newArtist = new NewArtistView(artist, "adjust", MainContent);
             newArtist.Show();
+            newArtist.Closed += NewArtist_Closed;
+        }
+
+        private void NewArtist_Closed( object sender, EventArgs e )
+        {
+            MainContent.Navigate(new ArtistAdminView(MainContent));
         }
     }
 }

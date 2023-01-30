@@ -155,23 +155,15 @@ namespace music.View.Admin.Song
                     case "adjust":
                         if ( songVM.UpdateSong(song.id, songName, topic, album, singer, area, lyrics, songPath, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Cập nhật thông tin bài hát thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new SongAdminView(MainContent));
-                            }
+                            MessageBox.Show("Cập nhật thông tin bài hát thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
                         }
                         break;
                     case "add":
                         if ( songVM.InsertSong(songName, topic, album, singer, area, lyrics, songPath, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Thêm mới bài hát thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new SongAdminView(MainContent));
-                            }
+                            MessageBox.Show("Thêm mới bài hát thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
                         }
                         break;
                     default:

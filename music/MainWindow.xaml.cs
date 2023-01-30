@@ -51,33 +51,7 @@ namespace music
             }
         }
 
-        private void LoadTimeOfSong()
-        {
-            int totalSecondsOfSong = 0;
-            if (player.NaturalDuration.HasTimeSpan)
-            {
-                totalSecondsOfSong = (int) player.NaturalDuration.TimeSpan.TotalSeconds;
-            }
-            tbTotalTime.Text = totalSecondsOfSong.ToString();
-        }
-
-        public void LoadSong(int indexOfSong)
-        {
-            this.indexOfSong = indexOfSong;
-            btnPlay.Visibility = Visibility.Visible;
-            btnPause.Visibility = Visibility.Hidden;
-            if (indexOfSong != -1)
-            {
-                if (songVM.GetAllSong().Count > 0)
-                {
-                    song = songVM.GetAllSong() [this.indexOfSong];
-    ;               ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
-                    tbSongName.Text = song.songName;
-                    tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
-                    player.Open(new Uri(song.songCode));
-                }
-            }
-        }
+        
 
         protected override void OnSourceInitialized( EventArgs e )
         {
@@ -220,6 +194,24 @@ namespace music
             return songVM.GetAllSong().IndexOf(song);
         }
 
+        public void LoadSong( int indexOfSong )
+        {
+            this.indexOfSong = indexOfSong;
+            btnPlay.Visibility = Visibility.Visible;
+            btnPause.Visibility = Visibility.Hidden;
+            if ( indexOfSong != -1 )
+            {
+                if ( songVM.GetAllSong().Count > 0 )
+                {
+                    song = songVM.GetAllSong() [this.indexOfSong];
+                    ; ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+                    tbSongName.Text = song.songName;
+                    tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
+                    player.Open(new Uri(song.songCode));
+                }
+            }
+        }
+
         private void btnPlay_Click( object sender, RoutedEventArgs e )
         {
             if (player.Source != null)
@@ -232,7 +224,6 @@ namespace music
                 }
                 btnPlay.Visibility = Visibility.Hidden;
                 btnPause.Visibility = Visibility.Visible;
-                LoadTimeOfSong();
                 player.Play();
             }
         }
