@@ -86,23 +86,15 @@ namespace music.View.Admin.Artist
                     case "adjust":
                         if ( artistVM.UpdateArtist(artist.id, artistName, artistIntro, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Cập nhật thông tin nghệ sĩ thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new ArtistAdminView(MainContent));
-                            }
+                            MessageBox.Show("Cập nhật thông tin nghệ sĩ thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
                         }
                         break;
                     case "add":
                         if ( artistVM.InsertNewArtist(artistName, artistIntro, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Thêm mới nghệ sĩ thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new ArtistAdminView(MainContent));
-                            }
+                            MessageBox.Show("Thêm mới nghệ sĩ thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
                         }
                         break;
                     default:

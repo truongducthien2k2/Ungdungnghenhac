@@ -49,25 +49,26 @@ namespace music.View.Admin.Song
         private void btnAdjustSong_Click( object sender, RoutedEventArgs e )
         {
             NewSongView newSong = new NewSongView(song, "adjust", MainContent);
+            newSong.Show();
+            newSong.Closed += NewSong_Closed;
+        }
+
+        private void NewSong_Closed( object sender, EventArgs e )
+        {
+            MainContent.Navigate(new SongAdminView(MainContent));
         }
 
         private void btnRemoveSong_Click( object sender, RoutedEventArgs e )
         {
             if ( songVM.RemoveSong(song.id) == 1 )
             {
-                bool? result = new CustomMessageBox("Xóa bài hát thành công!!!", "Success").ShowDialog();
-                if ( result.Value )
-                {
-                    MainContent.Navigate(new SongAdminView(MainContent));
-                }
+                MessageBox.Show("Xóa bài hát thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainContent.Navigate(new SongAdminView(MainContent));
             }
             else
             {
-                bool? result = new CustomMessageBox("Bạn không thể xóa bài hát này!!!", "Error").ShowDialog();
-                if ( result.Value )
-                {
-                    MainContent.Navigate(new SongAdminView(MainContent));
-                }
+                MessageBox.Show("Bạn không thể xóa bài hát này!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MainContent.Navigate(new SongAdminView(MainContent));
             }
         }
     }

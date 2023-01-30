@@ -27,11 +27,6 @@ namespace music.View.Admin
     {
         ArtistViewModel artistVM = new ArtistViewModel();
         Frame MainContent;
-        public ArtistAdminView()
-        {
-            InitializeComponent();
-            LoadSingerData();
-        }
 
         public ArtistAdminView(Frame MainContent)
         {

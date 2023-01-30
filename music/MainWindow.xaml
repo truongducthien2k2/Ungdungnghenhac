@@ -191,9 +191,9 @@
                                 </Button>
                             </Grid>
                             
-                            <TextBlock x:Name="tbCurrentTime" Text="03:00" VerticalAlignment="Center" FontWeight="Thin" />
+                            <TextBlock x:Name="tbCurrentTime" Text="00:00" VerticalAlignment="Center" FontWeight="Thin" />
                             <TextBlock VerticalAlignment="Center" Text="/" FontWeight="Thin" />
-                            <TextBlock x:Name="tbTotalTime" Text="03:00" VerticalAlignment="Center" FontWeight="Thin" />
+                            <TextBlock x:Name="tbTotalTime" Text="00:00" VerticalAlignment="Center" FontWeight="Thin" />
                         </StackPanel>
                     </Grid>
                 </Grid>

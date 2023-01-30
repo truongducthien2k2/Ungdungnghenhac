@@ -273,7 +273,10 @@
     <Compile Include="View\Song\SongView.xaml.cs">
       <DependentUpon>SongView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TopicView.xaml.cs">
+    <Compile Include="View\Topic\TopicItemView.xaml.cs">
+      <DependentUpon>TopicItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Topic\TopicView.xaml.cs">
       <DependentUpon>TopicView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VideoView.xaml.cs">
@@ -435,7 +438,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TopicView.xaml">
+    <Page Include="View\Topic\TopicItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Topic\TopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

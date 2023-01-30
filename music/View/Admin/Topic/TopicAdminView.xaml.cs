@@ -25,10 +25,6 @@ namespace music.View.Admin
     {
         TopicViewModel topicVM = new TopicViewModel();
         Frame MainContent;
-        public TopicAdminView()
-        {
-            InitializeComponent();
-        }
 
         public TopicAdminView(Frame MainContent)
         {

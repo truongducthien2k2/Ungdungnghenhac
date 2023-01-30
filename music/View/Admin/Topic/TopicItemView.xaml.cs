@@ -49,25 +49,25 @@ namespace music.View.Admin.Topic
         {
             NewTopicView newTopic = new NewTopicView(topic, "adjust", MainContent);
             newTopic.Show();
+            newTopic.Closed += NewTopic_Closed;
+        }
+
+        private void NewTopic_Closed( object sender, EventArgs e )
+        {
+            MainContent.Navigate(new TopicAdminView(MainContent));
         }
 
         private void btnRemoveTopic_Click( object sender, RoutedEventArgs e )
         {
             if ( topicVM.RemoveTopic(topic.id) == 1 )
             {
-                bool? result = new CustomMessageBox("Xóa chủ đề thành công!!!", "Success").ShowDialog();
-                if ( result.Value )
-                {
-                    MainContent.Navigate(new TopicAdminView(MainContent));
-                }
+                MessageBox.Show("Xóa chủ đề thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainContent.Navigate(new TopicAdminView(MainContent));
             }
             else
             {
-                bool? result = new CustomMessageBox("Bạn không thể xóa chủ đề này!!!", "Error").ShowDialog();
-                if ( result.Value )
-                {
-                    MainContent.Navigate(new TopicAdminView(MainContent));
-                }
+                MessageBox.Show("Bạn không thể xóa chủ đề này!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MainContent.Navigate(new TopicAdminView(MainContent));
             }
         }
     }
