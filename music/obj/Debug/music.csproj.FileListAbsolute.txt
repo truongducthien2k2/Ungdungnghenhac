@@ -38,25 +38,6 @@ D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
 D:\BTVN\OOP\OOP\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe.config
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\EntityFramework.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.dll
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\EntityFramework.xml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.xml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.xml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.csproj.AssemblyReference.cache
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.csproj.SuggestedBindingRedirects.cache
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\Component\CustomMessageBox.baml
@@ -81,20 +62,48 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HistoryView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HomeView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlayListView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\RankView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SignupView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\CommentItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\PostSongOnFacebookView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\TopicView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\VideoView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\App.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music_Content.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.cache
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.lref
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe.config
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.exe
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\music.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\EntityFramework.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Facebook.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\EntityFramework.xml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Facebook.xml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.xml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\App.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\MainWindow.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\AccountView.baml
@@ -116,14 +125,21 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.baml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HistoryView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\HomeView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\LoginView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlayListView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\RankView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SignupView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.baml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\SongView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\CommentItemView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\PostSongOnFacebookView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\TopicView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\VideoView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.g.resources
@@ -133,3 +149,120 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\m
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.exe
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.pdb
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SetTimeToStopView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SetTimeToStopView.baml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\music.exe.config
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\music.exe
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\music.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\EntityFramework.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\Facebook.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\EntityFramework.xml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\Facebook.xml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MaterialDesignColors.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\OOP4\Ungdungnghenhac\music\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.csproj.AssemblyReference.cache
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.csproj.SuggestedBindingRedirects.cache
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\Component\CustomMessageBox.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\Component\CustomMessageBox.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\MainWindow.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\AccountView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\AccountAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Advertisement\AdvertisementAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Album\AlbumAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\NewArtistView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\HomeAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\NewSongView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\NewTopicView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicAdminView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\AlbumView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ArtistView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\HomeView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\LoginView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\PlayListView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\RankView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\SignupView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\CommentItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\PostSongOnFacebookView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SetTimeToStopView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\VideoView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\App.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music_Content.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.cache
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music_MarkupCompile.lref
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\App.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\MainWindow.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\AccountView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\AccountAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Advertisement\AdvertisementAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Album\AlbumAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\ArtistItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Artist\NewArtistView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\HomeAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\NewSongView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Song\SongItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\NewTopicView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicAdminView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Admin\Topic\TopicItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\AlbumView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ArtistView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\FavoriteListView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\ResetPassword.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\ForgetPassword\VerifyAccountView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\History\HistoryItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\History\HistoryView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\HomeView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\LoginView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\MainAdmin.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\PlayListView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\PlaySongView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\RankView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\SignupView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\SongInDeviceView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\CommentItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\PostSongOnFacebookView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SetTimeToStopView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\VideoView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.g.resources
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.Properties.Resources.resources
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.csproj.GenerateResource.cache
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.csproj.CoreCompileInputs.cache
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.csproj.CopyComplete
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.exe
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\music.pdb
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.g.cs
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.baml
+D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.baml

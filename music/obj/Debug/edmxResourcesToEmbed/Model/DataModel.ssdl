@@ -131,16 +131,6 @@
     <Property Name="playlistId" Type="int" />
     <Property Name="songId" Type="int" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TOPIC">
     <Key>
       <PropertyRef Name="id" />
@@ -166,7 +156,7 @@
     <Property Name="videoDesc" Type="text" />
     <Property Name="topicId" Type="int" />
   </EntityType>
-  <Association Name="FK__CLIENT_LO__clien__778AC167">
+  <Association Name="FK__CLIENT_LO__clien__5441852A">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="CLIENT_LOVE_SONG" Type="Self.CLIENT_LOVE_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -178,7 +168,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_LO__songI__76969D2E">
+  <Association Name="FK__CLIENT_LO__songI__534D60F1">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="CLIENT_LOVE_SONG" Type="Self.CLIENT_LOVE_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -190,7 +180,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__clien__6FE99F9F">
+  <Association Name="FK__CLIENT_VI__clien__4CA06362">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="CLIENT_VIEW_SONG" Type="Self.CLIENT_VIEW_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -202,7 +192,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__clien__73BA3083">
+  <Association Name="FK__CLIENT_VI__clien__5070F446">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="CLIENT_VIEW_VIDEO" Type="Self.CLIENT_VIEW_VIDEO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -214,7 +204,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__songI__6EF57B66">
+  <Association Name="FK__CLIENT_VI__songI__4BAC3F29">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="CLIENT_VIEW_SONG" Type="Self.CLIENT_VIEW_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -226,7 +216,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CLIENT_VI__video__72C60C4A">
+  <Association Name="FK__CLIENT_VI__video__4F7CD00D">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="CLIENT_VIEW_VIDEO" Type="Self.CLIENT_VIEW_VIDEO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -238,7 +228,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__COMMENT__clientI__7B5B524B">
+  <Association Name="FK__COMMENT__clientI__5812160E">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="COMMENT" Type="Self.COMMENT" Multiplicity="*" />
     <ReferentialConstraint>
@@ -250,7 +240,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__COMMENT__songId__7A672E12">
+  <Association Name="FK__COMMENT__songId__571DF1D5">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="COMMENT" Type="Self.COMMENT" Multiplicity="*" />
     <ReferentialConstraint>
@@ -262,7 +252,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___clien__68487DD7">
+  <Association Name="FK__FAVORITE___clien__44FF419A">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="FAVORITE_LIST" Type="Self.FAVORITE_LIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -274,7 +264,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___favor__6B24EA82">
+  <Association Name="FK__FAVORITE___favor__47DBAE45">
     <End Role="FAVORITE_LIST" Type="Self.FAVORITE_LIST" Multiplicity="0..1" />
     <End Role="FAVORITE_LIST_SONG" Type="Self.FAVORITE_LIST_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -286,7 +276,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__FAVORITE___songI__6C190EBB">
+  <Association Name="FK__FAVORITE___songI__48CFD27E">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="FAVORITE_LIST_SONG" Type="Self.FAVORITE_LIST_SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -298,7 +288,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PLAYLIST__client__5BE2A6F2">
+  <Association Name="FK__PLAYLIST__client__31EC6D26">
     <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
     <End Role="PLAYLIST" Type="Self.PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -310,7 +300,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__albumId__5165187F">
+  <Association Name="FK__SONG__albumId__3C69FB99">
     <End Role="ALBUM" Type="Self.ALBUM" Multiplicity="0..1" />
     <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -322,7 +312,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__areaId__534D60F1">
+  <Association Name="FK__SONG__areaId__3E52440B">
     <End Role="AREA" Type="Self.AREA" Multiplicity="0..1" />
     <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -334,7 +324,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__singerId__52593CB8">
+  <Association Name="FK__SONG__singerId__3D5E1FD2">
     <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1" />
     <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -346,7 +336,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG__topicId__4F7CD00D">
+  <Association Name="FK__SONG__topicId__3B75D760">
     <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
     <End Role="SONG" Type="Self.SONG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -358,7 +348,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG_PLAY__playl__5EBF139D">
+  <Association Name="FK__SONG_PLAY__playl__412EB0B6">
     <End Role="PLAYLIST" Type="Self.PLAYLIST" Multiplicity="0..1" />
     <End Role="SONG_PLAYLIST" Type="Self.SONG_PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -370,7 +360,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SONG_PLAY__songI__5FB337D6">
+  <Association Name="FK__SONG_PLAY__songI__4222D4EF">
     <End Role="SONG" Type="Self.SONG" Multiplicity="0..1" />
     <End Role="SONG_PLAYLIST" Type="Self.SONG_PLAYLIST" Multiplicity="*" />
     <ReferentialConstraint>
@@ -383,9 +373,9 @@
     </ReferentialConstraint>
   </Association>
   <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__USER_LOGI__userN__17F790F9' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__USER_LOGI__userN__17F790F9" />-->
-  <Association Name="FK__VIDEO__topicId__4316F928">
+warning 6035: The relationship 'FK__USER_LOGI__userN__5CD6CB2B' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__USER_LOGI__userN__5CD6CB2B" />-->
+  <Association Name="FK__VIDEO__topicId__38996AB5">
     <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
     <End Role="VIDEO" Type="Self.VIDEO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -412,83 +402,82 @@ warning 6035: The relationship 'FK__USER_LOGI__userN__17F790F9' has columns that
     <EntitySet Name="SINGER" EntityType="Self.SINGER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SONG" EntityType="Self.SONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SONG_PLAYLIST" EntityType="Self.SONG_PLAYLIST" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TOPIC" EntityType="Self.TOPIC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USER_LOGIN_CREDENTIAL" EntityType="Self.USER_LOGIN_CREDENTIAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VIDEO" EntityType="Self.VIDEO" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__CLIENT_LO__clien__778AC167" Association="Self.FK__CLIENT_LO__clien__778AC167">
+    <AssociationSet Name="FK__CLIENT_LO__clien__5441852A" Association="Self.FK__CLIENT_LO__clien__5441852A">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_LOVE_SONG" EntitySet="CLIENT_LOVE_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_LO__songI__76969D2E" Association="Self.FK__CLIENT_LO__songI__76969D2E">
+    <AssociationSet Name="FK__CLIENT_LO__songI__534D60F1" Association="Self.FK__CLIENT_LO__songI__534D60F1">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_LOVE_SONG" EntitySet="CLIENT_LOVE_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__clien__6FE99F9F" Association="Self.FK__CLIENT_VI__clien__6FE99F9F">
+    <AssociationSet Name="FK__CLIENT_VI__clien__4CA06362" Association="Self.FK__CLIENT_VI__clien__4CA06362">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_VIEW_SONG" EntitySet="CLIENT_VIEW_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__clien__73BA3083" Association="Self.FK__CLIENT_VI__clien__73BA3083">
+    <AssociationSet Name="FK__CLIENT_VI__clien__5070F446" Association="Self.FK__CLIENT_VI__clien__5070F446">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="CLIENT_VIEW_VIDEO" EntitySet="CLIENT_VIEW_VIDEO" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__songI__6EF57B66" Association="Self.FK__CLIENT_VI__songI__6EF57B66">
+    <AssociationSet Name="FK__CLIENT_VI__songI__4BAC3F29" Association="Self.FK__CLIENT_VI__songI__4BAC3F29">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_VIEW_SONG" EntitySet="CLIENT_VIEW_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__CLIENT_VI__video__72C60C4A" Association="Self.FK__CLIENT_VI__video__72C60C4A">
+    <AssociationSet Name="FK__CLIENT_VI__video__4F7CD00D" Association="Self.FK__CLIENT_VI__video__4F7CD00D">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="CLIENT_VIEW_VIDEO" EntitySet="CLIENT_VIEW_VIDEO" />
     </AssociationSet>
-    <AssociationSet Name="FK__COMMENT__clientI__7B5B524B" Association="Self.FK__COMMENT__clientI__7B5B524B">
+    <AssociationSet Name="FK__COMMENT__clientI__5812160E" Association="Self.FK__COMMENT__clientI__5812160E">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="COMMENT" EntitySet="COMMENT" />
     </AssociationSet>
-    <AssociationSet Name="FK__COMMENT__songId__7A672E12" Association="Self.FK__COMMENT__songId__7A672E12">
+    <AssociationSet Name="FK__COMMENT__songId__571DF1D5" Association="Self.FK__COMMENT__songId__571DF1D5">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="COMMENT" EntitySet="COMMENT" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___clien__68487DD7" Association="Self.FK__FAVORITE___clien__68487DD7">
+    <AssociationSet Name="FK__FAVORITE___clien__44FF419A" Association="Self.FK__FAVORITE___clien__44FF419A">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="FAVORITE_LIST" EntitySet="FAVORITE_LIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___favor__6B24EA82" Association="Self.FK__FAVORITE___favor__6B24EA82">
+    <AssociationSet Name="FK__FAVORITE___favor__47DBAE45" Association="Self.FK__FAVORITE___favor__47DBAE45">
       <End Role="FAVORITE_LIST" EntitySet="FAVORITE_LIST" />
       <End Role="FAVORITE_LIST_SONG" EntitySet="FAVORITE_LIST_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__FAVORITE___songI__6C190EBB" Association="Self.FK__FAVORITE___songI__6C190EBB">
+    <AssociationSet Name="FK__FAVORITE___songI__48CFD27E" Association="Self.FK__FAVORITE___songI__48CFD27E">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="FAVORITE_LIST_SONG" EntitySet="FAVORITE_LIST_SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__PLAYLIST__client__5BE2A6F2" Association="Self.FK__PLAYLIST__client__5BE2A6F2">
+    <AssociationSet Name="FK__PLAYLIST__client__31EC6D26" Association="Self.FK__PLAYLIST__client__31EC6D26">
       <End Role="CLIENT" EntitySet="CLIENT" />
       <End Role="PLAYLIST" EntitySet="PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__albumId__5165187F" Association="Self.FK__SONG__albumId__5165187F">
+    <AssociationSet Name="FK__SONG__albumId__3C69FB99" Association="Self.FK__SONG__albumId__3C69FB99">
       <End Role="ALBUM" EntitySet="ALBUM" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__areaId__534D60F1" Association="Self.FK__SONG__areaId__534D60F1">
+    <AssociationSet Name="FK__SONG__areaId__3E52440B" Association="Self.FK__SONG__areaId__3E52440B">
       <End Role="AREA" EntitySet="AREA" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__singerId__52593CB8" Association="Self.FK__SONG__singerId__52593CB8">
+    <AssociationSet Name="FK__SONG__singerId__3D5E1FD2" Association="Self.FK__SONG__singerId__3D5E1FD2">
       <End Role="SINGER" EntitySet="SINGER" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG__topicId__4F7CD00D" Association="Self.FK__SONG__topicId__4F7CD00D">
+    <AssociationSet Name="FK__SONG__topicId__3B75D760" Association="Self.FK__SONG__topicId__3B75D760">
       <End Role="TOPIC" EntitySet="TOPIC" />
       <End Role="SONG" EntitySet="SONG" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG_PLAY__playl__5EBF139D" Association="Self.FK__SONG_PLAY__playl__5EBF139D">
+    <AssociationSet Name="FK__SONG_PLAY__playl__412EB0B6" Association="Self.FK__SONG_PLAY__playl__412EB0B6">
       <End Role="PLAYLIST" EntitySet="PLAYLIST" />
       <End Role="SONG_PLAYLIST" EntitySet="SONG_PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__SONG_PLAY__songI__5FB337D6" Association="Self.FK__SONG_PLAY__songI__5FB337D6">
+    <AssociationSet Name="FK__SONG_PLAY__songI__4222D4EF" Association="Self.FK__SONG_PLAY__songI__4222D4EF">
       <End Role="SONG" EntitySet="SONG" />
       <End Role="SONG_PLAYLIST" EntitySet="SONG_PLAYLIST" />
     </AssociationSet>
-    <AssociationSet Name="FK__VIDEO__topicId__4316F928" Association="Self.FK__VIDEO__topicId__4316F928">
+    <AssociationSet Name="FK__VIDEO__topicId__38996AB5" Association="Self.FK__VIDEO__topicId__38996AB5">
       <End Role="TOPIC" EntitySet="TOPIC" />
       <End Role="VIDEO" EntitySet="VIDEO" />
     </AssociationSet>

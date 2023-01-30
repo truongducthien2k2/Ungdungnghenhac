@@ -76,7 +76,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="content" Type="text" />
+          <Property Name="content" Type="nvarchar(max)" />
           <Property Name="commentDate" Type="datetime" />
           <Property Name="songId" Type="int" />
           <Property Name="clientId" Type="int" />
@@ -387,9 +387,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__USER_LOGI__userN__17F790F9' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__USER_LOGI__userN__17F790F9" />-->
         <Association Name="FK__VIDEO__topicId__4316F928">
           <End Role="TOPIC" Type="Self.TOPIC" Multiplicity="0..1" />
           <End Role="VIDEO" Type="Self.VIDEO" Multiplicity="*" />
@@ -683,7 +680,7 @@ warning 6035: The relationship 'FK__USER_LOGI__userN__17F790F9' has columns that
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="commentDate" Type="DateTime" Precision="3" />
           <Property Name="songId" Type="Int32" />
           <Property Name="clientId" Type="Int32" />

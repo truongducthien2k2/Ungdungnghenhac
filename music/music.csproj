@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>packages\Facebook.7.0.10-beta\lib\net45\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
     </Reference>
@@ -85,8 +88,10 @@
       <DependentUpon>CustomMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Component\IconHelper.cs" />
+    <Compile Include="LocalStore\BasicSong.cs" />
     <Compile Include="LocalStore\EmailResetPassword.cs" />
     <Compile Include="LocalStore\OTPCode.cs" />
+    <Compile Include="LocalStore\TimeToStop.cs" />
     <Compile Include="Model\ADVERTISEMENT.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -143,9 +148,6 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\SONG_PLAYLIST.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TOPIC.cs">
@@ -220,7 +222,10 @@
     <Compile Include="View\ForgetPassword\VerifyAccountView.xaml.cs">
       <DependentUpon>VerifyAccountView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\HistoryView.xaml.cs">
+    <Compile Include="View\History\HistoryItemView.xaml.cs">
+      <DependentUpon>HistoryItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\History\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HomeView.xaml.cs">
@@ -235,16 +240,40 @@
     <Compile Include="View\PlayListView.xaml.cs">
       <DependentUpon>PlayListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PlaySongView.xaml.cs">
+      <DependentUpon>PlaySongView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RankView.xaml.cs">
       <DependentUpon>RankView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignupView.xaml.cs">
+      <DependentUpon>SignupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SongInDeviceView.xaml.cs">
       <DependentUpon>SongInDeviceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SongView.xaml.cs">
+    <Compile Include="View\Song\CommentItemView.xaml.cs">
+      <DependentUpon>CommentItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\PostSongOnFacebookView.xaml.cs">
+      <DependentUpon>PostSongOnFacebookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\SetTimeToStopView.xaml.cs">
+      <DependentUpon>SetTimeToStopView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\ShareSongView.xaml.cs">
+      <DependentUpon>ShareSongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\SongItemView.xaml.cs">
+      <DependentUpon>SongItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Song\SongView.xaml.cs">
       <DependentUpon>SongView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TopicView.xaml.cs">
+    <Compile Include="View\Topic\TopicItemView.xaml.cs">
+      <DependentUpon>TopicItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Topic\TopicView.xaml.cs">
       <DependentUpon>TopicView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VideoView.xaml.cs">
@@ -342,7 +371,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\HistoryView.xaml">
+    <Page Include="View\History\HistoryItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\History\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -362,7 +395,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\PlaySongView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\RankView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SignupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -370,11 +411,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SongView.xaml">
+    <Page Include="View\Song\CommentItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TopicView.xaml">
+    <Page Include="View\Song\PostSongOnFacebookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\SetTimeToStopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\ShareSongView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\SongItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Song\SongView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Topic\TopicItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Topic\TopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -436,6 +501,7 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
