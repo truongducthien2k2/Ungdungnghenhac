@@ -77,7 +77,6 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.g.cs
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\TopicView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\VideoView.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\App.g.cs
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music_Content.g.cs
@@ -140,7 +139,6 @@ E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\V
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\ShareSongView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongItemView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Song\SongView.baml
-E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\TopicView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\VideoView.baml
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.g.resources
 E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\music.Properties.Resources.resources
@@ -266,3 +264,7 @@ D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.g.cs
 D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.g.cs
 D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.baml
 D:\OOP4\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.g.cs
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicItemView.baml
+E:\Projects\Phát triển phần mềm OOP\App\Ungdungnghenhac\music\obj\Debug\View\Topic\TopicView.baml

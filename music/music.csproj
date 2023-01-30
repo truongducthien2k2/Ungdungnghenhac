@@ -150,6 +150,9 @@
     <Compile Include="Model\SONG_PLAYLIST.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\TOPIC.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

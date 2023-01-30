@@ -1,4 +1,5 @@
 ﻿using music.Model;
+using music.View.Song;
 using music.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -23,25 +24,56 @@ namespace music.View.Topic
     public partial class TopicView : Page
     {
         SongViewModel topicVM = new SongViewModel();
-        Image topicImage;
-        TextBlock topicName;
+        Image songImage;
+        TextBlock songName;
+        TextBlock singerName;
+        MediaPlayer player;
+        TOPIC topic;
+        Frame MainContent;
         public TopicView()
         {
             InitializeComponent();
         }
-        public TopicView(Image topicimage,TextBlock topicname)
+        public TopicView(Image songImage,TextBlock songName, TextBlock singerName, MediaPlayer player, TOPIC topic, Frame MainContent)
         {
             InitializeComponent();
-            this.topicImage = topicimage;
-            this.topicName = topicname;
+            this.songImage = songImage;
+            this.songName = songName;
+            this.singerName = singerName;
+            this.player = player;
+            this.topic = topic;
+            this.MainContent = MainContent;
             LoadUI();
         }
         private void LoadUI()
         {
-            List<TOPIC> topic = topicVM.GetAllTopic();
-            foreach (TOPIC topicDataItem in topic)
+            if (topic == null)
             {
-                plTOPIC.Children.Add(new TopicItemView(topicDataItem,topicImage,topicName));
+                List<TOPIC> topic = topicVM.GetAllTopic();
+                foreach (TOPIC topicDataItem in topic)
+                {
+                    plTOPIC.Children.Add(new TopicItemView(topicDataItem, songImage, songName, singerName, player, MainContent));
+                }
+            }
+            else
+            {
+                List<SONG> songs = topicVM.GetAllSong().Where(song => song.topicId == topic.id).ToList();
+                if (songs.Count == 0)
+                {
+                    TextBlock notice = new TextBlock();
+                    notice.Text = "Không có bài hát có sẵn trong chủ đề này";
+                    notice.HorizontalAlignment = HorizontalAlignment.Center;
+                    notice.Margin = new Thickness(0, 30, 0, 0);
+                    notice.FontSize = 14;
+                    plTOPIC.Children.Add(notice);
+                }
+                else
+                {
+                    foreach (SONG song in songs)
+                    {
+                        plTOPIC.Children.Add(new SongItemView(song, songImage, songName, singerName, player));
+                    }
+                }    
             }
         }
     }

@@ -51,6 +51,16 @@ namespace music
             }
         }
 
+        private void LoadTimeOfSong()
+        {
+            int totalSecondsOfSong = 0;
+            if (player.NaturalDuration.HasTimeSpan)
+            {
+                totalSecondsOfSong = (int) player.NaturalDuration.TimeSpan.TotalSeconds;
+            }
+            tbTotalTime.Text = totalSecondsOfSong.ToString();
+        }
+
         public void LoadSong(int indexOfSong)
         {
             this.indexOfSong = indexOfSong;
@@ -155,7 +165,7 @@ namespace music
 
         private void topicBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new TopicView(ImageViewer, tbSongName));
+            navFrame.Navigate(new TopicView(ImageViewer, tbSongName, tbSingerName, player, null, navFrame));
         }
 
         private void albumBtn_Click( object sender, RoutedEventArgs e )
@@ -222,6 +232,7 @@ namespace music
                 }
                 btnPlay.Visibility = Visibility.Hidden;
                 btnPause.Visibility = Visibility.Visible;
+                LoadTimeOfSong();
                 player.Play();
             }
         }

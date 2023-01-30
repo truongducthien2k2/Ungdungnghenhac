@@ -1,11 +1,13 @@
 ﻿<UserControl x:Class="music.View.Topic.TopicItemView"
+             x:Name="controlTopic"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:music.View.Topic"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="300">
+             d:DesignHeight="200" d:DesignWidth="300"
+             Background="White" PreviewMouseDown="controlTopic_PreviewMouseDown" Cursor="Hand" MouseMove="controlTopic_MouseMove" MouseLeave="controlTopic_MouseLeave">
     <Border Height="120" BorderThickness="0 1 0 0" BorderBrush="LightGray">
         <Grid>
 

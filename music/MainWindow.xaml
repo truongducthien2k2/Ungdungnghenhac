@@ -151,6 +151,7 @@
                     </StackPanel>
 
                     <Grid Grid.Column="1">
+                        <Slider Foreground="Gray"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Button x:Name="btnRandom" Background="Transparent" Padding="6" Foreground="LightGray" BorderThickness="0" Height="60" Click="btnRandom_Click">
                                 <materialDesign:PackIcon Kind="ShuffleVariant"  Width="25" Height="25"/>

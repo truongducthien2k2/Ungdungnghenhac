@@ -24,18 +24,24 @@ namespace music.View.Topic
     {
         TopicViewModel topicVM = new TopicViewModel();
         TOPIC topic;
-        Image topicimage;
-        TextBlock topicname;
+        Image songImage;
+        TextBlock songName;
+        TextBlock singerName;
+        MediaPlayer player;
+        Frame MainContent;
         public TopicItemView()
         {
             InitializeComponent();
         }
-        public TopicItemView(TOPIC topic, Image topicimage, TextBlock topicname)
+        public TopicItemView(TOPIC topic, Image songImage, TextBlock songName, TextBlock singerName, MediaPlayer player, Frame mainContent )
         {
             InitializeComponent();
             this.topic = topic;
-            this.topicimage = topicimage;
-            this.topicname = topicname;
+            this.songImage = songImage;
+            this.songName = songName;
+            this.singerName = singerName;
+            this.player = player;
+            this.MainContent = mainContent;
             LoadData();
         }
 
@@ -43,6 +49,21 @@ namespace music.View.Topic
         {
             topicImage.Source = new BitmapImage(new Uri(topic.topicImage));
             tbTopicName.Text = topic.topicName;
+        }
+
+        private void controlTopic_PreviewMouseDown( object sender, MouseButtonEventArgs e )
+        {
+            MainContent.Navigate(new TopicView(songImage, songName, singerName, player, topic, MainContent));
+        }
+
+        private void controlTopic_MouseMove( object sender, MouseEventArgs e )
+        {
+            controlTopic.Background = new SolidColorBrush(Colors.LightGray);
+        }
+
+        private void controlTopic_MouseLeave( object sender, MouseEventArgs e )
+        {
+            controlTopic.Background = new SolidColorBrush(Colors.White);
         }
     }
 }
