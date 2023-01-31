@@ -105,8 +105,12 @@ namespace music
                 else
                 {
                     StoreData();
-                    navFrame.Navigate(new HomeView());
+                    navFrame.Navigate(new SongView(ImageViewer, tbSongName, tbSingerName, player));
                 }
+            }
+            else
+            {
+                navFrame.Navigate(new SongView(ImageViewer, tbSongName, tbSingerName, player));
             }
         }
 
@@ -159,7 +163,7 @@ namespace music
 
         private void artistBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new ActistItem(ImageViewer, tbSongName, tbSingerName, player, null, navFrame));
+            navFrame.Navigate(new ArtistView(ImageViewer, tbSongName, tbSingerName, player, null, navFrame));
         }
 
         private void songBtn_Click( object sender, RoutedEventArgs e )

@@ -20,7 +20,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="albumName" Type="nvarchar" MaxLength="100" />
           <Property Name="publishDate" Type="date" />
-          <Property Name="albumImage" Type="varchar" MaxLength="500" />
+          <Property Name="albumImage" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="AREA">
           <Key>
@@ -112,7 +112,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="singerName" Type="nvarchar" MaxLength="100" />
           <Property Name="intro" Type="nvarchar(max)" />
-          <Property Name="singerImage" Type="varchar" MaxLength="500" />
+          <Property Name="singerImage" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="SONG">
           <Key>
@@ -152,7 +152,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="topicName" Type="nvarchar" MaxLength="100" />
-          <Property Name="topicImage" Type="varchar" MaxLength="500" />
+          <Property Name="topicImage" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="USER_LOGIN_CREDENTIAL">
           <Key>
@@ -610,7 +610,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="albumName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="publishDate" Type="DateTime" Precision="0" />
-          <Property Name="albumImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="albumImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__albumId__5165187F" FromRole="ALBUM" ToRole="SONG" />
         </EntityType>
         <EntityType Name="AREA">
@@ -724,7 +724,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="singerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="singerImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="singerImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__singerId__52593CB8" FromRole="SINGER" ToRole="SONG" />
         </EntityType>
         <EntityType Name="SONG">
@@ -777,7 +777,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="topicName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="topicImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="topicImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SONG" Relationship="MusicAppModel.FK__SONG__topicId__4F7CD00D" FromRole="TOPIC" ToRole="SONG" />
           <NavigationProperty Name="VIDEO" Relationship="MusicAppModel.FK__VIDEO__topicId__4316F928" FromRole="TOPIC" ToRole="VIDEO" />
         </EntityType>

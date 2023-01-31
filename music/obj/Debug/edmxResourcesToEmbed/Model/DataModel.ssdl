@@ -15,7 +15,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="albumName" Type="nvarchar" MaxLength="100" />
     <Property Name="publishDate" Type="date" />
-    <Property Name="albumImage" Type="varchar" MaxLength="500" />
+    <Property Name="albumImage" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="AREA">
     <Key>
@@ -107,7 +107,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="singerName" Type="nvarchar" MaxLength="100" />
     <Property Name="intro" Type="nvarchar(max)" />
-    <Property Name="singerImage" Type="varchar" MaxLength="500" />
+    <Property Name="singerImage" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="SONG">
     <Key>
@@ -147,7 +147,7 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="topicName" Type="nvarchar" MaxLength="100" />
-    <Property Name="topicImage" Type="varchar" MaxLength="500" />
+    <Property Name="topicImage" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="USER_LOGIN_CREDENTIAL">
     <Key>

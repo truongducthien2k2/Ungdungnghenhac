@@ -31,10 +31,10 @@ namespace music.View.Admin.Artist
         public ArtistItemView(SINGER artist, Frame MainContent)
         {
             InitializeComponent();
+            this.MainContent = MainContent;
             artistId.Text = artist.id.ToString();
             artistName.Text = artist.singerName;
             artistImage.Source = new BitmapImage(new Uri(artist.singerImage));
-            this.MainContent = MainContent;
             this.artist = artist;
         }
 

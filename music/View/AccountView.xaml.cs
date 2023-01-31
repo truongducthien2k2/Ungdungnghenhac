@@ -47,7 +47,7 @@ namespace music.View
 
         private void LoadStatistics()
         {
-            tbViewedSongs.Text = songVM.GetViewSongList().Where(user => user.id == client.id).Count().ToString();
+            tbViewedSongs.Text = songVM.GetViewSongList().Where(user => user.id == client.id).Select(view => view.songId).ToList().Count().ToString();
             tbLikes.Text = songVM.GetLikeSongList().Where(user => user.id == client.id).Count().ToString();
             tbVIP.Text = (bool) client.VIP ? "VIP" : "STANDARD";
         }

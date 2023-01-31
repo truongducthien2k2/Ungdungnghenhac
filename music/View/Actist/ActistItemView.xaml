@@ -5,31 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:music.View.Actist"
              mc:Ignorable="d" x:Name="controlTopic"
-             d:DesignHeight="450" d:DesignWidth="800" Background="White" PreviewMouseDown="controlTopic_PreviewMouseDown" Cursor="Hand" MouseMove="controlTopic_MouseMove" MouseLeave="controlTopic_MouseLeave">
-    <Border Height="120" BorderThickness="0 1 0 0" BorderBrush="LightGray">
+             d:DesignHeight="120" d:DesignWidth="800" Background="White" PreviewMouseDown="controlTopic_PreviewMouseDown" Cursor="Hand" MouseMove="controlTopic_MouseMove" MouseLeave="controlTopic_MouseLeave">
+    <Border Height="120" BorderThickness="0 1 0 1" BorderBrush="LightGray">
         <Grid>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Border 
-                    CornerRadius="100"
-                    Width="200"
-                    Height="80"
+            <Border CornerRadius="100"
+                    Width="100"
+                    Height="100"
                     HorizontalAlignment="Center">
-                <Image x:Name="topicImage"
+                <Image x:Name="singerImage"
                            Source="/Resources/mono.jpg"
                            Stretch="UniformToFill">
                     <Image.Clip>
                         <RectangleGeometry RadiusX="10"
                                            RadiusY="10"
-                                           Rect="0, 0, 200, 80"/>
+                                           Rect="0, 0, 100, 100"/>
                     </Image.Clip>
                 </Image>
             </Border>
 
-            <TextBlock Grid.Row="1" x:Name="tbTopicName" Grid.Column="1" Text="JAZZ"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+            <TextBlock Grid.Row="1" x:Name="tbSingerName" Grid.Column="1" Text="JAZZ"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
         </Grid>
     </Border>
 </UserControl>

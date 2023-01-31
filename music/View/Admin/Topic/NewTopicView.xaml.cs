@@ -84,23 +84,17 @@ namespace music.View.Admin.Topic
                     case "adjust":
                         if ( topicVM.UpdateTopic(topic.id, topicName, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Cập nhật thông tin chủ đề thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new TopicAdminView(MainContent));
-                            }
+                            MessageBox.Show("Cập nhật chủ đề thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
+                            MainContent.Navigate(new TopicAdminView(MainContent));
                         }
                         break;
                     case "add":
                         if ( topicVM.InsertNewTopic(topicName, selectedFileName) == 1 )
                         {
-                            bool? result = new CustomMessageBox("Thêm mới chủ đề thành công!!!", "Success").ShowDialog();
-                            if ( result.Value )
-                            {
-                                this.Close();
-                                MainContent.Navigate(new TopicAdminView(MainContent));
-                            }
+                            MessageBox.Show("Thêm mới chủ đề thành công!!!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
+                            MainContent.Navigate(new TopicAdminView(MainContent));
                         }
                         break;
                     default:

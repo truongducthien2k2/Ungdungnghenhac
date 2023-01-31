@@ -13,7 +13,7 @@ namespace music.ViewModel
         {
             try
             {
-                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO SINGER (singerName, intro, singerImage) VALUES (N'{name}', N'{intro}', '{avt}')");
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"INSERT INTO SINGER (singerName, intro, singerImage) VALUES (N'{name}', N'{intro}', N'{avt}')");
             }
             catch 
             {
@@ -26,7 +26,7 @@ namespace music.ViewModel
         {
             try
             {
-                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"UPDATE SINGER SET singerName=N'{name}', intro=N'{intro}', singerImage='{avt}' WHERE id={id}");
+                DataProvider.Ins.DB.Database.ExecuteSqlCommand($"UPDATE SINGER SET singerName=N'{name}', intro=N'{intro}', singerImage=N'{avt}' WHERE id={id}");
             }
             catch
             {

@@ -241,7 +241,11 @@ namespace music.ViewModel
 
         public int GetViewsOfSong(SONG song)
         {
-            return DataProvider.Ins.DB.CLIENT_VIEW_SONG.Where(View => View.songId == song.id ).Count();
+            var views = DataProvider.Ins.DB.CLIENT_VIEW_SONG.Where(View => View.songId == song.id)
+                                                       .GroupBy(view => view.songId)
+                                                       .Select(view => view.Sum(x => x.currentViews))
+                                                       .ToList();
+            return (int) views.First();
         }
     }
 }

@@ -30,10 +30,6 @@ namespace music.View.Topic
         MediaPlayer player;
         TOPIC topic;
         Frame MainContent;
-        public TopicView()
-        {
-            InitializeComponent();
-        }
         public TopicView(Image songImage,TextBlock songName, TextBlock singerName, MediaPlayer player, TOPIC topic, Frame MainContent)
         {
             InitializeComponent();

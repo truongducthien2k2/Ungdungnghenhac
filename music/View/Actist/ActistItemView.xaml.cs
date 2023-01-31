@@ -23,7 +23,7 @@ namespace music.View.Actist
     public partial class ActistItemView : UserControl
     {
             TopicViewModel topicVM = new TopicViewModel();
-            SINGER topic;
+            SINGER singer;
             Image songImage;
             TextBlock songName;
             TextBlock singerName;
@@ -33,10 +33,10 @@ namespace music.View.Actist
             {
                 InitializeComponent();
             }
-            public ActistItemView(SINGER topic, Image songImage, TextBlock songName, TextBlock singerName, MediaPlayer player, Frame mainContent)
+            public ActistItemView(SINGER singer, Image songImage, TextBlock songName, TextBlock singerName, MediaPlayer player, Frame mainContent)
             {
                 InitializeComponent();
-                this.topic = topic;
+                this.singer = singer;
                 this.songImage = songImage;
                 this.songName = songName;
                 this.singerName = singerName;
@@ -47,13 +47,13 @@ namespace music.View.Actist
 
             private void LoadData()
             {
-                topicImage.Source = new BitmapImage(new Uri(topic.singerImage));
-                tbTopicName.Text = topic.singerName;
+                singerImage.Source = new BitmapImage(new Uri(singer.singerImage));
+                tbSingerName.Text = singer.singerName;
             }
 
             private void controlTopic_PreviewMouseDown(object sender, MouseButtonEventArgs e)
             {
-                MainContent.Navigate(new ActistItem(songImage, songName, singerName, player, topic, MainContent));
+                MainContent.Navigate(new ArtistView(songImage, songName, singerName, player, singer, MainContent));
             }
 
             private void controlTopic_MouseMove(object sender, MouseEventArgs e)
