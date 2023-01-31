@@ -27,14 +27,14 @@
             <Grid Grid.Column="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="Headphones" Padding="10 0" Width="25" Height="60" Foreground="Gray"/>
-                    <TextBlock Text="3.6K" FontSize="13" VerticalAlignment="Center" Margin="4" FontWeight="Thin"/>
+                    <TextBlock x:Name="tbViewsOfSong" FontSize="13" VerticalAlignment="Center" Margin="4" FontWeight="Thin"/>
 
 
                     <Button x:Name="btnShare" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60" Click="btnShare_Click">
                         <materialDesign:PackIcon Kind="ShareVariant" Foreground="Gray" Width="30" Height="30"/>
                     </Button>
 
-                    <Button x:Name="btnDownLoad" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60">
+                    <Button x:Name="btnDownLoad" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60" Click="btnDownLoad_Click">
                         <materialDesign:PackIcon Kind="Download" Foreground="Gray" Width="30" Height="30"/>
                     </Button>
                     <Button x:Name="btnAdd" Background="Transparent" Padding="10 0" BorderThickness="0" Height="60" >

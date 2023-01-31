@@ -47,10 +47,18 @@ namespace music
             /// Xử lý khi btnRandom được chọn
             if ( isRandom )
             {
-
+                if (indexOfSong < songVM.GetAllSong().Count - 1)
+                {
+                    indexOfSong++;
+                    LoadSong(indexOfSong);
+                }
+                else
+                {
+                    indexOfSong = 0;
+                    LoadSong(indexOfSong);
+                }
             }
         }
-
         
 
         protected override void OnSourceInitialized( EventArgs e )
@@ -204,7 +212,7 @@ namespace music
                 if ( songVM.GetAllSong().Count > 0 )
                 {
                     song = songVM.GetAllSong() [this.indexOfSong];
-                    ; ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
+                    ImageViewer.Source = new BitmapImage(new Uri(song.songImage));
                     tbSongName.Text = song.songName;
                     tbSingerName.Text = songVM.GetAllSinger().Where(singer => singer.id == song.singerId).Select(singer => singer.singerName).First();
                     player.Open(new Uri(song.songCode));
