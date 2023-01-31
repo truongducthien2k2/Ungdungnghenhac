@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using music.View.Topic;
+using music.View.Album;
+using music.View.Actist;
 
 namespace music
 {
@@ -152,12 +154,12 @@ namespace music
 
         private void albumBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new AlbumView());
+            navFrame.Navigate(new AlbumItem(ImageViewer, tbSongName, tbSingerName, player, null, navFrame));
         }
 
         private void artistBtn_Click( object sender, RoutedEventArgs e )
         {
-            navFrame.Navigate(new ArtistView());
+            navFrame.Navigate(new ActistItem(ImageViewer, tbSongName, tbSingerName, player, null, navFrame));
         }
 
         private void songBtn_Click( object sender, RoutedEventArgs e )
